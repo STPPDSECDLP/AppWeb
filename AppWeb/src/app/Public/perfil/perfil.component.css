@@ -1,0 +1,24 @@
+.contenido{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+.izquierda{
+  margin-top: 10%;
+}
+
+.botones button{
+  margin-top: 1em;
+}
+
+.derecha{
+  justify-content: center;
+}
+
+.imagen{
+  height: 100%;
+}
+
+
