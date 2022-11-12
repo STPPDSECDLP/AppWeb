@@ -1,0 +1,30 @@
+.cuerpo{
+  width: 100%;
+  display: flex;
+}
+
+.contenido{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+.primera-linea{
+  margin-top: 2%;
+  display: flex;
+  width: 76em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.primera-linea h1{
+  color: white;
+  font-size: 2em;
+}
+
+.primera-linea button{
+  border-radius: 15px;
+  font-weight: 600;
+  background-color: #cdffff;
+}
+

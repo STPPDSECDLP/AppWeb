@@ -10,6 +10,9 @@ import { LoginHematologoComponent } from './Security/login-hematologo/login-hema
 import { LoginPediatraComponent } from './Security/login-pediatra/login-pediatra.component';
 import { HomePediatraComponent } from './Pediatra/home-pediatra/home-pediatra.component';
 import {HomeHematologoComponent} from "./Hematologo/home-hematologo/home-hematologo.component";
+import { HematologoNavBarComponent } from './Public/hematologo-nav-bar/hematologo-nav-bar.component';
+import { PediatraNavBarComponent } from './Public/pediatra-nav-bar/pediatra-nav-bar.component';
+import { PediatraHomeFiguraComponent } from './Figuras/pediatra-home-figura/pediatra-home-figura.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {HomeHematologoComponent} from "./Hematologo/home-hematologo/home-hematol
     LoginHematologoComponent,
     LoginPediatraComponent,
     HomePediatraComponent,
-    HomeHematologoComponent
+    HomeHematologoComponent,
+    HematologoNavBarComponent,
+    PediatraNavBarComponent,
+    PediatraHomeFiguraComponent
   ],
   imports: [
     BrowserModule,
