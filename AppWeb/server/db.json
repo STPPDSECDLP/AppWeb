@@ -1,0 +1,20 @@
+{
+  "medico": [
+    {
+      "id": 1,
+      "nombre": "Mark Albert",
+      "institucion": "Universidad Peruana de Ciencias Aplicadas",
+      "tipo": true,
+      "codigo": "PED202207",
+      "clave": "PED202207"
+    },
+    {
+      "id": 2,
+      "nombre": "Jose Lios",
+      "institucion": "Universidad Peruana de Ciencias Aplicadas",
+      "tipo": false,
+      "codigo": "HEM202209",
+      "clave": "HEM202209"
+    }
+  ]
+}

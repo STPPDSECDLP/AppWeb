@@ -8,6 +8,8 @@ import { PerfilComponent } from './Public/perfil/perfil.component';
 import { PerfilFigurasComponent } from './Figuras/perfil-figuras/perfil-figuras.component';
 import { LoginHematologoComponent } from './Security/login-hematologo/login-hematologo.component';
 import { LoginPediatraComponent } from './Security/login-pediatra/login-pediatra.component';
+import { HomePediatraComponent } from './Pediatra/home-pediatra/home-pediatra.component';
+import {HomeHematologoComponent} from "./Hematologo/home-hematologo/home-hematologo.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LoginPediatraComponent } from './Security/login-pediatra/login-pediatra
     PerfilComponent,
     PerfilFigurasComponent,
     LoginHematologoComponent,
-    LoginPediatraComponent
+    LoginPediatraComponent,
+    HomePediatraComponent,
+    HomeHematologoComponent
   ],
   imports: [
     BrowserModule,

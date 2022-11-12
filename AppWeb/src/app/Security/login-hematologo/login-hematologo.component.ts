@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Medico} from "../../Shared/Interface/medico";
+import {AuthService} from "../../Shared/Service/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-hematologo',
@@ -6,10 +9,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-hematologo.component.css']
 })
 export class LoginHematologoComponent implements OnInit {
+  medico: Medico[] = [];
+  ingresante!:number;
+  validacion: boolean = false;
 
-  constructor() { }
+  @ViewChild("codigo") codigo! : ElementRef;
+  @ViewChild("password") password! : ElementRef;
+
+  constructor(private authService : AuthService,
+              private _router: Router) { }
 
   ngOnInit(): void {
+    this.authService.getAllPrueba().subscribe((data: any) => {
+      this.medico = data;
+    })
   }
 
+  logIn():void {
+    var codigo = this.codigo.nativeElement.value;
+    var contra = this.password.nativeElement.value;
+    for (var i = 0; i < this.medico.length; i++){
+      if (codigo == this.medico[i].codigo && contra == this.medico[i].clave && !this.medico[i].tipo){
+        this.validacion = true;
+        this.ingresante = this.medico[i].id;
+      }
+    }
+    if (this.validacion){
+      this._router.navigate([`/home/hematologo/${this.ingresante}`]);
+    }
+    else{
+      alert("Usuario incorrecto");
+    }
+  }
 }
