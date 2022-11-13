@@ -13,6 +13,8 @@ import {HomeHematologoComponent} from "./Hematologo/home-hematologo/home-hematol
 import { HematologoNavBarComponent } from './Public/hematologo-nav-bar/hematologo-nav-bar.component';
 import { PediatraNavBarComponent } from './Public/pediatra-nav-bar/pediatra-nav-bar.component';
 import { PediatraHomeFiguraComponent } from './Figuras/pediatra-home-figura/pediatra-home-figura.component';
+import { RegistrarPacienteComponent } from './Paciente/registrar-paciente/registrar-paciente.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { PediatraHomeFiguraComponent } from './Figuras/pediatra-home-figura/pedi
     HomeHematologoComponent,
     HematologoNavBarComponent,
     PediatraNavBarComponent,
-    PediatraHomeFiguraComponent
+    PediatraHomeFiguraComponent,
+    RegistrarPacienteComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

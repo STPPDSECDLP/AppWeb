@@ -1,0 +1,77 @@
+<section class="cuerpo">
+
+  <div class="izquierda">
+
+    <div class="titulo">
+      <h1> Ingresar informacion <br> de paciente</h1>
+    </div>
+
+    <div class="formulario">
+
+        <div class="sub-izquierda">
+          <label>Nombre Completo</label>
+          <input type="text"
+                 name="nombre" #nombre
+                 class="form-control"
+                 placeholder="Nombres"
+                 required>
+
+          <br> <br>
+
+          <label>Sexo</label>
+            <select class="form-select" (change)="getSexo($event)">
+              <option value="0">Seleccione el sexo</option>
+              <option value="1">MASCULINO</option>
+              <option value="2">FEMENINO</option>
+            </select>
+
+          <br> <br>
+
+          <label>Dirección</label>
+          <input type="text"
+                 name="direccion" #direccion
+                 class="form-control"
+                 placeholder="Av. Huascar"
+                 required>
+        </div>
+
+        <div class="sub-derecha">
+          <label>Fecha de nacimiento (DD/MM/AAAA)</label>
+          <input type="date"
+                 name="fecha" #fecha
+                 class="form-control"
+                 placeholder="First name"
+                 required>
+
+          <br> <br>
+
+          <label>DNI</label>
+          <input type= number
+                 name=dni #dni
+                 class="form-control"
+                 placeholder="75055055"
+                 required>
+
+          <br> <br>
+
+          <label>Correo electrónico</label>
+          <input type="text"
+                 name="email" #email
+                 class="form-control"
+                 placeholder="example@gmail.com"
+                 required>
+        </div>
+
+    </div>
+    <div class="registrar">
+      <button type="button" class="btn"
+              style="background-color: #4743e0; color: white"
+              (click)="Registrar()">Registrar
+      </button>
+    </div>
+  </div>
+  <div class="derecha">
+    <img src="assets/image/Doctora_Bebe.jpeg" alt="Login image">
+  </div>
+
+</section>

@@ -16,5 +16,25 @@
       "codigo": "HEM202209",
       "clave": "HEM202209"
     }
+  ],
+  "paciente": [
+    {
+      "id": 72311233,
+      "nombre": "Martha",
+      "fechaNacimiento": "01/01/2001",
+      "genero": false,
+      "correo": "martha@gmail.com",
+      "direccion": "Av. Jesus Maria N° 504",
+      "telefono": 999999999
+    },
+    {
+      "id": 70440553,
+      "nombre": "Mark Albert",
+      "fechaNacimiento": "2001-04-03",
+      "genero": true,
+      "correo": "markalbert_09@hotmail.com",
+      "direccion": "Av. Julio Cesar",
+      "telefono": 0
+    }
   ]
 }
