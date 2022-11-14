@@ -1,17 +1,18 @@
 .cuerpo{
-  width: 100%;
   display: flex;
 }
 
 .contenido{
+  width: 90%;
   position: absolute;
-  top: 50px;
-  left: 10px;
+  top: 6%;
+  left: 5%;
+  right: 5%;
 }
 .primera-linea{
   margin-top: 2%;
+  margin-right: 5%;
   display: flex;
-  width: 76em;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
