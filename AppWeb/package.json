@@ -23,6 +23,8 @@
     "bootstrap-icons": "^1.10.1",
     "jquery": "^3.6.1",
     "json-server": "^0.17.1",
+    "mdb-angular-ui-kit": "^3.0.0",
+    "ng-modal": "^1.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -15,6 +15,11 @@ import { PediatraNavBarComponent } from './Public/pediatra-nav-bar/pediatra-nav-
 import { PediatraHomeFiguraComponent } from './Figuras/pediatra-home-figura/pediatra-home-figura.component';
 import { RegistrarPacienteComponent } from './Paciente/registrar-paciente/registrar-paciente.component';
 import {FormsModule} from "@angular/forms";
+import { HematologoHomeFiguraComponent } from './Figuras/hematologo-home-figura/hematologo-home-figura.component';
+import { SangrePerifericaComponent } from './Hematologo/sangre-periferica/sangre-periferica.component';
+import { HematologoSangrePerifericaFiguraComponent } from './Figuras/hematologo-sangre-periferica-figura/hematologo-sangre-periferica-figura.component';
+import { SangrePerifericaVisualizarComponent } from './Pediatra/sangre-periferica-visualizar/sangre-periferica-visualizar.component';
+import { SangrePerifericaEditComponent } from './Hematologo/sangre-periferica-edit/sangre-periferica-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import {FormsModule} from "@angular/forms";
     HematologoNavBarComponent,
     PediatraNavBarComponent,
     PediatraHomeFiguraComponent,
-    RegistrarPacienteComponent
+    RegistrarPacienteComponent,
+    HematologoHomeFiguraComponent,
+    SangrePerifericaComponent,
+    HematologoSangrePerifericaFiguraComponent,
+    SangrePerifericaVisualizarComponent,
+    SangrePerifericaEditComponent
   ],
     imports: [
         BrowserModule,

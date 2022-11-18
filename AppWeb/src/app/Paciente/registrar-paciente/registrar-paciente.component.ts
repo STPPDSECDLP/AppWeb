@@ -20,14 +20,16 @@ export class RegistrarPacienteComponent implements OnInit {
   @ViewChild("fecha") fecha! : ElementRef;
   @ViewChild("dni") dni! : ElementRef;
   @ViewChild("email") email! : ElementRef;
+  @ViewChild("telefono") telefono! : ElementRef;
 
   constructor(private pacienteService: PacienteService,
               private medicoService : MedicoService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+    this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
+  }
 
   ngOnInit(): void {
-    this.getMedicoId();
   }
 
   getSexo(event: any){
@@ -50,8 +52,9 @@ export class RegistrarPacienteComponent implements OnInit {
     var fecha = this.fecha.nativeElement.value;
     var dni = this.dni.nativeElement.value;
     var email = this.email.nativeElement.value;
+    var telefono = this.telefono.nativeElement.value;
 
-    if(nombre == '' || direccion == '' || fecha == '' || dni == '' || email == '' || this.box == 0){
+    if(nombre == '' || direccion == '' || fecha == '' || dni == '' || email == '' || telefono == '' || this.box == 0){
       alert("Complete todos los campos");
     }
     else {
@@ -62,27 +65,23 @@ export class RegistrarPacienteComponent implements OnInit {
         this.genero = false;
       }
 
-      this.id = Number(dni);
+      if (dni.length == 8){
+        this.id = Number(dni);
 
-      const newPaciente = {id: this.id,
-        nombre: nombre,
-        fechaNacimiento: fecha,
-        genero: this.genero,
-        correo: email,
-        direccion: direccion,
-        telefono: 0};
-      this.pacienteService.addPaciente(newPaciente).subscribe((response: any) => {
-        this.router.navigate(['home/pediatra/',this.MedicoId]);
-      });
+        const newPaciente = {dni: dni,
+          nombre: nombre,
+          fechaNacimiento: fecha,
+          genero: this.genero,
+          correo: email,
+          direccion: direccion,
+          telefono: telefono};
+        this.pacienteService.addPaciente(newPaciente).subscribe((response: any) => {
+          this.router.navigate(['home/pediatra/',this.MedicoId]);
+        });
+      }
+      else{
+        alert('DNI no valido');
+      }
     }
   }
-
-  getMedicoId(): void{
-    this.MedicoId = Number(this.route.params.subscribe(params => {
-      this.medicoService.getMedicoById(params['medicoId']).subscribe((response: any)=> {
-        this.MedicoId = params['medicoId'];
-      });
-    }));
-  }
-
 }

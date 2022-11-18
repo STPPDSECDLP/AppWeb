@@ -14,20 +14,22 @@ import {MedicoService} from "../../Shared/Service/medico.service";
 export class HomePediatraComponent implements OnInit {
   paciente: Paciente[] = [];
   listPacientes:any;
-  MedicoId!: number;
   searchText = "";
+
+  MedicoId!: number;
 
   constructor(private pacienteService : PacienteService,
               private medicoService : MedicoService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+    this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
+  }
 
   ngOnInit(): void {
     this.pacienteService.getAllPaciente().subscribe((data: any) => {
       this.paciente = data;
       this.listPacientes = data;
     });
-    this.getMedicoId();
   }
 
   Search(){
@@ -36,7 +38,7 @@ export class HomePediatraComponent implements OnInit {
       let searchValue = this.searchText.toString().toLocaleLowerCase();
 
       this.listPacientes = this.listPacientes.filter((contact:any) =>{
-        return contact.id.toString().toLocaleLowerCase().match(searchValue);
+        return contact.dni.toString().toLocaleLowerCase().match(searchValue);
         // you can keep on adding object properties here
       });
 
@@ -51,13 +53,4 @@ export class HomePediatraComponent implements OnInit {
       // if(this.searchText== ""){ you don't need this if
     }
   }
-
-  getMedicoId(): void{
-    this.MedicoId = Number(this.route.params.subscribe(params => {
-      this.medicoService.getMedicoById(params['medicoId']).subscribe((response: any)=> {
-        this.MedicoId = params['medicoId'];
-      });
-    }));
-  }
-
 }

@@ -1,1 +1,97 @@
 <app-hematologo-nav-bar></app-hematologo-nav-bar>
+<app-hematologo-home-figura></app-hematologo-home-figura>
+
+<div class="cuerpo">
+
+  <div class="contenido">
+    <div class="primera-linea">
+      <h1> Lista de pacientes </h1>
+    </div>
+
+    <div>
+      <div  class="input-group">
+        <span style="margin-top: 1%" class="input-group-text"><i class="bi bi-search"></i></span>
+        <input style="margin-top: 1%" class="form-control" type="text" [(ngModel)]="searchText"  (input)="Search()" placeholder="Buscar por DNI" />
+      </div>
+
+      <table class="table table-secondary align-middle mb-0 bg-white" style="margin-top: 1%">
+        <thead class="bg-light">
+        <tr>
+          <th>
+            <i class="bi bi-person-fill"></i>
+            Nombre
+          </th>
+          <th>
+            <i class="bi bi-lock-fill"></i>
+            DNI
+          </th>
+          <th>Prueba: Sangre Periférica</th>
+          <th>Prueba: Médula Ósea</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let group of listPacientes ">
+          <td>
+            <div class="d-flex align-items-center">
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                alt=""
+                style="width: 45px; height: 45px"
+                class="rounded-circle"
+              />
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{group.nombre}}</p>
+                <p class="text-muted mb-0">{{group.correo}}</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">{{group.dni}}</p>
+          </td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="editSangrePeriferica(group.id)">Editar</button>
+          </td>
+          <td>
+            <button type="button" class="btn" style="background-color: #7a43ee; color: white">Editar</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!--form modal-->
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">ADVERTENCIA</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h5>Ya se registro la Sangre Periferica del paciente ¿Desea continuar con la modificacion de los datos?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="width: 100px" class="btn btn-secondary" (click)="refresh()" data-bs-dismiss="modal">
+          No
+        </button>
+        <button type="button" style="width: 100px" class="btn btn-primary" (click)="saveSomeThing()">
+          Si
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

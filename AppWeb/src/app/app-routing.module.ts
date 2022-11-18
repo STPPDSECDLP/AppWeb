@@ -6,6 +6,11 @@ import {LoginPediatraComponent} from "./Security/login-pediatra/login-pediatra.c
 import {HomePediatraComponent} from "./Pediatra/home-pediatra/home-pediatra.component";
 import {HomeHematologoComponent} from "./Hematologo/home-hematologo/home-hematologo.component";
 import {RegistrarPacienteComponent} from "./Paciente/registrar-paciente/registrar-paciente.component";
+import {SangrePerifericaComponent} from "./Hematologo/sangre-periferica/sangre-periferica.component";
+import {
+  SangrePerifericaVisualizarComponent
+} from "./Pediatra/sangre-periferica-visualizar/sangre-periferica-visualizar.component";
+import {SangrePerifericaEditComponent} from "./Hematologo/sangre-periferica-edit/sangre-periferica-edit.component";
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'login'},
@@ -16,9 +21,13 @@ const routes: Routes = [
   {path:'login/pediatra', component: LoginPediatraComponent},
   {path:'home/pediatra/:medicoId', component: HomePediatraComponent},
   {path:'home/pediatra/:medicoId/registrarPaciente', component: RegistrarPacienteComponent},
+  {path:'home/pediatra/:medicoId/paciente/:pacienteId/sangrePeriferica', component: SangrePerifericaVisualizarComponent},
+
 
   //HEMATOLOGO
   {path:'home/hematologo/:medicoId', component: HomeHematologoComponent},
+  {path:'home/hematologo/:medicoId/paciente/:pacienteId/sangrePeriferica', component: SangrePerifericaComponent},
+  {path:'home/hematologo/:medicoId/paciente/:pacienteId/sangrePeriferica/:sangrePerifericaId', component: SangrePerifericaEditComponent},
 ];
 
 @NgModule({

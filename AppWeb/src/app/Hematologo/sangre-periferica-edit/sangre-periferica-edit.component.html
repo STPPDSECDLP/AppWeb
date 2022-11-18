@@ -1,0 +1,204 @@
+<app-hematologo-nav-bar></app-hematologo-nav-bar>
+<app-hematologo-sangre-periferica-figura></app-hematologo-sangre-periferica-figura>
+
+<div class="titulo">
+  <h1> Prueba: Sangre Periférica </h1>
+</div>
+
+<div class="cuerpo">
+
+  <div class="formulario">
+
+    <div class="sub-izquierda">
+
+      <div style="display: flex;">
+        <label>linfoblasto B patólogico</label>
+        <input type="number"
+               name="linfoblastoBPatologico" #linfoblastoBPatologico
+               class="form-control"
+               placeholder="{{sangrePeriferica.linfoblastoBPatologico}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>linfoblasto B normal</label>
+        <input type="number"
+               name="linfoblastoBNormal" #linfoblastoBNormal
+               class="form-control"
+               placeholder="{{sangrePeriferica.linfoblastoBNormal}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>linfocitos T</label>
+        <input type="number"
+               name="linfocitosT" #linfocitosT
+               class="form-control"
+               placeholder="{{sangrePeriferica.linfocitosT}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Serie granulocito/neutrófilo</label>
+        <input type="number"
+               name="serieGranulocitoNeutrofilo" #serieGranulocitoNeutrofilo
+               class="form-control"
+               placeholder="{{sangrePeriferica.serieGranulocitoNeutrofilo}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Eosinófilo</label>
+        <input type="number"
+               name="eosinofilo" #eosinofilo
+               class="form-control"
+               placeholder="{{sangrePeriferica.eosinofilo}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Serie eritroide</label>
+        <input type="number"
+               name="serieEritroide" #serieEritroide
+               class="form-control"
+               placeholder="{{sangrePeriferica.serieEritroide}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Celularidad de la muestra</label>
+        <input type="number"
+               name="celularidad" #celularidad
+               class="form-control"
+               placeholder="{{sangrePeriferica.celularidad}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+    </div>
+
+    <div class="sub-derecha">
+
+      <div style="display: flex;">
+        <label>Blasto mieloide</label>
+        <input type="number"
+               name="blastoMieloide" #blastoMieloide
+               class="form-control"
+               placeholder="{{sangrePeriferica.blastoMieloide}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>linf. B maduro e interm </label>
+        <input type="number"
+               name="linfBMaduroElntorm" #linfBMaduroElntorm
+               class="form-control"
+               placeholder="{{sangrePeriferica.linfBMaduroElntorm}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Células NK</label>
+        <input type="number"
+               name="celulasNK" #celulasNK
+               class="form-control"
+               placeholder="{{sangrePeriferica.celulasNK}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>serie monocítica</label>
+        <input type="number"
+               name="serieMonocitica" #serieMonocitica
+               class="form-control"
+               placeholder="{{sangrePeriferica.serieMonocitica}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Basófilo/CD</label>
+        <input type="number"
+               name="basofiloCD" #basofiloCD
+               class="form-control"
+               placeholder="{{sangrePeriferica.basofiloCD}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Plasmocito</label>
+        <input type="number"
+               name="plasmocito" #plasmocito
+               class="form-control"
+               placeholder="{{sangrePeriferica.plasmocito}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="botones">
+  <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
+  <button type="button" class="btn btn-danger" [routerLink]="['/home/hematologo/',MedicoId]"> Cancelar</button>
+</div>

@@ -1,5 +1,6 @@
 export interface Paciente {
   id: number,
+  dni: number,
   nombre: string,
   fechaNacimiento: string,
   genero: boolean,

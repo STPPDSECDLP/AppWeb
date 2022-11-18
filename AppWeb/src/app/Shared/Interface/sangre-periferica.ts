@@ -1,0 +1,17 @@
+export interface SangrePeriferica {
+  id: number,
+  pacienteId: number,
+  linfoblastoBPatologico: number,
+  blastoMieloide: number,
+  linfoblastoBNormal: number,
+  linfBMaduroElntorm: number,
+  linfocitosT: number,
+  celulasNK: number,
+  serieGranulocitoNeutrofilo: number,
+  serieMonocitica: number,
+  eosinofilo: number,
+  basofiloCD: number,
+  serieEritroide: number,
+  plasmocito: number,
+  celularidad: number,
+}

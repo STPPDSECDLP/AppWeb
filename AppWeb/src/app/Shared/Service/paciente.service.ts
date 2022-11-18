@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {Paciente} from "../Interface/paciente";
+import {Medico} from "../Interface/medico";
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,11 @@ export class PacienteService {
   addPaciente(item: any): Observable<Paciente>{
     return this.http.post<Paciente>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
+  }
+
+  getPacienteById(pacienteId: number): Observable<Paciente>{
+    return this.http.get<Paciente>(`${this.basePath}/${pacienteId}`)
+      .pipe(retry(0), catchError(this.handleError));
   }
 
 }

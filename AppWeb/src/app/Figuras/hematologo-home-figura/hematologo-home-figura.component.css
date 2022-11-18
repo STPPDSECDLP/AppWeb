@@ -1,0 +1,10 @@
+.bg {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  width:100%;
+  height: 30em;
+  border-radius: 0 0 100% 100%;
+  background-color: #0360d9;
+}

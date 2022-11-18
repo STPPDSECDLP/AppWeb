@@ -11,7 +11,7 @@
     <div>
       <div  class="input-group">
         <span style="margin-top: 1%" class="input-group-text"><i class="bi bi-search"></i></span>
-        <input style="margin-top: 1%" class="form-control" type="text" [(ngModel)]="searchText"  (input)="Search()" placeholder="Buscar por correo" />
+        <input style="margin-top: 1%" class="form-control" type="text" [(ngModel)]="searchText"  (input)="Search()" placeholder="Buscar por DNI" />
       </div>
 
       <table class="table table-secondary align-middle mb-0 bg-white" style="margin-top: 1%">
@@ -49,10 +49,10 @@
             </div>
           </td>
           <td>
-            <p class="fw-normal mb-1">{{group.id}}</p>
+            <p class="fw-normal mb-1">{{group.dni}}</p>
           </td>
           <td>
-            <button type="button" class="btn btn-success">Visualizar</button>
+            <button type="button" class="btn btn-success" [routerLink]="['/home/pediatra/',MedicoId,'paciente',group.id,'sangrePeriferica']">Visualizar</button>
           </td>
           <td>
             <button type="button" class="btn" style="background-color: #7a43ee; color: white">Visualizar</button>
@@ -67,9 +67,3 @@
 
   </div>
 </div>
-
-
-
-
-
-
