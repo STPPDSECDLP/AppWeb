@@ -20,6 +20,9 @@ import { SangrePerifericaComponent } from './Hematologo/sangre-periferica/sangre
 import { HematologoSangrePerifericaFiguraComponent } from './Figuras/hematologo-sangre-periferica-figura/hematologo-sangre-periferica-figura.component';
 import { SangrePerifericaVisualizarComponent } from './Pediatra/sangre-periferica-visualizar/sangre-periferica-visualizar.component';
 import { SangrePerifericaEditComponent } from './Hematologo/sangre-periferica-edit/sangre-periferica-edit.component';
+import { HematologoMedulaOseaFiguraComponent } from './Figuras/hematologo-medula-osea-figura/hematologo-medula-osea-figura.component';
+import { MedulaOseaComponent } from './Hematologo/medula-osea/medula-osea.component';
+import { MedulaOseaEditComponent } from './Hematologo/medula-osea-edit/medula-osea-edit.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { SangrePerifericaEditComponent } from './Hematologo/sangre-periferica-ed
     SangrePerifericaComponent,
     HematologoSangrePerifericaFiguraComponent,
     SangrePerifericaVisualizarComponent,
-    SangrePerifericaEditComponent
+    SangrePerifericaEditComponent,
+    HematologoMedulaOseaFiguraComponent,
+    MedulaOseaComponent,
+    MedulaOseaEditComponent
   ],
     imports: [
         BrowserModule,

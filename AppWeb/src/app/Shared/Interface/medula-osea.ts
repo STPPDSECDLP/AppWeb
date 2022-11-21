@@ -1,0 +1,17 @@
+export interface MedulaOsea {
+  id: number,
+  pacienteId: number,
+  linfoblastoBPatologico: number,
+  blastoMieloide: number,
+  linfoblastoBNormal: number,
+  linfBMaduroElntorm: number,
+  linfocitosTNK: number,
+  celMesenquimal: number,
+  serieGranulocitoNeutrofilo: number,
+  serieMonocitica: number,
+  eosinofilo: number,
+  basofiloCD: number,
+  serieEritroide: number,
+  plasmocito: number,
+  celularidad: number,
+}

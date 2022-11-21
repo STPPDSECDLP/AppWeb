@@ -27,24 +27,70 @@
       "direccion": "Av. Julio Cesar",
       "telefono": "999923339",
       "id": 1
+    },
+    {
+      "dni": "22456144",
+      "nombre": "Carolina",
+      "fechaNacimiento": "2022-11-14",
+      "genero": false,
+      "correo": "carol@gmail.com",
+      "direccion": "Av. Gusan",
+      "telefono": "999922113",
+      "id": 2
     }
   ],
   "sangrePeriferica": [
     {
       "pacienteId": 1,
-      "linfoblastoBPatologico": 1,
-      "blastoMieloide": 0,
-      "linfoblastoBNormal": 2,
+      "linfoblastoBPatologico": 0,
+      "blastoMieloide": 0.01,
+      "linfoblastoBNormal": 0,
       "linfBMaduroElntorm": 0.01,
-      "linfocitosT": 3,
-      "celulasNK": 0.02,
-      "serieGranulocitoNeutrofilo": 4,
-      "serieMonocitica": 0.03,
+      "linfocitosT": 0.01,
+      "celulasNK": 0.01,
+      "serieGranulocitoNeutrofilo": 0.01,
+      "serieMonocitica": 0.02,
+      "eosinofilo": 0.01,
+      "basofiloCD": 0.01,
+      "serieEritroide": 0.01,
+      "plasmocito": 0.01,
+      "celularidad": 0.01,
+      "id": 1
+    },
+    {
+      "pacienteId": 2,
+      "linfoblastoBPatologico": 5,
+      "blastoMieloide": 5,
+      "linfoblastoBNormal": 5,
+      "linfBMaduroElntorm": 5,
+      "linfocitosT": 5,
+      "celulasNK": 5,
+      "serieGranulocitoNeutrofilo": 5,
+      "serieMonocitica": 5,
       "eosinofilo": 5,
-      "basofiloCD": 0.04,
-      "serieEritroide": 6,
-      "plasmocito": 0.05,
-      "celularidad": 7,
+      "basofiloCD": 5,
+      "serieEritroide": 5,
+      "plasmocito": 5,
+      "celularidad": 5,
+      "id": 2
+    }
+  ],
+  "medulaOsea": [
+    {
+      "pacienteId": 1,
+      "linfoblastoBPatologico": 1,
+      "blastoMieloide": 1,
+      "linfoblastoBNormal": 1,
+      "linfBMaduroElntorm": 1,
+      "linfocitosTNK": 1,
+      "celMesenquimal": 1,
+      "serieGranulocitoNeutrofilo": 1,
+      "serieMonocitica": 1,
+      "eosinofilo": 1,
+      "basofiloCD": 1,
+      "serieEritroide": 1,
+      "plasmocito": 1,
+      "celularidad": 1,
       "id": 1
     }
   ]

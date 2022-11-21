@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {Paciente} from "../../Shared/Interface/paciente";
+import {Medico} from "../../Shared/Interface/medico";
 import {PacienteService} from "../../Shared/Service/paciente.service";
 import {MedicoService} from "../../Shared/Service/medico.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Paciente} from "../../Shared/Interface/paciente";
-import {Medico} from "../../Shared/Interface/medico";
 
 @Component({
-  selector: 'app-hematologo-sangre-periferica-figura',
-  templateUrl: './hematologo-sangre-periferica-figura.component.html',
-  styleUrls: ['./hematologo-sangre-periferica-figura.component.css']
+  selector: 'app-hematologo-medula-osea-figura',
+  templateUrl: './hematologo-medula-osea-figura.component.html',
+  styleUrls: ['./hematologo-medula-osea-figura.component.css']
 })
-export class HematologoSangrePerifericaFiguraComponent implements OnInit {
+export class HematologoMedulaOseaFiguraComponent implements OnInit {
   PacienteId!: number;
   paciente: Paciente;
 
@@ -44,4 +44,5 @@ export class HematologoSangrePerifericaFiguraComponent implements OnInit {
       this.medico = response;
     });
   }
+
 }

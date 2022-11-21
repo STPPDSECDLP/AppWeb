@@ -4,6 +4,7 @@ import {PacienteService} from "../../Shared/Service/paciente.service";
 import {MedicoService} from "../../Shared/Service/medico.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
+import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
 declare var window: any;
 
 @Component({
@@ -14,19 +15,26 @@ declare var window: any;
 export class HomeHematologoComponent implements OnInit {
   PacienteId!: number;
   MedicoId!: number;
-  validar: boolean = false;
-  sangrePerifericaId!: number;
+  SangrePerifericaId!: number;
+  MedulaOseaId!: number;
+
+  validarSangrePeriferica: boolean = false;
+  validarMedulaOsea: boolean = false;
+
 
   paciente: Paciente[] = [];
   listPacientes:any;
   sangrePerifericaData: any;
+  medulaOseaData: any;
 
   searchText = "";
-  formModal: any;
+  formModalSangrePeriferica: any;
+  formModalMedulaOsea: any;
 
   constructor(private pacienteService : PacienteService,
               private medicoService : MedicoService,
               private sangrePerifericaService: SangrePerifericaService,
+              private medulaOseaService: MedulaOseaService,
               private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
@@ -38,17 +46,31 @@ export class HomeHematologoComponent implements OnInit {
       this.listPacientes = data;
     });
 
-    this.formModal = new window.bootstrap.Modal(
-      document.getElementById('myModal')
+    this.formModalSangrePeriferica = new window.bootstrap.Modal(
+      document.getElementById('modalSangrePeriferica')
+    );
+
+    this.formModalMedulaOsea = new window.bootstrap.Modal(
+      document.getElementById('modalMedulaOsea')
     );
   }
 
-  openFormModal() {
-    this.formModal.show();
+  openFormModalSangrePeriferica() {
+    this.formModalSangrePeriferica.show();
   }
-  saveSomeThing() {
-    this.formModal.hide();
-    this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica',this.sangrePerifericaId]);
+
+  openFormModalMedulaOsea() {
+    this.formModalMedulaOsea.show();
+  }
+
+  saveSomeThingSangrePeriferica() {
+    this.formModalSangrePeriferica.hide();
+    this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica',this.SangrePerifericaId]);
+  }
+
+  saveSomeThingMedulaOsea() {
+    this.formModalMedulaOsea.hide();
+    this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'medulaOsea',this.MedulaOseaId]);
   }
 
   refresh(){
@@ -61,16 +83,37 @@ export class HomeHematologoComponent implements OnInit {
       this.sangrePerifericaData = data;
       for (var i = 0; i < this.sangrePerifericaData.length; i++){
         if (this.PacienteId  == this.sangrePerifericaData[i].pacienteId){
-          this.sangrePerifericaId = this.sangrePerifericaData[i].id;
-          this.validar = true;
+          this.SangrePerifericaId = this.sangrePerifericaData[i].id;
+          this.validarSangrePeriferica = true;
         }
       }
 
-      if (this.validar){
-        this.openFormModal();
+      if (this.validarSangrePeriferica){
+        this.openFormModalSangrePeriferica();
       }
       else {
         this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica']);
+      }
+
+    });
+  }
+
+  editMedulaOsea(idPaciente: number){
+    this.PacienteId = idPaciente;
+    this.medulaOseaService.getAllMedulaOsea().subscribe(data=>{
+      this.medulaOseaData = data;
+      for (var i = 0; i < this.medulaOseaData.length; i++){
+        if (this.PacienteId  == this.medulaOseaData[i].pacienteId){
+          this.MedulaOseaId = this.medulaOseaData[i].id;
+          this.validarMedulaOsea = true;
+        }
+      }
+
+      if (this.validarMedulaOsea){
+        this.openFormModalMedulaOsea();
+      }
+      else {
+        this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'medulaOsea']);
       }
 
     });
