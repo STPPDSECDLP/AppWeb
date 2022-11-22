@@ -3,6 +3,7 @@ import {Paciente} from "../../Shared/Interface/paciente";
 import {PacienteService} from "../../Shared/Service/paciente.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {MedicoService} from "../../Shared/Service/medico.service";
+import * as Util from "util";
 
 
 
@@ -31,6 +32,7 @@ export class HomePediatraComponent implements OnInit {
       this.listPacientes = data;
     });
   }
+
 
   Search(){
     // alert(this.searchText)

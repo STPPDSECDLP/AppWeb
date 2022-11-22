@@ -17,12 +17,13 @@ import { RegistrarPacienteComponent } from './Paciente/registrar-paciente/regist
 import {FormsModule} from "@angular/forms";
 import { HematologoHomeFiguraComponent } from './Figuras/hematologo-home-figura/hematologo-home-figura.component';
 import { SangrePerifericaComponent } from './Hematologo/sangre-periferica/sangre-periferica.component';
-import { HematologoSangrePerifericaFiguraComponent } from './Figuras/hematologo-sangre-periferica-figura/hematologo-sangre-periferica-figura.component';
+import { HematologoSangrePerifericaFiguraComponent } from './Figuras/sangre-periferica-figura/hematologo-sangre-periferica-figura.component';
 import { SangrePerifericaVisualizarComponent } from './Pediatra/sangre-periferica-visualizar/sangre-periferica-visualizar.component';
 import { SangrePerifericaEditComponent } from './Hematologo/sangre-periferica-edit/sangre-periferica-edit.component';
-import { HematologoMedulaOseaFiguraComponent } from './Figuras/hematologo-medula-osea-figura/hematologo-medula-osea-figura.component';
+import { HematologoMedulaOseaFiguraComponent } from './Figuras/medula-osea-figura/hematologo-medula-osea-figura.component';
 import { MedulaOseaComponent } from './Hematologo/medula-osea/medula-osea.component';
 import { MedulaOseaEditComponent } from './Hematologo/medula-osea-edit/medula-osea-edit.component';
+import { MedulaOseaVisualizarComponent } from './Pediatra/medula-osea-visualizar/medula-osea-visualizar.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MedulaOseaEditComponent } from './Hematologo/medula-osea-edit/medula-os
     SangrePerifericaEditComponent,
     HematologoMedulaOseaFiguraComponent,
     MedulaOseaComponent,
-    MedulaOseaEditComponent
+    MedulaOseaEditComponent,
+    MedulaOseaVisualizarComponent
   ],
     imports: [
         BrowserModule,

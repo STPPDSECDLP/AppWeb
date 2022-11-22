@@ -3,7 +3,6 @@ import {PacienteService} from "../../Shared/Service/paciente.service";
 import {MedicoService} from "../../Shared/Service/medico.service";
 import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Paciente} from "../../Shared/Interface/paciente";
 import {SangrePeriferica} from "../../Shared/Interface/sangre-periferica";
 
 @Component({

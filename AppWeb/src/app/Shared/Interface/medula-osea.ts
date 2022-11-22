@@ -4,7 +4,7 @@ export interface MedulaOsea {
   linfoblastoBPatologico: number,
   blastoMieloide: number,
   linfoblastoBNormal: number,
-  linfBMaduroElntorm: number,
+  linfBMaduroEInterm: number,
   linfocitosTNK: number,
   celMesenquimal: number,
   serieGranulocitoNeutrofilo: number,

@@ -16,7 +16,7 @@ export class SangrePerifericaComponent implements OnInit {
   @ViewChild("linfoblastoBPatologico") linfoblastoBPatologico! : ElementRef;
   @ViewChild("blastoMieloide") blastoMieloide! : ElementRef;
   @ViewChild("linfoblastoBNormal") linfoblastoBNormal! : ElementRef;
-  @ViewChild("linfBMaduroElntorm") linfBMaduroElntorm! : ElementRef;
+  @ViewChild("linfBMaduroEInterm") linfBMaduroEInterm! : ElementRef;
   @ViewChild("linfocitosT") linfocitosT! : ElementRef;
   @ViewChild("celulasNK") celulasNK! : ElementRef;
   @ViewChild("serieGranulocitoNeutrofilo") serieGranulocitoNeutrofilo! : ElementRef;
@@ -43,7 +43,7 @@ export class SangrePerifericaComponent implements OnInit {
     var linfoblastoBPatologico = this.linfoblastoBPatologico.nativeElement.value;
     var blastoMieloide = this.blastoMieloide.nativeElement.value;
     var linfoblastoBNormal = this.linfoblastoBNormal.nativeElement.value;
-    var linfBMaduroElntorm = this.linfBMaduroElntorm.nativeElement.value;
+    var linfBMaduroEInterm = this.linfBMaduroEInterm.nativeElement.value;
     var linfocitosT = this.linfocitosT.nativeElement.value;
     var celulasNK = this.celulasNK.nativeElement.value;
     var serieGranulocitoNeutrofilo = this.serieGranulocitoNeutrofilo.nativeElement.value;
@@ -54,7 +54,7 @@ export class SangrePerifericaComponent implements OnInit {
     var plasmocito = this.plasmocito.nativeElement.value;
     var celularidad = this.celularidad.nativeElement.value;
 
-    if(linfoblastoBPatologico == '' || blastoMieloide == '' || linfoblastoBNormal == '' || linfBMaduroElntorm == '' ||
+    if(linfoblastoBPatologico == '' || blastoMieloide == '' || linfoblastoBNormal == '' || linfBMaduroEInterm == '' ||
       linfocitosT == '' || celulasNK == '' || serieGranulocitoNeutrofilo == '' || serieMonocitica == '' ||
       eosinofilo == '' || basofiloCD == '' || serieEritroide == '' || plasmocito == '' || celularidad == ''){
       alert("Complete todos los campos");
@@ -63,7 +63,7 @@ export class SangrePerifericaComponent implements OnInit {
       let a = parseFloat(linfoblastoBPatologico);
       let b = parseFloat(blastoMieloide);
       let c = parseFloat(linfoblastoBNormal);
-      let d = parseFloat(linfBMaduroElntorm);
+      let d = parseFloat(linfBMaduroEInterm);
       let e = parseFloat(linfocitosT);
       let f = parseFloat(celulasNK);
       let g = parseFloat(serieGranulocitoNeutrofilo);
@@ -79,7 +79,7 @@ export class SangrePerifericaComponent implements OnInit {
         linfoblastoBPatologico: a,
         blastoMieloide: b,
         linfoblastoBNormal: c,
-        linfBMaduroElntorm: d,
+        linfBMaduroEInterm: d,
         linfocitosT: e,
         celulasNK: f,
         serieGranulocitoNeutrofilo: g,

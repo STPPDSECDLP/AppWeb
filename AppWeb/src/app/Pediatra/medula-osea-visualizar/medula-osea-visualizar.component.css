@@ -1,0 +1,64 @@
+.cuerpo{
+  display: flex;
+}
+
+.contenido{
+  width: 90%;
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  right: 5%;
+}
+
+.titulo{
+  margin-top: 3%;
+  text-align: center;
+  color: #42505c;
+}
+
+.derecha{
+  text-align: right;
+}
+
+.formulario{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.sub-izquierda{
+  width: 30em;
+  margin: 0;
+}
+
+.sub-izquierda label{
+  width: 15em;
+}
+
+.sub-izquierda input{
+  width: 6em;
+}
+
+.sub-derecha{
+  width: 30em;
+  margin: 0;
+}
+
+.sub-derecha label{
+  width: 15em;
+}
+
+.sub-derecha input{
+  width: 6em;
+}
+
+.botones{
+  margin-top: 2%;
+  text-align: center;
+}
+
+.botones button{
+  width: 7em;
+  margin-right: 7%;
+}

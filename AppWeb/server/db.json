@@ -21,7 +21,7 @@
     {
       "dni": "75055044",
       "nombre": "Mark Albert",
-      "fechaNacimiento": "2001-03-03",
+      "fechaNacimiento": "2001-04-03",
       "genero": true,
       "correo": "markalbert_09@hotmail.com",
       "direccion": "Av. Julio Cesar",
@@ -42,48 +42,12 @@
   "sangrePeriferica": [
     {
       "pacienteId": 1,
-      "linfoblastoBPatologico": 0,
-      "blastoMieloide": 0.01,
-      "linfoblastoBNormal": 0,
-      "linfBMaduroElntorm": 0.01,
-      "linfocitosT": 0.01,
-      "celulasNK": 0.01,
-      "serieGranulocitoNeutrofilo": 0.01,
-      "serieMonocitica": 0.02,
-      "eosinofilo": 0.01,
-      "basofiloCD": 0.01,
-      "serieEritroide": 0.01,
-      "plasmocito": 0.01,
-      "celularidad": 0.01,
-      "id": 1
-    },
-    {
-      "pacienteId": 2,
-      "linfoblastoBPatologico": 5,
-      "blastoMieloide": 5,
-      "linfoblastoBNormal": 5,
-      "linfBMaduroElntorm": 5,
-      "linfocitosT": 5,
-      "celulasNK": 5,
-      "serieGranulocitoNeutrofilo": 5,
-      "serieMonocitica": 5,
-      "eosinofilo": 5,
-      "basofiloCD": 5,
-      "serieEritroide": 5,
-      "plasmocito": 5,
-      "celularidad": 5,
-      "id": 2
-    }
-  ],
-  "medulaOsea": [
-    {
-      "pacienteId": 1,
       "linfoblastoBPatologico": 1,
       "blastoMieloide": 1,
       "linfoblastoBNormal": 1,
-      "linfBMaduroElntorm": 1,
-      "linfocitosTNK": 1,
-      "celMesenquimal": 1,
+      "linfBMaduroEInterm": 1,
+      "linfocitosT": 1,
+      "celulasNK": 1,
       "serieGranulocitoNeutrofilo": 1,
       "serieMonocitica": 1,
       "eosinofilo": 1,
@@ -92,6 +56,59 @@
       "plasmocito": 1,
       "celularidad": 1,
       "id": 1
+    },
+    {
+      "pacienteId": 2,
+      "linfoblastoBPatologico": 2,
+      "blastoMieloide": 2,
+      "linfoblastoBNormal": 2,
+      "linfBMaduroEInterm": 2,
+      "linfocitosT": 2,
+      "celulasNK": 2,
+      "serieGranulocitoNeutrofilo": 2,
+      "serieMonocitica": 2,
+      "eosinofilo": 2,
+      "basofiloCD": 2,
+      "serieEritroide": 2,
+      "plasmocito": 2,
+      "celularidad": 2,
+      "id": 2
+    }
+  ],
+  "medulaOsea": [
+    {
+      "pacienteId": 1,
+      "linfoblastoBPatologico": 0,
+      "blastoMieloide": 1,
+      "linfoblastoBNormal": 2,
+      "linfBMaduroEInterm": 2,
+      "linfocitosTNK": 2,
+      "celMesenquimal": 1,
+      "serieGranulocitoNeutrofilo": 2,
+      "serieMonocitica": 5,
+      "eosinofilo": 3,
+      "basofiloCD": 3,
+      "serieEritroide": 4,
+      "plasmocito": 4,
+      "celularidad": 5,
+      "id": 1
+    },
+    {
+      "pacienteId": 2,
+      "linfoblastoBPatologico": 0,
+      "blastoMieloide": 0,
+      "linfoblastoBNormal": 0,
+      "linfBMaduroEInterm": 0,
+      "linfocitosTNK": 0,
+      "celMesenquimal": 0,
+      "serieGranulocitoNeutrofilo": 0,
+      "serieMonocitica": 0,
+      "eosinofilo": 0,
+      "basofiloCD": 0,
+      "serieEritroide": 0,
+      "plasmocito": 0,
+      "celularidad": 0,
+      "id": 2
     }
   ]
 }

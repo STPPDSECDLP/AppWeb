@@ -4,7 +4,7 @@ export interface SangrePeriferica {
   linfoblastoBPatologico: number,
   blastoMieloide: number,
   linfoblastoBNormal: number,
-  linfBMaduroElntorm: number,
+  linfBMaduroEInterm: number,
   linfocitosT: number,
   celulasNK: number,
   serieGranulocitoNeutrofilo: number,
