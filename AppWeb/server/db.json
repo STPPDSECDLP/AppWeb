@@ -19,96 +19,26 @@
   ],
   "paciente": [
     {
-      "dni": "75055044",
+      "dni": "12345678",
       "nombre": "Mark Albert",
-      "fechaNacimiento": "2001-04-03",
+      "fechaNacimiento": "2022-11-01",
       "genero": true,
       "correo": "markalbert_09@hotmail.com",
-      "direccion": "Av. Julio Cesar",
+      "direccion": "Jr. Huiracocha 2083",
       "telefono": "999923339",
       "id": 1
     },
     {
-      "dni": "22456144",
-      "nombre": "Carolina",
-      "fechaNacimiento": "2022-11-14",
+      "dni": "12345679",
+      "nombre": "Katerin",
+      "fechaNacimiento": "2022-11-03",
       "genero": false,
-      "correo": "carol@gmail.com",
-      "direccion": "Av. Gusan",
-      "telefono": "999922113",
+      "correo": "admin@gmail.com",
+      "direccion": "Jr. Huiracocha 2083",
+      "telefono": "999923339",
       "id": 2
     }
   ],
-  "sangrePeriferica": [
-    {
-      "pacienteId": 1,
-      "linfoblastoBPatologico": 1,
-      "blastoMieloide": 1,
-      "linfoblastoBNormal": 1,
-      "linfBMaduroEInterm": 1,
-      "linfocitosT": 1,
-      "celulasNK": 1,
-      "serieGranulocitoNeutrofilo": 1,
-      "serieMonocitica": 1,
-      "eosinofilo": 1,
-      "basofiloCD": 1,
-      "serieEritroide": 1,
-      "plasmocito": 1,
-      "celularidad": 1,
-      "id": 1
-    },
-    {
-      "pacienteId": 2,
-      "linfoblastoBPatologico": 2,
-      "blastoMieloide": 2,
-      "linfoblastoBNormal": 2,
-      "linfBMaduroEInterm": 2,
-      "linfocitosT": 2,
-      "celulasNK": 2,
-      "serieGranulocitoNeutrofilo": 2,
-      "serieMonocitica": 2,
-      "eosinofilo": 2,
-      "basofiloCD": 2,
-      "serieEritroide": 2,
-      "plasmocito": 2,
-      "celularidad": 2,
-      "id": 2
-    }
-  ],
-  "medulaOsea": [
-    {
-      "pacienteId": 1,
-      "linfoblastoBPatologico": 0,
-      "blastoMieloide": 1,
-      "linfoblastoBNormal": 2,
-      "linfBMaduroEInterm": 2,
-      "linfocitosTNK": 2,
-      "celMesenquimal": 1,
-      "serieGranulocitoNeutrofilo": 2,
-      "serieMonocitica": 5,
-      "eosinofilo": 3,
-      "basofiloCD": 3,
-      "serieEritroide": 4,
-      "plasmocito": 4,
-      "celularidad": 5,
-      "id": 1
-    },
-    {
-      "pacienteId": 2,
-      "linfoblastoBPatologico": 0,
-      "blastoMieloide": 0,
-      "linfoblastoBNormal": 0,
-      "linfBMaduroEInterm": 0,
-      "linfocitosTNK": 0,
-      "celMesenquimal": 0,
-      "serieGranulocitoNeutrofilo": 0,
-      "serieMonocitica": 0,
-      "eosinofilo": 0,
-      "basofiloCD": 0,
-      "serieEritroide": 0,
-      "plasmocito": 0,
-      "celularidad": 0,
-      "id": 2
-    }
-  ]
+  "sangrePeriferica": [],
+  "medulaOsea": []
 }

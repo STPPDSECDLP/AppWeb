@@ -14,6 +14,9 @@ export class RegistrarPacienteComponent implements OnInit {
   genero:boolean = false;
   MedicoId!: number;
   id!: number;
+  validador: boolean = false;
+
+  listPacientes:any;
 
   @ViewChild("nombre") nombre! : ElementRef;
   @ViewChild("direccion") direccion! : ElementRef;
@@ -30,6 +33,9 @@ export class RegistrarPacienteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.pacienteService.getAllPaciente().subscribe((data: any) => {
+      this.listPacientes = data;
+    });
   }
 
   getSexo(event: any){
@@ -58,6 +64,7 @@ export class RegistrarPacienteComponent implements OnInit {
       alert("Complete todos los campos");
     }
     else {
+      //Validacion Genero
       if (this.box == 1){
         this.genero = true;
       }
@@ -65,23 +72,46 @@ export class RegistrarPacienteComponent implements OnInit {
         this.genero = false;
       }
 
-      if (dni.length == 8){
-        this.id = Number(dni);
+      //Validacion DNI y Numero de Telefono
 
-        const newPaciente = {dni: dni,
-          nombre: nombre,
-          fechaNacimiento: fecha,
-          genero: this.genero,
-          correo: email,
-          direccion: direccion,
-          telefono: telefono};
-        this.pacienteService.addPaciente(newPaciente).subscribe((response: any) => {
-          this.router.navigate(['home/pediatra/',this.MedicoId]);
-        });
+      if (dni.length == 8 && telefono.length == 9){
+        if (telefono[0] == 9){
+          for (var i = 0; i < this.listPacientes.length; i++){
+            if (dni == this.listPacientes[i].dni){
+              this.validador = true;
+            }
+          }
+
+          if (this.validador){
+            this.validador = false;
+            alert("PRECAUCION: DNI REGISTRADO");
+          }
+          else {
+            const newPaciente = {dni: dni,
+              nombre: nombre,
+              fechaNacimiento: fecha,
+              genero: this.genero,
+              correo: email,
+              direccion: direccion,
+              telefono: telefono};
+            this.pacienteService.addPaciente(newPaciente).subscribe((response: any) => {
+              this.router.navigate(['home/pediatra/',this.MedicoId]);
+            });
+          }
+
+        }else {
+          alert('Número de telefono no valido');
+        }
       }
       else{
-        alert('DNI no valido');
+        if (dni.length != 8){
+          alert('DNI no valido');
+        }
+        if (telefono.length != 9){
+          alert('Número de telefono no valido');
+        }
       }
+
     }
   }
 }
