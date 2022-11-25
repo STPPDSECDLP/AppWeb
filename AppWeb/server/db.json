@@ -19,26 +19,53 @@
   ],
   "paciente": [
     {
-      "dni": "12345678",
+      "dni": "72134200",
       "nombre": "Mark Albert",
-      "fechaNacimiento": "2022-11-01",
+      "fechaNacimiento": "2001-03-04",
       "genero": true,
       "correo": "markalbert_09@hotmail.com",
-      "direccion": "Jr. Huiracocha 2083",
-      "telefono": "999923339",
+      "direccion": "Av. Brasil",
+      "telefono": "992343221",
       "id": 1
-    },
-    {
-      "dni": "12345679",
-      "nombre": "Katerin",
-      "fechaNacimiento": "2022-11-03",
-      "genero": false,
-      "correo": "admin@gmail.com",
-      "direccion": "Jr. Huiracocha 2083",
-      "telefono": "999923339",
-      "id": 2
     }
   ],
-  "sangrePeriferica": [],
-  "medulaOsea": []
+  "sangrePeriferica": [
+    {
+      "pacienteId": 1,
+      "linfoblastoBPatologico": 50,
+      "blastoMieloide": 0.27,
+      "linfoblastoBNormal": 3,
+      "linfBMaduroEInterm": 0.19,
+      "linfocitosT": 4,
+      "celulasNK": 0.11,
+      "serieGranulocitoNeutrofilo": 21,
+      "serieMonocitica": 0.15,
+      "eosinofilo": 2,
+      "basofiloCD": 0.14,
+      "serieEritroide": 0.04,
+      "plasmocito": 0.14,
+      "celularidad": 0.18,
+      "id": 1
+    }
+  ],
+  "medulaOsea": [
+    {
+      "pacienteId": 1,
+      "linfoblastoBPatologico": 0.1,
+      "blastoMieloide": 0,
+      "linfoblastoBNormal": 0.19,
+      "linfBMaduroEInterm": 0.05,
+      "linfocitosTNK": 0.21,
+      "celMesenquimal": 0.01,
+      "serieGranulocitoNeutrofilo": 0.07,
+      "serieMonocitica": 0,
+      "eosinofilo": 0.08,
+      "basofiloCD": 0,
+      "serieEritroide": 0.05,
+      "plasmocito": 0,
+      "celularidad": 0.01,
+      "id": 1
+    }
+  ],
+  "reporte": []
 }

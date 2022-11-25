@@ -1,0 +1,27 @@
+<div class="bg"></div>
+
+<div class="cuerpo">
+
+  <div class="formulario">
+
+    <div class="izquierda">
+      <h3> Datos del paciente</h3>
+      <span> Nombre: {{paciente.nombre}}</span> <br>
+      <span> Edad: {{anioNacimiento}} años {{mesNacimiento}} meses {{diaNacimiento}} días</span> <br>
+      <div *ngIf="paciente.genero">
+        <span> Sexo: Masculino</span> <br>
+      </div>
+      <div *ngIf="!paciente.genero">
+        <span> Sexo: Femenino</span> <br>
+      </div>
+      <span> Muestra: Sangre Periférica y Médula Ósea </span> <br>
+      <span> Médico: {{medico.nombre}} </span> <br>
+    </div>
+
+    <div class="derecha">
+      <span> Institución: {{medico.institucion}} </span> <br>
+    </div>
+
+  </div>
+
+</div>
