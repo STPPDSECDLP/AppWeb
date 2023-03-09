@@ -8,10 +8,10 @@
       <h3> Datos del paciente</h3>
       <span> Nombre: {{paciente.nombre}}</span> <br>
       <span> Edad: {{anioNacimiento}} años {{mesNacimiento}} meses {{diaNacimiento}} días</span> <br>
-      <div *ngIf="paciente.genero">
+      <div *ngIf="paciente.sexo">
         <span> Sexo: Masculino</span> <br>
       </div>
-      <div *ngIf="!paciente.genero">
+      <div *ngIf="!paciente.sexo">
         <span> Sexo: Femenino</span> <br>
       </div>
       <span> Muestra: Sangre Periférica </span> <br>

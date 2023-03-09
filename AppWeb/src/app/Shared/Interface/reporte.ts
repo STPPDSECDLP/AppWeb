@@ -4,6 +4,7 @@ export interface Reporte {
   medicoId: number,
   sangrePerifericaId: number,
   medulaOseaId: number,
+  prediccion: string,
   comentario: string,
   observacion: string
 }

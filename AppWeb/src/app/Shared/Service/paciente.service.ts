@@ -8,7 +8,7 @@ import {Medico} from "../Interface/medico";
   providedIn: 'root'
 })
 export class PacienteService {
-  basePath = 'http://localhost:3000/paciente';
+  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/paciente';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
