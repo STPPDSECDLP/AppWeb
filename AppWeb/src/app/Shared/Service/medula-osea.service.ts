@@ -7,7 +7,7 @@ import {MedulaOsea} from "../Interface/medula-osea";
   providedIn: 'root'
 })
 export class MedulaOseaService {
-  basePath = 'http://localhost:3000/medulaOsea';
+  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/medulaosea';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
@@ -28,8 +28,8 @@ export class MedulaOseaService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  updateMedulaOsea(id: number, item: any): Observable<MedulaOsea>{
-    return this.http.put<MedulaOsea>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+  updateMedulaOsea(item: any): Observable<MedulaOsea>{
+    return this.http.put<MedulaOsea>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
@@ -39,7 +39,7 @@ export class MedulaOseaService {
   }
 
   getMedulaOseaById(sangrePerifericaId: number): Observable<MedulaOsea>{
-    return this.http.get<MedulaOsea>(`${this.basePath}/${sangrePerifericaId}`)
+    return this.http.get<MedulaOsea>(`${this.basePath}?id=${sangrePerifericaId}`)
       .pipe(retry(0), catchError(this.handleError));
   }
 }

@@ -7,7 +7,7 @@ import {Medico} from "../Interface/medico";
   providedIn: 'root'
 })
 export class MedicoService {
-  basePath = 'http://localhost:3000/medico';
+  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/medico';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
   constructor(private http: HttpClient) { }
@@ -22,7 +22,7 @@ export class MedicoService {
   }
 
   getMedicoById(medicoId: number): Observable<Medico>{
-    return this.http.get<Medico>(`${this.basePath}/${medicoId}`)
+    return this.http.get<Medico>(`${this.basePath}?id=${medicoId}`)
       .pipe(retry(0), catchError(this.handleError));
   }
 }

@@ -28,15 +28,13 @@ export class LoginHematologoComponent implements OnInit {
   logIn():void {
     var codigo = this.codigo.nativeElement.value;
     var contra = this.password.nativeElement.value;
-    console.log("this.medico");
-    console.log(this.medico);
     for (var i = 0; i < this.medico.length; i++){
       if (codigo == this.medico[i].codigo && contra == this.medico[i].clave && !this.medico[i].tipo){
         this.validacion = true;
         this.ingresante = this.medico[i].id;
       }
     }
-    if (this.validacion || !this.validacion){
+    if (this.validacion){
       this._router.navigate([`/home/hematologo/${this.ingresante}`]);
     }
     else{

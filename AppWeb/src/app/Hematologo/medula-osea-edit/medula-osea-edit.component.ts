@@ -102,11 +102,11 @@ export class MedulaOseaEditComponent implements OnInit {
         linfoblastoBPatologico: a,
         blastoMieloide: b,
         linfoblastoBNormal: c,
-        linfBMaduroEInterm: d,
+        linfBMaduroEinterm: d,
         linfocitosTNK: e,
         celMesenquimal: f,
         serieGranulocitoNeutrofilo: g,
-        serieMonocitica: h,
+        serieMonocritica: h,
         eosinofilo: i,
         basofiloCD: j,
         serieEritroide: k,
@@ -114,7 +114,7 @@ export class MedulaOseaEditComponent implements OnInit {
         celularidad: m
       };
 
-      this.medulaOseaService.updateMedulaOsea(this.MedulaOseaId,medulaOseaNew).subscribe((response: any) => {
+      this.medulaOseaService.updateMedulaOsea(medulaOseaNew).subscribe((response: any) => {
         this.router.navigate(['home/hematologo/',this.MedicoId]);
       });
     }

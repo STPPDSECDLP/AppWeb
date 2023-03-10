@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class RegistrarPacienteComponent implements OnInit {
   box: number = 0;
   selecteEstado: string = '';
-  genero:boolean = false;
+  sexo: string = '';
   MedicoId!: number;
   id!: number;
   validador: boolean = false;
@@ -64,12 +64,12 @@ export class RegistrarPacienteComponent implements OnInit {
       alert("Complete todos los campos");
     }
     else {
-      //Validacion Genero
+      //Validacion sexo
       if (this.box == 1){
-        this.genero = true;
+        this.sexo = "Masculino";
       }
       else {
-        this.genero = false;
+        this.sexo = "Femenino";
       }
 
       //Validacion DNI y Numero de Telefono
@@ -90,7 +90,7 @@ export class RegistrarPacienteComponent implements OnInit {
             const newPaciente = {dni: dni,
               nombre: nombre,
               fechaNacimiento: fecha,
-              genero: this.genero,
+              sexo: this.sexo,
               correo: email,
               direccion: direccion,
               telefono: telefono};

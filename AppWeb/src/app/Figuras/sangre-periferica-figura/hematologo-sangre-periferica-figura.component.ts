@@ -40,7 +40,7 @@ export class HematologoSangrePerifericaFiguraComponent implements OnInit {
 
   getPacienteId(): void{
     this.pacienteService.getPacienteById(this.PacienteId).subscribe((response: any)=> {
-      this.paciente = response;
+      this.paciente = response[0];
 
       this.convertDate(this.paciente.fechaNacimiento);
       this.CalcularEdad();
@@ -88,7 +88,7 @@ export class HematologoSangrePerifericaFiguraComponent implements OnInit {
 
   getMedicoId(): void{
     this.medicoService.getMedicoById(this.MedicoId).subscribe((response: any)=> {
-      this.medico = response;
+      this.medico = response[0];
     });
   }
 }

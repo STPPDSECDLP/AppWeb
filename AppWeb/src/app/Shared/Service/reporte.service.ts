@@ -8,7 +8,7 @@ import {Reporte} from "../Interface/reporte";
   providedIn: 'root'
 })
 export class ReporteService {
-  basePath = 'http://localhost:3000/reporte';
+  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/reporte';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 

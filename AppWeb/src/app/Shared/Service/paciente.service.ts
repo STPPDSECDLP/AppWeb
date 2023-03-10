@@ -35,7 +35,7 @@ export class PacienteService {
   }
 
   getPacienteById(pacienteId: number): Observable<Paciente>{
-    return this.http.get<Paciente>(`${this.basePath}/${pacienteId}`)
+    return this.http.get<Paciente>(`${this.basePath}?id=${pacienteId}`)
       .pipe(retry(0), catchError(this.handleError));
   }
 

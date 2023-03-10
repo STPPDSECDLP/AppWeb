@@ -37,8 +37,8 @@ export class SangrePerifericaVisualizarComponent implements OnInit {
       this.sangrePerifericaData = data;
       for (var i = 0; i < this.sangrePerifericaData.length; i++){
         if (this.PacienteId == this.sangrePerifericaData[i].pacienteId){
-          this.sangrePerifericaService.getSangrePerifericaById(this.sangrePerifericaData[i].id).subscribe(response => {
-            this.sangrePeriferica = response;
+          this.sangrePerifericaService.getSangrePerifericaById(this.sangrePerifericaData[i].id).subscribe((response:any) => {
+            this.sangrePeriferica = response[0];
             this.validar = true;
           })
         }

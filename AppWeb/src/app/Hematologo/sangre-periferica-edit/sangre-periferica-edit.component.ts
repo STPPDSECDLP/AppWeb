@@ -100,11 +100,11 @@ export class SangrePerifericaEditComponent implements OnInit {
         linfoblastoBPatologico: a,
         blastoMieloide: b,
         linfoblastoBNormal: c,
-        linfBMaduroEInterm: d,
+        linfBMaduroEinterm: d,
         linfocitosT: e,
         celulasNK: f,
         serieGranulocitoNeutrofilo: g,
-        serieMonocitica: h,
+        serieMonocritica: h,
         eosinofilo: i,
         basofiloCD: j,
         serieEritroide: k,
@@ -112,7 +112,7 @@ export class SangrePerifericaEditComponent implements OnInit {
         celularidad: m
       };
 
-      this.sangrePerifericaService.updateSangrePeriferica(this.sangrePerifericaId,sangrePerifericaNew).subscribe((response: any) => {
+      this.sangrePerifericaService.updateSangrePeriferica(sangrePerifericaNew).subscribe((response: any) => {
         this.router.navigate(['home/hematologo/',this.MedicoId]);
       });
     }

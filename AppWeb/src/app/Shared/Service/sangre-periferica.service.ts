@@ -8,7 +8,7 @@ import {SangrePeriferica} from "../Interface/sangre-periferica";
   providedIn: 'root'
 })
 export class SangrePerifericaService {
-  basePath = 'http://localhost:3000/sangrePeriferica';
+  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/sangreperiferica';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
@@ -29,8 +29,8 @@ export class SangrePerifericaService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  updateSangrePeriferica(id: number, item: any): Observable<SangrePeriferica>{
-    return this.http.put<SangrePeriferica>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+  updateSangrePeriferica(item: any): Observable<SangrePeriferica>{
+    return this.http.put<SangrePeriferica>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
@@ -40,7 +40,7 @@ export class SangrePerifericaService {
   }
 
   getSangrePerifericaById(sangrePerifericaId: number): Observable<SangrePeriferica>{
-    return this.http.get<SangrePeriferica>(`${this.basePath}/${sangrePerifericaId}`)
+    return this.http.get<SangrePeriferica>(`${this.basePath}?id=${sangrePerifericaId}`)
       .pipe(retry(0), catchError(this.handleError));
   }
 }
