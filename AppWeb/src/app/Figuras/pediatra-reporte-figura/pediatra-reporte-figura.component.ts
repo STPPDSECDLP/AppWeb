@@ -40,21 +40,13 @@ export class PediatraReporteFiguraComponent implements OnInit {
 
   getPacienteId(): void{
     this.pacienteService.getPacienteById(this.PacienteId).subscribe((response: any)=> {
-      this.paciente = response;
-
-      this.convertDate(this.paciente.fechaNacimiento);
+      this.paciente = response[0];
+      var date = new Date(this.paciente.fechaNacimiento);
+      this.anioNacimiento = date.getFullYear();
+      this.mesNacimiento = date.getMonth() + 1;
+      this.diaNacimiento = date.getDate();
       this.CalcularEdad();
     });
-  }
-
-  convertDate(dateString: string){
-    let d = dateString.split("/");
-    let dat = new Date(d[2] + '/' + d[1] + '/' + d[0]);
-
-    this.anioNacimiento = dat.getFullYear();
-    this.mesNacimiento = dat.getMonth() + 1;
-    this.diaNacimiento = dat.getDate();
-    return dat;
   }
 
   CalcularEdad() {
