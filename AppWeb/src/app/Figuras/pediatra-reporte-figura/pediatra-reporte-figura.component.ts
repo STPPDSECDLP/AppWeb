@@ -80,7 +80,7 @@ export class PediatraReporteFiguraComponent implements OnInit {
 
   getMedicoId(): void{
     this.medicoService.getMedicoById(this.MedicoId).subscribe((response: any)=> {
-      this.medico = response;
+      this.medico = response[0];
     });
   }
 }

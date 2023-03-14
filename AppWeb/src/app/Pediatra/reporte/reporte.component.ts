@@ -32,9 +32,7 @@ export class ReporteComponent implements OnInit {
   sangrePerifericaData: any;
   sangrePeriferica: SangrePeriferica;
 
-  constructor(private pacienteService: PacienteService,
-              private medicoService : MedicoService,
-              private sangrePerifericaService: SangrePerifericaService,
+  constructor(private sangrePerifericaService: SangrePerifericaService,
               private reporteService: ReporteService,
               private medulaOseaService: MedulaOseaService,
               private router: Router,
@@ -56,8 +54,8 @@ export class ReporteComponent implements OnInit {
       for (var i = 0; i < this.sangrePerifericaData.length; i++){
         if (this.PacienteId == this.sangrePerifericaData[i].pacienteId){
           this.SangrePerifericaId = this.sangrePerifericaData[i].id;
-          this.sangrePerifericaService.getSangrePerifericaById(this.sangrePerifericaData[i].id).subscribe(response => {
-            this.sangrePeriferica = response;
+          this.sangrePerifericaService.getSangrePerifericaById(this.sangrePerifericaData[i].id).subscribe((response:any) => {
+            this.sangrePeriferica = response[0];
             this.validar = true;
           })
         }
@@ -71,8 +69,8 @@ export class ReporteComponent implements OnInit {
       for (var i = 0; i < this.medulaOseaData.length; i++){
         if (this.PacienteId == this.medulaOseaData[i].pacienteId){
           this.MedulaOseaId = this.medulaOseaData[i].id;
-          this.medulaOseaService.getMedulaOseaById(this.medulaOseaData[i].id).subscribe(response => {
-            this.medulaOsea = response;
+          this.medulaOseaService.getMedulaOseaById(this.medulaOseaData[i].id).subscribe((response: any) => {
+            this.medulaOsea = response[0];
             this.validarMedulaOsea = true;
           })
         }
@@ -92,6 +90,7 @@ export class ReporteComponent implements OnInit {
         medicoId: medicoId,
         sangrePerifericaId: this.SangrePerifericaId,
         medulaOseaId: this.MedulaOseaId,
+        prediccion: "Positivo", // TEMPORAL HASTA TENER LA PREDICCIÓN CON ML
         comentario: comentario,
         observacion: observacion
     };

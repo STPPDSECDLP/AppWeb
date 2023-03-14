@@ -54,8 +54,8 @@ export class MedulaOseaEditComponent implements OnInit {
       this.medulaOseaData = data;
       for (var i = 0; i < this.medulaOseaData.length; i++){
         if (this.PacienteId == this.medulaOseaData[i].pacienteId){
-          this.medulaOseaService.getMedulaOseaById(this.medulaOseaData[i].id).subscribe(response => {
-            this.medulaOsea = response;
+          this.medulaOseaService.getMedulaOseaById(this.medulaOseaData[i].id).subscribe((response: any) => {
+            this.medulaOsea = response[0];
           })
         }
       }
