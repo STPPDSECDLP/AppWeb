@@ -314,10 +314,13 @@
   <div class="rounded-md bg-yellow-50 p-4">
     <div class="flex">
       <div class="ml-3">
-        <h2 class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Predicción:</h2>
-        <h3 class="text-sm font-medium text-yellow-800">$Resultado</h3>
+        <div class="botones">
+          <button type="button" class="btn btn-primary" (click)="getPrediction()">Predecir</button>
+        </div>
+        <input type="text" class="mt-2" placeholder="{{prediccionResult}}"
+              disabled=disabled>
         <div class="mt-2 text-sm text-yellow-700">
-          <p>Nota: Lorem ipsum dolor sit amet consectetur adipisicing elit. um dolor sit amet consectetur adum dolor sit amet consectetur adum dolor sit amet consectetur adum dolor sit amet consectetur adum dolor sit amet consectetur ad Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.</p>
+          <p>IMPORTANTE: El análisis basado en inteligencia artificial no pretende reemplazar el criterio médico. Considerar como herramienta de asistencia.</p>
         </div>
       </div>
     </div>

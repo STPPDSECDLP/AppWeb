@@ -50,9 +50,8 @@ export class ReporteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.getReturnDataPacient();
-    //this.getReturnDataPacientMedulaOsea();
-    this.getPrediction();
+    this.getReturnDataPacient();
+    this.getReturnDataPacientMedulaOsea();
   }
 
   getReturnDataPacient(){
@@ -85,38 +84,36 @@ export class ReporteComponent implements OnInit {
     })
   }
 
-  getPrediction(){
-    this.getReturnDataPacient();
-    this.getReturnDataPacientMedulaOsea();
+  getPrediction() : void{
 
-    console.log(this.sangrePeriferica.linfBMaduroEinterm.toString())
+    const a = this.sangrePeriferica.linfoblastoBPatologico.toString() 
+    const b = this.sangrePeriferica.blastoMieloide.toString() 
+    const c = this.sangrePeriferica.linfoblastoBNormal.toString() 
+    const d = this.sangrePeriferica.linfBMaduroEinterm.toString() 
+    const e = this.sangrePeriferica.linfocitosT.toString() 
+    const f = this.sangrePeriferica.celulasNK.toString() 
+    const g= this.sangrePeriferica.serieGranulocitoNeutrofilo.toString() 
+    const h= this.sangrePeriferica.serieMonocritica.toString() 
+    const i= this.sangrePeriferica.eosinofilo.toString() 
+    const j= this.sangrePeriferica.basofiloCD.toString() 
+    const k= this.sangrePeriferica.serieEritroide.toString() 
+    const l= this.sangrePeriferica.plasmocito.toString() 
+    const m= this.sangrePeriferica.celularidad.toString()
+    const n= this.medulaOsea.linfoblastoBPatologico.toString()
+    const o= this.medulaOsea.blastoMieloide.toString()
+    const p= this.medulaOsea.linfoblastoBNormal.toString()
+    const q= this.medulaOsea.linfBMaduroEinterm.toString()
+    const r= this.medulaOsea.linfocitosTNK.toString()
+    const s= this.medulaOsea.celMesenquimal.toString()
+    const t= this.medulaOsea.serieGranulocitoNeutrofilo.toString()
+    const u= this.medulaOsea.serieMonocritica.toString()
+    const v= this.medulaOsea.eosinofilo.toString()
+    const w= this.medulaOsea.basofiloCD.toString()
+    const x= this.medulaOsea.serieEritroide.toString()
+    const y= this.medulaOsea.plasmocito.toString()
+    const z= this.medulaOsea.celularidad;
 
-    this.prediccionData = this.sangrePeriferica.linfoblastoBPatologico.toString() 
-    + this.sangrePeriferica.blastoMieloide.toString() 
-    + this.sangrePeriferica.linfoblastoBNormal.toString() 
-    + this.sangrePeriferica.linfBMaduroEinterm.toString() 
-    + this.sangrePeriferica.linfocitosT.toString() 
-    + this.sangrePeriferica.celulasNK.toString() 
-    + this.sangrePeriferica.serieGranulocitoNeutrofilo.toString() 
-    + this.sangrePeriferica.serieMonocritica.toString() 
-    + this.sangrePeriferica.eosinofilo.toString() 
-    + this.sangrePeriferica.basofiloCD.toString() 
-    + this.sangrePeriferica.serieEritroide.toString() 
-    + this.sangrePeriferica.plasmocito.toString() 
-    + this.sangrePeriferica.celularidad.toString()
-    + this.medulaOsea.linfoblastoBPatologico.toString()
-    + this.medulaOsea.blastoMieloide.toString()
-    + this.medulaOsea.linfoblastoBNormal.toString()
-    + this.medulaOsea.linfBMaduroEinterm.toString()
-    + this.medulaOsea.linfocitosTNK.toString()
-    + this.medulaOsea.celMesenquimal.toString()
-    + this.medulaOsea.serieGranulocitoNeutrofilo.toString()
-    + this.medulaOsea.serieMonocritica.toString()
-    + this.medulaOsea.eosinofilo.toString()
-    + this.medulaOsea.basofiloCD.toString()
-    + this.medulaOsea.serieEritroide.toString()
-    +this.medulaOsea.plasmocito.toString()
-    + this.medulaOsea.celularidad.toString();
+    this.prediccionData = a+','+b+','+c+','+d+','+e+','+f+','+g+','+h+','+i+','+j+','+k+','+l+','+m+','+n+','+o+','+p+','+q+','+r+','+s+','+t+','+u+','+v+','+w+','+x+','+y+','+z;
 
     const prediccionNew = {data: this.prediccionData}
     console.log(prediccionNew);
@@ -137,7 +134,7 @@ export class ReporteComponent implements OnInit {
         medicoId: medicoId,
         sangrePerifericaId: this.SangrePerifericaId,
         medulaOseaId: this.MedulaOseaId,
-        prediccion: "Positivo", // TEMPORAL HASTA TENER LA PREDICCIÓN CON ML
+        prediccion: this.prediccionResult, 
         comentario: comentario,
         observacion: observacion
     };
