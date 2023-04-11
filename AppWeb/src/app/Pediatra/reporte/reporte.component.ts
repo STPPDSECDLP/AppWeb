@@ -1,12 +1,12 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {SangrePeriferica} from "../../Shared/Interface/sangre-periferica";
-import {PacienteService} from "../../Shared/Service/paciente.service";
-import {MedicoService} from "../../Shared/Service/medico.service";
 import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {MedulaOsea} from "../../Shared/Interface/medula-osea";
 import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
 import {ReporteService} from "../../Shared/Service/reporte.service";
+import {Prediccion} from "../../Shared/Interface/prediccion";
+import {PrediccionService} from "../../Shared/Service/prediccion.service";
 
 @Component({
   selector: 'app-reporte',
@@ -16,6 +16,7 @@ import {ReporteService} from "../../Shared/Service/reporte.service";
 export class ReporteComponent implements OnInit {
   @ViewChild("comentario") comentario!: ElementRef;
   @ViewChild("observacion") observacion! : ElementRef;
+  @ViewChild("observacion") prediccion! : ElementRef;
 
   PacienteId!: number;
   MedicoId!: number;
@@ -32,20 +33,26 @@ export class ReporteComponent implements OnInit {
   sangrePerifericaData: any;
   sangrePeriferica: SangrePeriferica;
 
+  prediccionResult: any;
+  prediccionData!: Prediccion;
+
   constructor(private sangrePerifericaService: SangrePerifericaService,
               private reporteService: ReporteService,
               private medulaOseaService: MedulaOseaService,
+              private prediccionService: PrediccionService,
               private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params=>this.PacienteId= params['pacienteId'])
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
     this.sangrePeriferica = {} as SangrePeriferica;
     this.medulaOsea = {} as MedulaOsea;
+    this
   }
 
   ngOnInit(): void {
     this.getReturnDataPacient();
     this.getReturnDataPacientMedulaOsea();
+    this.getPrediction();
   }
 
   getReturnDataPacient(){
@@ -78,6 +85,12 @@ export class ReporteComponent implements OnInit {
     })
   }
 
+  getPrediction(){
+    const prediccionNew = {data: this.prediccionData}
+    this.prediccionService.getPrediccion(prediccionNew).subscribe(data=>{
+      this.prediccionResult = data;
+    })
+  }
 
   Registrar():void{
     var comentario = this.comentario.nativeElement.value;
