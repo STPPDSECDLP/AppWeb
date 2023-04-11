@@ -34,7 +34,7 @@ export class ReporteComponent implements OnInit {
   sangrePeriferica: SangrePeriferica;
 
   prediccionResult: any;
-  prediccionData!: Prediccion;
+  prediccionData!: String;
 
   constructor(private sangrePerifericaService: SangrePerifericaService,
               private reporteService: ReporteService,
@@ -50,8 +50,8 @@ export class ReporteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getReturnDataPacient();
-    this.getReturnDataPacientMedulaOsea();
+    //this.getReturnDataPacient();
+    //this.getReturnDataPacientMedulaOsea();
     this.getPrediction();
   }
 
@@ -86,9 +86,43 @@ export class ReporteComponent implements OnInit {
   }
 
   getPrediction(){
+    this.getReturnDataPacient();
+    this.getReturnDataPacientMedulaOsea();
+
+    console.log(this.sangrePeriferica.linfBMaduroEinterm.toString())
+
+    this.prediccionData = this.sangrePeriferica.linfoblastoBPatologico.toString() 
+    + this.sangrePeriferica.blastoMieloide.toString() 
+    + this.sangrePeriferica.linfoblastoBNormal.toString() 
+    + this.sangrePeriferica.linfBMaduroEinterm.toString() 
+    + this.sangrePeriferica.linfocitosT.toString() 
+    + this.sangrePeriferica.celulasNK.toString() 
+    + this.sangrePeriferica.serieGranulocitoNeutrofilo.toString() 
+    + this.sangrePeriferica.serieMonocritica.toString() 
+    + this.sangrePeriferica.eosinofilo.toString() 
+    + this.sangrePeriferica.basofiloCD.toString() 
+    + this.sangrePeriferica.serieEritroide.toString() 
+    + this.sangrePeriferica.plasmocito.toString() 
+    + this.sangrePeriferica.celularidad.toString()
+    + this.medulaOsea.linfoblastoBPatologico.toString()
+    + this.medulaOsea.blastoMieloide.toString()
+    + this.medulaOsea.linfoblastoBNormal.toString()
+    + this.medulaOsea.linfBMaduroEinterm.toString()
+    + this.medulaOsea.linfocitosTNK.toString()
+    + this.medulaOsea.celMesenquimal.toString()
+    + this.medulaOsea.serieGranulocitoNeutrofilo.toString()
+    + this.medulaOsea.serieMonocritica.toString()
+    + this.medulaOsea.eosinofilo.toString()
+    + this.medulaOsea.basofiloCD.toString()
+    + this.medulaOsea.serieEritroide.toString()
+    +this.medulaOsea.plasmocito.toString()
+    + this.medulaOsea.celularidad.toString();
+
     const prediccionNew = {data: this.prediccionData}
-    this.prediccionService.getPrediccion(prediccionNew).subscribe(data=>{
+    console.log(prediccionNew);
+    this.prediccionService.addPrediccion(prediccionNew).subscribe(data=>{
       this.prediccionResult = data;
+      console.log(this.prediccionResult);
     })
   }
 

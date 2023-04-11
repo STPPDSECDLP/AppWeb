@@ -23,7 +23,7 @@ export class PrediccionService {
     return throwError('Something happened with request, please try again later.');
   }
 
-  getPrediccion(item: any): Observable<Prediccion>{
+  addPrediccion(item: any): Observable<Prediccion>{
     return this.http.post<Prediccion>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
