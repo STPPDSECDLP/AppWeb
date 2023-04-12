@@ -18,14 +18,20 @@
   overflow: hidden;
   justify-content: space-between;
 }
+
 .primera-linea h1{
   color: white;
   font-size: 2em;
 }
 
-.primera-linea button{
+.button1{
   border-radius: 15px;
   font-weight: 600;
-  background-color: #cdffff;
+  background-color: #45cf0f;
 }
 
+.button2{
+  border-radius: 15px;
+  font-weight: 600;
+  background-color: #f7e604;
+}

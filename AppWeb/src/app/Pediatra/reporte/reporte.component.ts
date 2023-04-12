@@ -46,7 +46,6 @@ export class ReporteComponent implements OnInit {
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
     this.sangrePeriferica = {} as SangrePeriferica;
     this.medulaOsea = {} as MedulaOsea;
-    this
   }
 
   ngOnInit(): void {

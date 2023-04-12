@@ -15,6 +15,7 @@ import {MedulaOseaComponent} from "./Hematologo/medula-osea/medula-osea.componen
 import {MedulaOseaEditComponent} from "./Hematologo/medula-osea-edit/medula-osea-edit.component";
 import {MedulaOseaVisualizarComponent} from "./Pediatra/medula-osea-visualizar/medula-osea-visualizar.component";
 import {ReporteComponent} from "./Pediatra/reporte/reporte.component";
+import { EstadisticasComponent } from './Pediatra/estadisticas/estadisticas.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'login'},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:'home/pediatra/:medicoId/paciente/:pacienteId/sangrePeriferica', component: SangrePerifericaVisualizarComponent},
   {path:'home/pediatra/:medicoId/paciente/:pacienteId/medulaOsea', component: MedulaOseaVisualizarComponent},
   {path:'home/pediatra/:medicoId/paciente/:pacienteId/reporte', component: ReporteComponent},
+  {path:'home/pediatra/:medicoId/estadisticas', component: EstadisticasComponent},
 
 
   //HEMATOLOGO

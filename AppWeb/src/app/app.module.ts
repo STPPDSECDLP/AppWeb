@@ -26,6 +26,7 @@ import { MedulaOseaEditComponent } from './Hematologo/medula-osea-edit/medula-os
 import { MedulaOseaVisualizarComponent } from './Pediatra/medula-osea-visualizar/medula-osea-visualizar.component';
 import { ReporteComponent } from './Pediatra/reporte/reporte.component';
 import { PediatraReporteFiguraComponent } from './Figuras/pediatra-reporte-figura/pediatra-reporte-figura.component';
+import { EstadisticasComponent } from './Pediatra/estadisticas/estadisticas.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { PediatraReporteFiguraComponent } from './Figuras/pediatra-reporte-figur
     MedulaOseaEditComponent,
     MedulaOseaVisualizarComponent,
     ReporteComponent,
-    PediatraReporteFiguraComponent
+    PediatraReporteFiguraComponent,
+    EstadisticasComponent
   ],
     imports: [
         BrowserModule,

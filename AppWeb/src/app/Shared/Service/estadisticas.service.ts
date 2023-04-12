@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {Paciente} from "../Interface/paciente";
 
 @Injectable({
   providedIn: 'root'
 })
-export class PacienteService {
-  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/paciente';
+export class EstadisticasService {
+  basePath = 'https://e7zitnrcak.execute-api.us-east-1.amazonaws.com/dev/estadisticas';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
@@ -23,19 +22,13 @@ export class PacienteService {
     return throwError('Something happened with request, please try again later.');
   }
 
-  getAllPaciente(): Observable<Paciente>{
-    return this.http.get<Paciente>(this.basePath)
+  getSexoEstadisticas(): Observable<any>{
+    return this.http.get<any>(this.basePath)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  addPaciente(item: any): Observable<Paciente>{
-    return this.http.post<Paciente>(this.basePath, JSON.stringify(item), this.httpOptions)
+  getEdadEstadisticas(): Observable<any>{
+    return this.http.get<any>(`${this.basePath}?id=edad`)
       .pipe(retry(2), catchError(this.handleError));
   }
-
-  getPacienteById(pacienteId: number): Observable<Paciente>{
-    return this.http.get<Paciente>(`${this.basePath}?id=${pacienteId}`)
-      .pipe(retry(0), catchError(this.handleError));
-  }
-
 }
