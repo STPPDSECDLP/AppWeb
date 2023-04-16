@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pediatra-nav-bar',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pediatra-nav-bar.component.css']
 })
 export class PediatraNavBarComponent implements OnInit {
+  MedicoId!: number;
 
-  constructor() { }
+  constructor(private router: Router,
+              private route: ActivatedRoute) { 
+                this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
+              }
 
   ngOnInit(): void {
   }

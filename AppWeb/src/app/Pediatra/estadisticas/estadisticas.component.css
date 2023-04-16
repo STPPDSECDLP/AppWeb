@@ -1,8 +1,28 @@
-.box{
-    height: 30%;
-  width: 40%;
+.box {
+  height: 50%;
+  width: 30%;
 }
 
-.space{
-    height: 5em;
+.space {
+  height: 5em;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.col-lg-6 {
+  padding: 1%;
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: center;
+}
+.center{
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }

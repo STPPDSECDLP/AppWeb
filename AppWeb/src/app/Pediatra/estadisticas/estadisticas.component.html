@@ -1,13 +1,17 @@
 <app-pediatra-nav-bar></app-pediatra-nav-bar>
 <div class="space"></div>
 
-<div class="row">
-    <div class = "col-lg-6" class="box">
-        <h2>Sexo Chart</h2>
-        <canvas id ="sexoChart"></canvas>
+<div class="row row-centered">
+    <div class="col-lg-6 col-centered" class="box">
+        <h2>Pacientes según sexo </h2>
+        <canvas id="sexoChart"></canvas>
     </div>
-    <div class = "col-lg-6">
-        <h2>Edad Chart</h2>
-        <canvas id ="edadChart"></canvas>
+    <div class="col-lg-6 col-centered">
+        <h2>Pacientes según edad</h2>
+        <canvas id="edadChart"></canvas>
     </div>
+</div>
+
+<div class="center">
+    <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Regresar</button>
 </div>

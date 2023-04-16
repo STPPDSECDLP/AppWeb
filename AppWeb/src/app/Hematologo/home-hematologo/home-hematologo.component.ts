@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Paciente} from "../../Shared/Interface/paciente";
 import {PacienteService} from "../../Shared/Service/paciente.service";
-import {MedicoService} from "../../Shared/Service/medico.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
 import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
@@ -32,7 +31,6 @@ export class HomeHematologoComponent implements OnInit {
   formModalMedulaOsea: any;
 
   constructor(private pacienteService : PacienteService,
-              private medicoService : MedicoService,
               private sangrePerifericaService: SangrePerifericaService,
               private medulaOseaService: MedulaOseaService,
               private router: Router,
@@ -126,7 +124,7 @@ export class HomeHematologoComponent implements OnInit {
 
       this.listPacientes = this.listPacientes.filter((contact:any) =>{
         return contact.dni.toString().toLocaleLowerCase().match(searchValue);
-        // you can keep on adding object properties here
+       
       });
 
       console.log(this.listPacientes);
@@ -137,7 +135,6 @@ export class HomeHematologoComponent implements OnInit {
         this.listPacientes = data;
 
       }, error => console.error(error));
-      // if(this.searchText== ""){ you don't need this if
     }
   }
 

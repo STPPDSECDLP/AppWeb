@@ -37,13 +37,11 @@ export class EstadisticasComponent implements OnInit {
     getSexo() {
         this.estadisticasService.getSexoEstadisticas().subscribe((response: any) => {
             this.estadisticaSexo = response;
-            console.log('SEXO')
+            console.log('POR SEXO')
             console.log(this.estadisticaSexo)
             for (let i = 0; i < this.estadisticaSexo.length; i++) {
                 this.sexoData.push(this.estadisticaSexo[i].total)
             }
-            console.log(this.sexoData)
-
 
             const sexoChart = new Chart("sexoChart", {
                 type: 'doughnut',
@@ -82,19 +80,17 @@ export class EstadisticasComponent implements OnInit {
     getEdad() {
         this.estadisticasService.getEdadEstadisticas().subscribe((response: any) => {
             this.estadisticaEdad = response;
-            console.log('EDAD')
+            console.log('POR EDAD')
             console.log(this.estadisticaEdad)
             for (let i = 0; i < this.estadisticaEdad.length; i++) {
-                if(this.estadisticaEdad[i].prediccion == 'POSITIVO'){
-                this.edadData.push(this.estadisticaEdad[i].total)}
-                if(this.estadisticaEdad[i].prediccion == 'NEGATIVO'){
-                this.edadNegativo.push(this.estadisticaEdad[i].total)
+                if (this.estadisticaEdad[i].prediccion == 'POSITIVO') {
+                    this.edadData.push(this.estadisticaEdad[i].total)
+                }
+                if (this.estadisticaEdad[i].prediccion == 'NEGATIVO') {
+                    this.edadNegativo.push(this.estadisticaEdad[i].total)
                 }
 
             }
-            console.log(this.edadData)
-            console.log(this.edadNegativo)
-
 
             const edadChart = new Chart("edadChart", {
                 type: 'line',
@@ -109,8 +105,8 @@ export class EstadisticasComponent implements OnInit {
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
                         ],
-                        borderWidth: 1,
-                        yAxisID:'y'
+                        borderWidth: 2,
+                        yAxisID: 'y'
                     }, {
                         label: 'Negativo',
                         data: this.edadNegativo,
@@ -120,8 +116,7 @@ export class EstadisticasComponent implements OnInit {
                         borderColor: [
                             'rgba(54, 162, 235, 1)',
                         ],
-                        borderWidth: 1,
-                        yAxisID:'y1'
+                        borderWidth: 2,
                     }]
                 },
 

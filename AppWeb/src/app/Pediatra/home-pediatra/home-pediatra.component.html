@@ -59,12 +59,46 @@
             <button type="button" class="btn" style="background-color: #7a43ee; color: white" [routerLink]="['/home/pediatra/',MedicoId,'paciente',group.id,'medulaOsea']">Visualizar</button>
           </td>
           <td>
-            <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId,'paciente',group.id,'reporte']">Reporte</button>
+            <button type="button" class="btn btn-danger" (click)="editReporte(group.id)">Reporte</button>
           </td>
         </tr>
         </tbody>
       </table>
     </div>
 
+  </div>
+</div>
+
+<!--form modal-->
+<div
+  class="modal fade"
+  id="modalReporte"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">ADVERTENCIA</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h5>Ya se registró el Reporte del paciente ¿Desea continuar con la modificacion de los datos?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="width: 100px" class="btn btn-secondary" (click)="refresh()" data-bs-dismiss="modal">
+          No
+        </button>
+        <button type="button" style="width: 100px" class="btn btn-primary" (click)="saveSomeThingReporte()">
+          Si
+        </button>
+      </div>
+    </div>
   </div>
 </div>

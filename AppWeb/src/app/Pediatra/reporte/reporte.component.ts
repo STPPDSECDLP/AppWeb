@@ -138,7 +138,7 @@ export class ReporteComponent implements OnInit {
     let pacienteId = parseFloat(this.PacienteId.toString());
     let medicoId = parseFloat(this.MedicoId.toString());
 
-    if (comentario == '' || observacion == '' || this.prediccionResult == '') {
+    if (comentario == '' || observacion == '' || this.prediccionResult == undefined) {
       alert("Completar los datos")
     }
     else {

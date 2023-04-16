@@ -24,8 +24,24 @@ export class ReporteService {
     return throwError('Something happened with request, please try again later.');
   }
 
+  getAllReportes(): Observable<Reporte>{
+    return this.http.get<Reporte>(this.basePath)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  getReporteById(reporteId: number): Observable<Reporte>{
+    return this.http.get<Reporte>(`${this.basePath}?id=${reporteId}`)
+      .pipe(retry(0), catchError(this.handleError));
+  }
+  
   addReporte(item: any): Observable<Reporte>{
     return this.http.post<Reporte>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
+
+  updateReporte(item: any): Observable<Reporte>{
+    return this.http.put<Reporte>(this.basePath, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
 }

@@ -39,7 +39,7 @@ export class ReporteEditComponent implements OnInit {
     ReporteId!: number;
     reporteData: any;
     reporteObj: Reporte;
-  
+
 
     constructor(private sangrePerifericaService: SangrePerifericaService,
         private reporteService: ReporteService,
@@ -52,16 +52,28 @@ export class ReporteEditComponent implements OnInit {
         this.route.params.subscribe(params => this.ReporteId = params['reporteId'])
         this.sangrePeriferica = {} as SangrePeriferica;
         this.medulaOsea = {} as MedulaOsea;
-        this.reporteObj ={} as Reporte;
+        this.reporteObj = {} as Reporte;
     }
 
     ngOnInit(): void {
         this.getReturnDataPacient();
         this.getReturnDataPacientMedulaOsea();
-        this.getReturnDataPacient();
+        this.getReturnDataReporte();
     }
 
-    getReturnDataReporte(){
+    getReturnDataReporte() {
+        this.reporteService.getAllReportes().subscribe(data => {
+            this.reporteData = data;
+            for (var i = 0; i < this.reporteData.length; i++) {
+                if (this.PacienteId == this.reporteData[i].pacienteId) {
+                    this.reporteService.getReporteById(this.reporteData[i].id).subscribe((response: any) => {
+                        this.reporteObj = response[0];
+                        this.prediccionResult = this.reporteObj.prediccion
+                    })
+                }
+            }
+
+        })
 
     }
 
@@ -149,7 +161,7 @@ export class ReporteEditComponent implements OnInit {
         let pacienteId = parseFloat(this.PacienteId.toString());
         let medicoId = parseFloat(this.MedicoId.toString());
 
-        if (comentario == '' || observacion == '' || this.prediccionResult == '') {
+        if (comentario == '' || observacion == '' || this.prediccionResult == undefined) {
             alert("Completar los datos")
         }
         else {
@@ -163,7 +175,7 @@ export class ReporteEditComponent implements OnInit {
                 observacion: observacion
             };
 
-            this.reporteService.addReporte(reporteNew).subscribe((response: any) => {
+            this.reporteService.updateReporte(reporteNew).subscribe((response: any) => {
                 this.router.navigate(['home/pediatra/', this.MedicoId]);
             });
         }
