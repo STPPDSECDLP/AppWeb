@@ -78,7 +78,7 @@ export class ReporteEditComponent implements OnInit {
     }
 
     printPage() {
-        if (this.comentario.nativeElement.value == '' || this.observacion.nativeElement.value == '' || this.prediccionResult == '') {
+        if (this.comentario.nativeElement.value == '' || this.observacion.nativeElement.value == '' || this.prediccionResult == undefined) {
             alert("Completar los datos")
         } else {
             window.print();
