@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { MedulaOsea } from "../../Shared/Interface/medula-osea";
 import { MedulaOseaService } from "../../Shared/Service/medula-osea.service";
 import { ReporteService } from "../../Shared/Service/reporte.service";
-import { Prediccion } from "../../Shared/Interface/prediccion";
 import { PrediccionService } from "../../Shared/Service/prediccion.service";
 
 @Component({
@@ -36,6 +35,7 @@ export class ReporteComponent implements OnInit {
   prediccionResult: any;
   prediccionData!: String;
 
+ 
   constructor(private sangrePerifericaService: SangrePerifericaService,
     private reporteService: ReporteService,
     private medulaOseaService: MedulaOseaService,
@@ -51,6 +51,7 @@ export class ReporteComponent implements OnInit {
   ngOnInit(): void {
     this.getReturnDataPacient();
     this.getReturnDataPacientMedulaOsea();
+    
   }
 
   printPage() {

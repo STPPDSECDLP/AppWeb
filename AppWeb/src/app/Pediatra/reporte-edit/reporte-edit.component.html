@@ -1,0 +1,348 @@
+<app-pediatra-nav-bar></app-pediatra-nav-bar>
+<app-pediatra-reporte-figura></app-pediatra-reporte-figura>
+
+<div class="titulo">
+  <h1>REPORTE DE PRUEBAS CLÍNICAS</h1>
+
+  <div class="hr"></div>
+
+  <div *ngIf="validar" style="margin-top: 1%">
+    <h1> Prueba: Sangre Periférica </h1>
+
+    <div class="cuerpo">
+
+      <div class="formulario">
+
+        <div class="sub-izquierda">
+
+          <div style="display: flex;">
+            <label>linfoblasto B patólogico</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.linfoblastoBPatologico}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>linfoblasto B normal</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.linfoblastoBNormal}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>linfocitos T</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.linfocitosT}}" disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Serie granulocito/neutrófilo</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.serieGranulocitoNeutrofilo}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Eosinófilo</label>
+            <input type="number" o class="form-control" placeholder="{{sangrePeriferica.eosinofilo}}" disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Serie eritroide</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.serieEritroide}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Celularidad de la muestra</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.celularidad}}" disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+        </div>
+
+        <div class="sub-derecha">
+
+          <div style="display: flex;">
+            <label>Blasto mieloide</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.blastoMieloide}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>linf. B maduro e interm </label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.linfBMaduroEinterm}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Células NK</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.celulasNK}}" disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>serie monocítica</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.serieMonocritica}}"
+              disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Basófilo/CD</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.basofiloCD}}" disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Plasmocito</label>
+            <input type="number" class="form-control" placeholder="{{sangrePeriferica.plasmocito}}" disabled=disabled>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr" style="margin-top: 2%"></div>
+
+  </div>
+
+  <div *ngIf="validarMedulaOsea">
+
+    <h1> Prueba: Médula Ósea </h1>
+
+    <div class="cuerpo">
+
+      <div class="formulario">
+
+        <div class="sub-izquierda">
+
+          <div style="display: flex;">
+            <label>Linfoblasto B patólogico</label>
+            <input type="number" disabled=disabled placeholder="{{medulaOsea.linfoblastoBPatologico}}"
+              class="form-control" required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Linfoblasto B normal</label>
+            <input type="number" placeholder="{{medulaOsea.linfoblastoBNormal}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Linfocitos T y NK</label>
+            <input type="number" placeholder="{{medulaOsea.linfocitosTNK}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Serie granulocito/neutrófilo</label>
+            <input type="number" placeholder="{{medulaOsea.serieGranulocitoNeutrofilo}}" class="form-control"
+              disabled=disabled required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Eosinófilo</label>
+            <input type="number" placeholder="{{medulaOsea.eosinofilo}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Serie eritroide</label>
+            <input type="number" placeholder="{{medulaOsea.serieEritroide}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Celularidad de la muestra</label>
+            <input required type="number" placeholder="{{medulaOsea.celularidad}}" class="form-control"
+              disabled=disabled />
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+        </div>
+
+        <div class="sub-derecha">
+
+          <div style="display: flex;">
+            <label>Blasto mieloide</label>
+            <input type="number" placeholder="{{medulaOsea.blastoMieloide}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Linf. B maduro e interm </label>
+            <input type="number" placeholder="{{medulaOsea.linfBMaduroEinterm}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Plasmocito</label>
+            <input type="number" placeholder="{{medulaOsea.plasmocito}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Serie monocítica</label>
+            <input type="number" placeholder="{{medulaOsea.serieMonocritica}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Basófilo/CD</label>
+            <input type="number" placeholder="{{medulaOsea.basofiloCD}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Cel. Mesenquinal</label>
+            <input type="number" placeholder="{{medulaOsea.celMesenquimal}}" class="form-control" disabled=disabled
+              required>
+            <span class="input-group-text" style="background-color: white; border: none"><i
+                class="bi bi-percent"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!validar && !validarMedulaOsea" style="margin-top: 2%">
+    <h1> DATOS DE LA SANGRE PERIFÉRICA DEL PACIENTE NO REGISTRADOS </h1>
+    <div class="hr" style="margin-top: 2%"></div>
+    <h1 style="margin-top: 2%"> DATOS DE LA MÉDULA ÓSEA DEL PACIENTE NO REGISTRADOS</h1>
+  </div>
+
+  <div *ngIf="validar && !validarMedulaOsea">
+    <h1 style="margin-top: 2%"> DATOS DE LA MÉDULA ÓSEA DEL PACIENTE NO REGISTRADOS</h1>
+  </div>
+
+  <div *ngIf="!validar && validarMedulaOsea">
+    <div class="hr" style="margin-top: 2%"></div>
+    <h1 style="margin-top: 2%"> DATOS DE LA SANGRE PERIFÉRICA DEL PACIENTE NO REGISTRADOS </h1>
+  </div>
+
+  <div *ngIf="!validar && !validarMedulaOsea || validar && !validarMedulaOsea || !validar && validarMedulaOsea"
+    class="botones">
+    <button style="margin-top: 8%" type="button" class="btn btn-primary"
+      [routerLink]="['/home/pediatra/',MedicoId]">Regresar</button>
+  </div>
+
+  <div class="rounded-md bg-yellow-50 p-4">
+    <div class="flex">
+      <div class="ml-3">
+        <div class="botones">
+          <button type="button" class="btn btn-primary" (click)="getPrediction()">Predecir</button>
+        </div>
+        <input type="text" class="mt-2" placeholder="{{reporte.prediccion}}"
+              disabled=disabled>
+        <div class="mt-2 text-sm text-yellow-700">
+          <p>IMPORTANTE: El análisis basado en inteligencia artificial no pretende reemplazar el criterio médico. Considerar como herramienta de asistencia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="validar && validarMedulaOsea" class="form-group comentarios">
+    <div class="comment">
+      <label for="comment">Comentarios:</label>
+      <textarea placeholder="{{reporte.comentario}}" type="text" name="comentario" #comentario class="form-control" rows="5" id="comment"></textarea>
+    </div>
+
+    <div class="conclusion">
+      <label for="conclusion">Observaciones:</label>
+      <textarea placeholder="{{reporte.observacion}}" type="text" name="observacion" #observacion class="form-control" rows="5" id="conclusion"></textarea>
+    </div>
+
+    <div class="botones">
+      <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
+      <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Cancelar</button>
+      <button (click)="printPage()">Imprimir</button>
+    </div>
+
+  </div>
+
+</div>
