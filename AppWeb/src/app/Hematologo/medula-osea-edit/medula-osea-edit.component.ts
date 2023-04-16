@@ -1,8 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {SangrePeriferica} from "../../Shared/Interface/sangre-periferica";
 import {PacienteService} from "../../Shared/Service/paciente.service";
 import {MedicoService} from "../../Shared/Service/medico.service";
-import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {MedulaOsea} from "../../Shared/Interface/medula-osea";
 import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
