@@ -44,6 +44,11 @@
   margin-top: 5%;
 }
 
+.registrar button{
+  width: 7em;
+  margin-right: 7%;
+}
+
 .derecha img{
   width: 35em;
   height: 39em;
