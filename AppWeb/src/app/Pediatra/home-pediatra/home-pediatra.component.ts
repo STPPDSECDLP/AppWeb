@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Paciente} from "../../Shared/Interface/paciente";
 import {PacienteService} from "../../Shared/Service/paciente.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
+import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
 import { ReporteService } from 'src/app/Shared/Service/reporte.service';
 declare var window: any;
 
@@ -15,17 +17,27 @@ export class HomePediatraComponent implements OnInit {
   PacienteId!: number;
   MedicoId!: number;
   ReporteId!: number;
+  SangrePerifericaId!: number;
+  MedulaOseaId!: number;
 
   validarReporte: boolean = false;
+  validarSangrePeriferica: boolean = false;
+  validarMedulaOsea: boolean = false;
   
   paciente: Paciente[] = [];
   listPacientes:any;
   reporteData: any;
+  sangrePerifericaData: any;
+  medulaOseaData: any;
   searchText = "";
 
   formModalReporte: any;
+  formModalSangrePeriferica: any;
+  formModalMedulaOsea: any;
 
   constructor(private pacienteService : PacienteService,
+    private sangrePerifericaService: SangrePerifericaService,
+              private medulaOseaService: MedulaOseaService,
               private reporteService : ReporteService,
               private router: Router,
               private route: ActivatedRoute) {
@@ -41,7 +53,34 @@ export class HomePediatraComponent implements OnInit {
     this.formModalReporte = new window.bootstrap.Modal(
       document.getElementById('modalReporte')
     );
+
+    this.formModalSangrePeriferica = new window.bootstrap.Modal(
+      document.getElementById('modalSangrePeriferica')
+    );
+
+    this.formModalMedulaOsea = new window.bootstrap.Modal(
+      document.getElementById('modalMedulaOsea')
+    );
   }
+
+  openFormModalSangrePeriferica() {
+    this.formModalSangrePeriferica.show();
+  }
+
+  openFormModalMedulaOsea() {
+    this.formModalMedulaOsea.show();
+  }
+
+  saveSomeThingSangrePeriferica() {
+    this.formModalSangrePeriferica.hide();
+    this.router.navigate(['/home/pediatra/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica',this.SangrePerifericaId]);
+  }
+
+  saveSomeThingMedulaOsea() {
+    this.formModalMedulaOsea.hide();
+    this.router.navigate(['/home/pediatra/',this.MedicoId,'paciente',this.PacienteId ,'medulaOsea',this.MedulaOseaId]);
+  }
+
 
   editReporte(idPaciente: number){
     this.PacienteId = idPaciente;
@@ -59,6 +98,48 @@ export class HomePediatraComponent implements OnInit {
       }
       else {
         this.router.navigate(['/home/pediatra/',this.MedicoId,'paciente',this.PacienteId ,'reporte']);
+      }
+
+    });
+  }
+
+  editSangrePeriferica(idPaciente: number){
+    this.PacienteId = idPaciente;
+    this.sangrePerifericaService.getAllSangrePeriferica().subscribe(data=>{
+      this.sangrePerifericaData = data;
+      for (var i = 0; i < this.sangrePerifericaData.length; i++){
+        if (this.PacienteId  == this.sangrePerifericaData[i].pacienteId){
+          this.SangrePerifericaId = this.sangrePerifericaData[i].id;
+          this.validarSangrePeriferica = true;
+        }
+      }
+
+      if (this.validarSangrePeriferica){
+        this.openFormModalSangrePeriferica();
+      }
+      else {
+        this.router.navigate(['/home/pediatra/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica']);
+      }
+
+    });
+  }
+
+  editMedulaOsea(idPaciente: number){
+    this.PacienteId = idPaciente;
+    this.medulaOseaService.getAllMedulaOsea().subscribe(data=>{
+      this.medulaOseaData = data;
+      for (var i = 0; i < this.medulaOseaData.length; i++){
+        if (this.PacienteId  == this.medulaOseaData[i].pacienteId){
+          this.MedulaOseaId = this.medulaOseaData[i].id;
+          this.validarMedulaOsea = true;
+        }
+      }
+
+      if (this.validarMedulaOsea){
+        this.openFormModalMedulaOsea();
+      }
+      else {
+        this.router.navigate(['/home/pediatra/',this.MedicoId,'paciente',this.PacienteId ,'medulaOsea']);
       }
 
     });

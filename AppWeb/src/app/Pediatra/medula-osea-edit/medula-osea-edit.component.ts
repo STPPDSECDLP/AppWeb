@@ -2,16 +2,21 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {PacienteService} from "../../Shared/Service/paciente.service";
 import {MedicoService} from "../../Shared/Service/medico.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {MedulaOsea} from "../../Shared/Interface/medula-osea";
 import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
 
 @Component({
-  selector: 'app-medula-osea',
-  templateUrl: './medula-osea.component.html',
-  styleUrls: ['./medula-osea.component.css']
+  selector: 'app-medula-osea-edit',
+  templateUrl: './medula-osea-edit.component.html',
+  styleUrls: ['./medula-osea-edit.component.css']
 })
-export class MedulaOseaComponent implements OnInit {
+export class MedulaOseaEditComponent implements OnInit {
   PacienteId!: number;
   MedicoId!: number;
+  MedulaOseaId!: number;
+
+  medulaOseaData: any;
+  medulaOsea: MedulaOsea;
 
   @ViewChild("linfoblastoBPatologico") linfoblastoBPatologico! : ElementRef;
   @ViewChild("blastoMieloide") blastoMieloide! : ElementRef;
@@ -34,9 +39,25 @@ export class MedulaOseaComponent implements OnInit {
               private route: ActivatedRoute) {
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
     this.route.params.subscribe(params=>this.PacienteId= params['pacienteId'])
+    this.route.params.subscribe(params=>this.MedulaOseaId= params['medulaOseaId'])
+    this.medulaOsea = {} as MedulaOsea;
   }
 
   ngOnInit(): void {
+    this.getReturnDataPacient();
+  }
+
+  getReturnDataPacient(){
+    this.medulaOseaService.getAllMedulaOsea().subscribe(data=>{
+      this.medulaOseaData = data;
+      for (var i = 0; i < this.medulaOseaData.length; i++){
+        if (this.PacienteId == this.medulaOseaData[i].pacienteId){
+          this.medulaOseaService.getMedulaOseaById(this.medulaOseaData[i].id).subscribe((response: any) => {
+            this.medulaOsea = response[0];
+          })
+        }
+      }
+    })
   }
 
   Registrar():void{
@@ -91,10 +112,9 @@ export class MedulaOseaComponent implements OnInit {
         celularidad: m
       };
 
-      this.medulaOseaService.addMedulaOsea(medulaOseaNew).subscribe((response: any) => {
-        this.router.navigate(['home/hematologo/',this.MedicoId]);
+      this.medulaOseaService.updateMedulaOsea(medulaOseaNew).subscribe((response: any) => {
+        this.router.navigate(['home/pediatra/',this.MedicoId]);
       });
     }
   }
-
 }

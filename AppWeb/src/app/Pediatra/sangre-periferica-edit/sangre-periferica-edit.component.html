@@ -1,8 +1,8 @@
-<app-hematologo-nav-bar></app-hematologo-nav-bar>
+<app-pediatra-nav-bar></app-pediatra-nav-bar>
 <app-sangre-periferica-figura></app-sangre-periferica-figura>
 
 <div class="titulo">
-  <h1> Prueba: Sangre Periférica </h1>
+  <h1> Prueba: Sangre Periférica</h1>
 </div>
 
 <div class="cuerpo">
@@ -13,12 +13,13 @@
 
       <div style="display: flex;">
         <label>linfoblasto B patólogico</label>
-          <input type="number"
-                 name="linfoblastoBPatologico" #linfoblastoBPatologico
-                 class="form-control"
-                 step="0.01"
-                 min="0"
-                 required>
+        <input type="number"
+               name="linfoblastoBPatologico" #linfoblastoBPatologico
+               class="form-control"
+               placeholder="{{sangrePeriferica.linfoblastoBPatologico}}"
+               step="0.01"
+               min="0"
+               required>
         <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
       </div>
 
@@ -29,6 +30,7 @@
         <input type="number"
                name="linfoblastoBNormal" #linfoblastoBNormal
                class="form-control"
+               placeholder="{{sangrePeriferica.linfoblastoBNormal}}"
                step="0.01"
                min="0"
                required>
@@ -42,6 +44,7 @@
         <input type="number"
                name="linfocitosT" #linfocitosT
                class="form-control"
+               placeholder="{{sangrePeriferica.linfocitosT}}"
                step="0.01"
                min="0"
                required>
@@ -55,6 +58,7 @@
         <input type="number"
                name="serieGranulocitoNeutrofilo" #serieGranulocitoNeutrofilo
                class="form-control"
+               placeholder="{{sangrePeriferica.serieGranulocitoNeutrofilo}}"
                step="0.01"
                min="0"
                required>
@@ -68,6 +72,7 @@
         <input type="number"
                name="eosinofilo" #eosinofilo
                class="form-control"
+               placeholder="{{sangrePeriferica.eosinofilo}}"
                step="0.01"
                min="0"
                required>
@@ -81,6 +86,7 @@
         <input type="number"
                name="serieEritroide" #serieEritroide
                class="form-control"
+               placeholder="{{sangrePeriferica.serieEritroide}}"
                step="0.01"
                min="0"
                required>
@@ -94,6 +100,7 @@
         <input type="number"
                name="celularidad" #celularidad
                class="form-control"
+               placeholder="{{sangrePeriferica.celularidad}}"
                step="0.01"
                min="0"
                required>
@@ -109,6 +116,7 @@
         <input type="number"
                name="blastoMieloide" #blastoMieloide
                class="form-control"
+               placeholder="{{sangrePeriferica.blastoMieloide}}"
                step="0.01"
                min="0"
                required>
@@ -122,6 +130,7 @@
         <input type="number"
                name="linfBMaduroEInterm" #linfBMaduroEInterm
                class="form-control"
+               placeholder="{{sangrePeriferica.linfBMaduroEinterm}}"
                step="0.01"
                min="0"
                required>
@@ -135,6 +144,7 @@
         <input type="number"
                name="celulasNK" #celulasNK
                class="form-control"
+               placeholder="{{sangrePeriferica.celulasNK}}"
                step="0.01"
                min="0"
                required>
@@ -148,6 +158,7 @@
         <input type="number"
                name="serieMonocitica" #serieMonocitica
                class="form-control"
+               placeholder="{{sangrePeriferica.serieMonocritica}}"
                step="0.01"
                min="0"
                required>
@@ -161,6 +172,7 @@
         <input type="number"
                name="basofiloCD" #basofiloCD
                class="form-control"
+               placeholder="{{sangrePeriferica.basofiloCD}}"
                step="0.01"
                min="0"
                required>
@@ -174,6 +186,7 @@
         <input type="number"
                name="plasmocito" #plasmocito
                class="form-control"
+               placeholder="{{sangrePeriferica.plasmocito}}"
                step="0.01"
                min="0"
                required>
@@ -187,5 +200,5 @@
 
 <div class="botones">
   <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
-  <button type="button" class="btn btn-danger" [routerLink]="['/home/hematologo/',MedicoId]"> Cancelar</button>
+  <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Cancelar</button>
 </div>

@@ -113,7 +113,7 @@ export class SangrePerifericaEditComponent implements OnInit {
       };
 
       this.sangrePerifericaService.updateSangrePeriferica(sangrePerifericaNew).subscribe((response: any) => {
-        this.router.navigate(['home/hematologo/',this.MedicoId]);
+        this.router.navigate(['home/pediatra/',this.MedicoId]);
       });
     }
   }

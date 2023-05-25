@@ -2,28 +2,23 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {PacienteService} from "../../Shared/Service/paciente.service";
 import {MedicoService} from "../../Shared/Service/medico.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {MedulaOsea} from "../../Shared/Interface/medula-osea";
-import {MedulaOseaService} from "../../Shared/Service/medula-osea.service";
+import {SangrePerifericaService} from "../../Shared/Service/sangre-periferica.service";
 
 @Component({
-  selector: 'app-medula-osea-edit',
-  templateUrl: './medula-osea-edit.component.html',
-  styleUrls: ['./medula-osea-edit.component.css']
+  selector: 'app-sangre-periferica',
+  templateUrl: './sangre-periferica.component.html',
+  styleUrls: ['./sangre-periferica.component.css']
 })
-export class MedulaOseaEditComponent implements OnInit {
+export class SangrePerifericaComponent implements OnInit {
   PacienteId!: number;
   MedicoId!: number;
-  MedulaOseaId!: number;
-
-  medulaOseaData: any;
-  medulaOsea: MedulaOsea;
 
   @ViewChild("linfoblastoBPatologico") linfoblastoBPatologico! : ElementRef;
   @ViewChild("blastoMieloide") blastoMieloide! : ElementRef;
   @ViewChild("linfoblastoBNormal") linfoblastoBNormal! : ElementRef;
   @ViewChild("linfBMaduroEInterm") linfBMaduroEInterm! : ElementRef;
-  @ViewChild("linfocitosTNK") linfocitosTNK! : ElementRef;
-  @ViewChild("celMesenquimal") celMesenquimal! : ElementRef;
+  @ViewChild("linfocitosT") linfocitosT! : ElementRef;
+  @ViewChild("celulasNK") celulasNK! : ElementRef;
   @ViewChild("serieGranulocitoNeutrofilo") serieGranulocitoNeutrofilo! : ElementRef;
   @ViewChild("serieMonocitica") serieMonocitica! : ElementRef;
   @ViewChild("eosinofilo") eosinofilo! : ElementRef;
@@ -34,30 +29,14 @@ export class MedulaOseaEditComponent implements OnInit {
 
   constructor(private pacienteService: PacienteService,
               private medicoService : MedicoService,
-              private medulaOseaService: MedulaOseaService,
+              private sangrePerifericaService: SangrePerifericaService,
               private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
     this.route.params.subscribe(params=>this.PacienteId= params['pacienteId'])
-    this.route.params.subscribe(params=>this.MedulaOseaId= params['medulaOseaId'])
-    this.medulaOsea = {} as MedulaOsea;
   }
 
   ngOnInit(): void {
-    this.getReturnDataPacient();
-  }
-
-  getReturnDataPacient(){
-    this.medulaOseaService.getAllMedulaOsea().subscribe(data=>{
-      this.medulaOseaData = data;
-      for (var i = 0; i < this.medulaOseaData.length; i++){
-        if (this.PacienteId == this.medulaOseaData[i].pacienteId){
-          this.medulaOseaService.getMedulaOseaById(this.medulaOseaData[i].id).subscribe((response: any) => {
-            this.medulaOsea = response[0];
-          })
-        }
-      }
-    })
   }
 
   Registrar():void{
@@ -65,8 +44,8 @@ export class MedulaOseaEditComponent implements OnInit {
     var blastoMieloide = this.blastoMieloide.nativeElement.value;
     var linfoblastoBNormal = this.linfoblastoBNormal.nativeElement.value;
     var linfBMaduroEInterm = this.linfBMaduroEInterm.nativeElement.value;
-    var linfocitosTNK = this.linfocitosTNK.nativeElement.value;
-    var celMesenquimal = this.celMesenquimal.nativeElement.value;
+    var linfocitosT = this.linfocitosT.nativeElement.value;
+    var celulasNK = this.celulasNK.nativeElement.value;
     var serieGranulocitoNeutrofilo = this.serieGranulocitoNeutrofilo.nativeElement.value;
     var serieMonocitica = this.serieMonocitica.nativeElement.value;
     var eosinofilo = this.eosinofilo.nativeElement.value;
@@ -76,7 +55,7 @@ export class MedulaOseaEditComponent implements OnInit {
     var celularidad = this.celularidad.nativeElement.value;
 
     if(linfoblastoBPatologico == '' || blastoMieloide == '' || linfoblastoBNormal == '' || linfBMaduroEInterm == '' ||
-      linfocitosTNK == '' || celMesenquimal == '' || serieGranulocitoNeutrofilo == '' || serieMonocitica == '' ||
+      linfocitosT == '' || celulasNK == '' || serieGranulocitoNeutrofilo == '' || serieMonocitica == '' ||
       eosinofilo == '' || basofiloCD == '' || serieEritroide == '' || plasmocito == '' || celularidad == ''){
       alert("Complete todos los campos");
     }
@@ -85,8 +64,8 @@ export class MedulaOseaEditComponent implements OnInit {
       let b = parseFloat(blastoMieloide);
       let c = parseFloat(linfoblastoBNormal);
       let d = parseFloat(linfBMaduroEInterm);
-      let e = parseFloat(linfocitosTNK);
-      let f = parseFloat(celMesenquimal);
+      let e = parseFloat(linfocitosT);
+      let f = parseFloat(celulasNK);
       let g = parseFloat(serieGranulocitoNeutrofilo);
       let h = parseFloat(serieMonocitica);
       let i = parseFloat(eosinofilo);
@@ -96,13 +75,13 @@ export class MedulaOseaEditComponent implements OnInit {
       let m = parseFloat(celularidad);
       let pacienteId = parseFloat(this.PacienteId.toString());
 
-      const medulaOseaNew = {pacienteId: pacienteId,
+      const sangrePerifericaNew = {pacienteId: pacienteId,
         linfoblastoBPatologico: a,
         blastoMieloide: b,
         linfoblastoBNormal: c,
         linfBMaduroEinterm: d,
-        linfocitosTNK: e,
-        celMesenquimal: f,
+        linfocitosT: e,
+        celulasNK: f,
         serieGranulocitoNeutrofilo: g,
         serieMonocritica: h,
         eosinofilo: i,
@@ -112,8 +91,8 @@ export class MedulaOseaEditComponent implements OnInit {
         celularidad: m
       };
 
-      this.medulaOseaService.updateMedulaOsea(medulaOseaNew).subscribe((response: any) => {
-        this.router.navigate(['home/hematologo/',this.MedicoId]);
+      this.sangrePerifericaService.addSangrePeriferica(sangrePerifericaNew).subscribe((response: any) => {
+        this.router.navigate(['home/pediatra/',this.MedicoId]);
       });
     }
   }

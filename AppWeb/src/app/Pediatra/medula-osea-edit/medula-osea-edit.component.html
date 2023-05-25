@@ -1,8 +1,8 @@
-<app-hematologo-nav-bar></app-hematologo-nav-bar>
-<app-sangre-periferica-figura></app-sangre-periferica-figura>
+<app-pediatra-nav-bar></app-pediatra-nav-bar>
+<app-medula-osea-figura></app-medula-osea-figura>
 
 <div class="titulo">
-  <h1> Prueba: Sangre Periférica</h1>
+  <h1> Prueba: Médula Ósea </h1>
 </div>
 
 <div class="cuerpo">
@@ -12,11 +12,11 @@
     <div class="sub-izquierda">
 
       <div style="display: flex;">
-        <label>linfoblasto B patólogico</label>
+        <label>Linfoblasto B patólogico</label>
         <input type="number"
                name="linfoblastoBPatologico" #linfoblastoBPatologico
+               placeholder="{{medulaOsea.linfoblastoBPatologico}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.linfoblastoBPatologico}}"
                step="0.01"
                min="0"
                required>
@@ -26,11 +26,11 @@
       <br>
 
       <div style="display: flex;">
-        <label>linfoblasto B normal</label>
+        <label>Linfoblasto B normal</label>
         <input type="number"
                name="linfoblastoBNormal" #linfoblastoBNormal
+               placeholder="{{medulaOsea.linfoblastoBNormal}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.linfoblastoBNormal}}"
                step="0.01"
                min="0"
                required>
@@ -40,11 +40,11 @@
       <br>
 
       <div style="display: flex;">
-        <label>linfocitos T</label>
+        <label>Linfocitos T y NK</label>
         <input type="number"
-               name="linfocitosT" #linfocitosT
+               name="linfocitosTNK" #linfocitosTNK
+               placeholder="{{medulaOsea.linfocitosTNK}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.linfocitosT}}"
                step="0.01"
                min="0"
                required>
@@ -57,8 +57,8 @@
         <label>Serie granulocito/neutrófilo</label>
         <input type="number"
                name="serieGranulocitoNeutrofilo" #serieGranulocitoNeutrofilo
+               placeholder="{{medulaOsea.serieGranulocitoNeutrofilo}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.serieGranulocitoNeutrofilo}}"
                step="0.01"
                min="0"
                required>
@@ -71,8 +71,8 @@
         <label>Eosinófilo</label>
         <input type="number"
                name="eosinofilo" #eosinofilo
+               placeholder="{{medulaOsea.eosinofilo}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.eosinofilo}}"
                step="0.01"
                min="0"
                required>
@@ -85,8 +85,8 @@
         <label>Serie eritroide</label>
         <input type="number"
                name="serieEritroide" #serieEritroide
+               placeholder="{{medulaOsea.serieEritroide}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.serieEritroide}}"
                step="0.01"
                min="0"
                required>
@@ -97,13 +97,14 @@
 
       <div style="display: flex;">
         <label>Celularidad de la muestra</label>
-        <input type="number"
+        <input required
+               type="number"
                name="celularidad" #celularidad
+               placeholder="{{medulaOsea.celularidad}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.celularidad}}"
                step="0.01"
                min="0"
-               required>
+                />
         <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
       </div>
 
@@ -115,8 +116,8 @@
         <label>Blasto mieloide</label>
         <input type="number"
                name="blastoMieloide" #blastoMieloide
+               placeholder="{{medulaOsea.blastoMieloide}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.blastoMieloide}}"
                step="0.01"
                min="0"
                required>
@@ -126,53 +127,11 @@
       <br>
 
       <div style="display: flex;">
-        <label>linf. B maduro e interm </label>
+        <label>Linf. B maduro e interm </label>
         <input type="number"
                name="linfBMaduroEInterm" #linfBMaduroEInterm
+               placeholder="{{medulaOsea.linfBMaduroEinterm}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.linfBMaduroEinterm}}"
-               step="0.01"
-               min="0"
-               required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
-      </div>
-
-      <br>
-
-      <div style="display: flex;">
-        <label>Células NK</label>
-        <input type="number"
-               name="celulasNK" #celulasNK
-               class="form-control"
-               placeholder="{{sangrePeriferica.celulasNK}}"
-               step="0.01"
-               min="0"
-               required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
-      </div>
-
-      <br>
-
-      <div style="display: flex;">
-        <label>serie monocítica</label>
-        <input type="number"
-               name="serieMonocitica" #serieMonocitica
-               class="form-control"
-               placeholder="{{sangrePeriferica.serieMonocritica}}"
-               step="0.01"
-               min="0"
-               required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
-      </div>
-
-      <br>
-
-      <div style="display: flex;">
-        <label>Basófilo/CD</label>
-        <input type="number"
-               name="basofiloCD" #basofiloCD
-               class="form-control"
-               placeholder="{{sangrePeriferica.basofiloCD}}"
                step="0.01"
                min="0"
                required>
@@ -185,8 +144,50 @@
         <label>Plasmocito</label>
         <input type="number"
                name="plasmocito" #plasmocito
+               placeholder="{{medulaOsea.plasmocito}}"
                class="form-control"
-               placeholder="{{sangrePeriferica.plasmocito}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Serie monocítica</label>
+        <input type="number"
+               name="serieMonocitica" #serieMonocitica
+               placeholder="{{medulaOsea.serieMonocritica}}"
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Basófilo/CD</label>
+        <input type="number"
+               name="basofiloCD" #basofiloCD
+               placeholder="{{medulaOsea.basofiloCD}}"
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Cel. Mesenquinal</label>
+        <input type="number"
+               name="celMesenquimal" #celMesenquimal
+               placeholder="{{medulaOsea.celMesenquimal}}"
+               class="form-control"
                step="0.01"
                min="0"
                required>
@@ -200,5 +201,6 @@
 
 <div class="botones">
   <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
-  <button type="button" class="btn btn-danger" [routerLink]="['/home/hematologo/',MedicoId]"> Cancelar</button>
+  <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Cancelar</button>
 </div>
+
