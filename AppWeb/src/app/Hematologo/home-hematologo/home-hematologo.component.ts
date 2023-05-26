@@ -27,8 +27,7 @@ export class HomeHematologoComponent implements OnInit {
   medulaOseaData: any;
 
   searchText = "";
-  formModalSangrePeriferica: any;
-  formModalMedulaOsea: any;
+
 
   constructor(private pacienteService : PacienteService,
               private sangrePerifericaService: SangrePerifericaService,
@@ -43,80 +42,7 @@ export class HomeHematologoComponent implements OnInit {
       this.paciente = data;
       this.listPacientes = data;
     });
-
-    this.formModalSangrePeriferica = new window.bootstrap.Modal(
-      document.getElementById('modalSangrePeriferica')
-    );
-
-    this.formModalMedulaOsea = new window.bootstrap.Modal(
-      document.getElementById('modalMedulaOsea')
-    );
   }
-
-  openFormModalSangrePeriferica() {
-    this.formModalSangrePeriferica.show();
-  }
-
-  openFormModalMedulaOsea() {
-    this.formModalMedulaOsea.show();
-  }
-
-  saveSomeThingSangrePeriferica() {
-    this.formModalSangrePeriferica.hide();
-    this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica',this.SangrePerifericaId]);
-  }
-
-  saveSomeThingMedulaOsea() {
-    this.formModalMedulaOsea.hide();
-    this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'medulaOsea',this.MedulaOseaId]);
-  }
-
-  refresh(){
-    window.location.reload()
-  }
-
-  editSangrePeriferica(idPaciente: number){
-    this.PacienteId = idPaciente;
-    this.sangrePerifericaService.getAllSangrePeriferica().subscribe(data=>{
-      this.sangrePerifericaData = data;
-      for (var i = 0; i < this.sangrePerifericaData.length; i++){
-        if (this.PacienteId  == this.sangrePerifericaData[i].pacienteId){
-          this.SangrePerifericaId = this.sangrePerifericaData[i].id;
-          this.validarSangrePeriferica = true;
-        }
-      }
-
-      if (this.validarSangrePeriferica){
-        this.openFormModalSangrePeriferica();
-      }
-      else {
-        this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'sangrePeriferica']);
-      }
-
-    });
-  }
-
-  editMedulaOsea(idPaciente: number){
-    this.PacienteId = idPaciente;
-    this.medulaOseaService.getAllMedulaOsea().subscribe(data=>{
-      this.medulaOseaData = data;
-      for (var i = 0; i < this.medulaOseaData.length; i++){
-        if (this.PacienteId  == this.medulaOseaData[i].pacienteId){
-          this.MedulaOseaId = this.medulaOseaData[i].id;
-          this.validarMedulaOsea = true;
-        }
-      }
-
-      if (this.validarMedulaOsea){
-        this.openFormModalMedulaOsea();
-      }
-      else {
-        this.router.navigate(['/home/hematologo/',this.MedicoId,'paciente',this.PacienteId ,'medulaOsea']);
-      }
-
-    });
-  }
-
   Search(){
     // alert(this.searchText)
     if(this.searchText!== ""){

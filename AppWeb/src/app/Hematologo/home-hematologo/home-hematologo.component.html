@@ -6,6 +6,7 @@
   <div class="contenido">
     <div class="primera-linea">
       <h1> Lista de pacientes </h1>
+      <button class="button2" [routerLink]="['/home/pediatra/',MedicoId,'estadisticas']"> Estadísticas </button>
     </div>
 
     <div>
@@ -27,6 +28,7 @@
           </th>
           <th>Prueba: Sangre Periférica</th>
           <th>Prueba: Médula Ósea</th>
+          <th>Reporte</th>
         </tr>
         </thead>
         <tbody>
@@ -53,6 +55,9 @@
           </td>
           <td>
             <button type="button" class="btn" style="background-color: #7a43ee; color: white" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'medulaOsea']">Visualizar</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'reporte']">Visualizar</button>
           </td>
         </tr>
         </tbody>

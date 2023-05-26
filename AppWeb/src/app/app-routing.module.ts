@@ -17,6 +17,7 @@ import {MedulaOseaVisualizarComponent} from "./Hematologo/medula-osea-visualizar
 import {ReporteComponent} from "./Pediatra/reporte/reporte.component";
 import { EstadisticasComponent } from './Pediatra/estadisticas/estadisticas.component';
 import { ReporteEditComponent } from './Pediatra/reporte-edit/reporte-edit.component';
+import { ReporteVisualizarComponent } from './Hematologo/reporte-visualizar/reporte-visualizar.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'login'},
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path:'home/hematologo/:medicoId', component: HomeHematologoComponent},
   {path:'home/hematologo/:medicoId/paciente/:pacienteId/sangrePeriferica', component: SangrePerifericaVisualizarComponent},
   {path:'home/hematologo/:medicoId/paciente/:pacienteId/medulaOsea', component: MedulaOseaVisualizarComponent},
+  {path:'home/hematologo/:medicoId/paciente/:pacienteId/reporte', component: ReporteVisualizarComponent},
 ];
 
 @NgModule({
