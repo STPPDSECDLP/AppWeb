@@ -6,6 +6,7 @@ import { MedulaOsea } from "../../Shared/Interface/medula-osea";
 import { MedulaOseaService } from "../../Shared/Service/medula-osea.service";
 import { ReporteService } from "../../Shared/Service/reporte.service";
 import { PrediccionService } from "../../Shared/Service/prediccion.service";
+import { Reporte } from 'src/app/Shared/Interface/reporte';
 
 @Component({
   selector: 'app-reporte',
@@ -21,6 +22,10 @@ export class ReporteVisualizarComponent implements OnInit {
   MedicoId!: number;
   SangrePerifericaId!: number;
   MedulaOseaId!: number;
+
+  ReporteId!: number;
+  reporteData: any;
+  reporteObj: Reporte;
 
 
   validar: boolean = false;
@@ -44,15 +49,34 @@ export class ReporteVisualizarComponent implements OnInit {
     private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.PacienteId = params['pacienteId'])
     this.route.params.subscribe(params => this.MedicoId = params['medicoId'])
+    this.route.params.subscribe(params => this.ReporteId = params['reporteId'])
     this.sangrePeriferica = {} as SangrePeriferica;
     this.medulaOsea = {} as MedulaOsea;
+    this.reporteObj = {} as Reporte;
   }
 
   ngOnInit(): void {
     this.getReturnDataPacient();
     this.getReturnDataPacientMedulaOsea();
+    this.getReturnDataReporte();
     
   }
+
+  getReturnDataReporte() {
+    this.reporteService.getAllReportes().subscribe(data => {
+        this.reporteData = data;
+        for (var i = 0; i < this.reporteData.length; i++) {
+            if (this.PacienteId == this.reporteData[i].pacienteId) {
+                this.reporteService.getReporteById(this.reporteData[i].id).subscribe((response: any) => {
+                    this.reporteObj = response[0];
+                    this.prediccionResult = this.reporteObj.prediccion
+                })
+            }
+        }
+
+    })
+
+}
 
   printPage() {
     if (this.comentario.nativeElement.value == '' || this.observacion.nativeElement.value == '' || this.prediccionResult == undefined) {
