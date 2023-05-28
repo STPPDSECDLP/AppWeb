@@ -1,8 +1,8 @@
 <app-pediatra-nav-bar></app-pediatra-nav-bar>
 <app-sangre-periferica-figura></app-sangre-periferica-figura>
-<!--
+
 <div class="titulo">
-  <h1> Prueba: Sangre Periférica</h1>
+  <h1> Prueba: Hemograma</h1>
 </div>
 
 <div class="cuerpo">
@@ -13,98 +13,168 @@
 
       <div style="display: flex;">
         <label>Hemoglobina</label>
-        <input type="number"
-               name="linfoblastoBPatologico" #linfoblastoBPatologico
-               class="form-control"
-               placeholder="{{sangrePeriferica.hemoglobina}}"
-               step="0.01"
-               min="0"
-               required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+          <input type="number"
+                 name="hemoglobina" #hemoglobina
+                 class="form-control"
+                 placeholder="{{sangrePeriferica.hemoglobina}}"
+                 step="0.01"
+                 min="0"
+                 required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>linfoblasto B normal</label>
+        <label>Hematocrito</label>
         <input type="number"
-               name="linfoblastoBNormal" #linfoblastoBNormal
+               name="hematocrito" #hematocrito
                class="form-control"
-               placeholder="{{sangrePeriferica.linfoblastoBNormal}}"
+               placeholder="{{sangrePeriferica.hematocrito}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>linfocitos T</label>
+        <label>Hematies</label>
         <input type="number"
-               name="linfocitosT" #linfocitosT
+               name="hematies" #hematies
                class="form-control"
-               placeholder="{{sangrePeriferica.linfocitosT}}"
+               placeholder="{{sangrePeriferica.hematies}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie granulocito/neutrófilo</label>
+        <label>Volumen Corpuscular Medio</label>
         <input type="number"
-               name="serieGranulocitoNeutrofilo" #serieGranulocitoNeutrofilo
+               name="volumenCorpuscularMedio" #volumenCorpuscularMedio
                class="form-control"
-               placeholder="{{sangrePeriferica.serieGranulocitoNeutrofilo}}"
+               placeholder="{{sangrePeriferica.volumenCorpuscularMedio}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Eosinófilo</label>
+        <label>Hemoglobina Corpuscular Media</label>
         <input type="number"
-               name="eosinofilo" #eosinofilo
+               name="hemoglobinaCorpuscularMedia" #hemoglobinaCorpuscularMedia
                class="form-control"
-               placeholder="{{sangrePeriferica.eosinofilo}}"
+               placeholder="{{sangrePeriferica.hemoglobinaCorpuscularMedia}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie eritroide</label>
+        <label>Concentración Hemoglobina Corpuscular</label>
         <input type="number"
-               name="serieEritroide" #serieEritroide
+               name="concentracionHemoglobinaCorpuscular" #concentracionHemoglobinaCorpuscular
                class="form-control"
-               placeholder="{{sangrePeriferica.serieEritroide}}"
+               placeholder="{{sangrePeriferica.concentracionHemoglobinaCorpuscular}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Celularidad de la muestra</label>
+        <label>Indice Anisocitosis (RDW) (%)</label>
         <input type="number"
-               name="celularidad" #celularidad
+               name="indiceAnisocitosisRDW" #indiceAnisocitosisRDW
                class="form-control"
-               placeholder="{{sangrePeriferica.celularidad}}"
+               placeholder="{{sangrePeriferica.indiceAnisocitosisRDW}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Indice Anisocitosis (RDW) (SD)</label>
+        <input type="number"
+               name="indiceAnisocitosisRDWSD" #indiceAnisocitosisRDWSD
+               class="form-control"
+               placeholder="{{sangrePeriferica.indiceAnisocitosisRDWSD}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+      
+      <br>
+
+      <div style="display: flex;">
+        <label>Leucocitos Totales</label>
+        <input type="number"
+               name="leucocitosTotales" #leucocitosTotales
+               class="form-control"
+               placeholder="{{sangrePeriferica.leucocitosTotales}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+      
+      <br>
+
+      <div style="display: flex;">
+        <label>Eosinófilos (%)</label>
+        <input type="number"
+               name="eosinofilosP" #eosinofilosP
+               class="form-control"
+               placeholder="{{sangrePeriferica.eosinofilosP}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+      
+      <br>
+
+      <div style="display: flex;">
+        <label>Basófilos (%)</label>
+        <input type="number"
+               name="basofilosP" #basofilosP
+               class="form-control"
+               placeholder="{{sangrePeriferica.basofilosP}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Linfocitos (%)</label>
+        <input type="number"
+               name="linfocitosP" #linfocitosP
+               class="form-control"
+               placeholder="{{sangrePeriferica.linfocitosP}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
     </div>
@@ -112,92 +182,162 @@
     <div class="sub-derecha">
 
       <div style="display: flex;">
-        <label>Blasto mieloide</label>
+        <label>Monocitos (%)</label>
         <input type="number"
-               name="blastoMieloide" #blastoMieloide
+               name="monocitosP" #monocitosP
                class="form-control"
-               placeholder="{{sangrePeriferica.blastoMieloide}}"
+               placeholder="{{sangrePeriferica.monocitosP}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>linf. B maduro e interm </label>
+        <label>Neutrófilos Segmentados (%) </label>
         <input type="number"
-               name="linfBMaduroEInterm" #linfBMaduroEInterm
+               name="neutrofilosSegmentadosP" #neutrofilosSegmentadosP
                class="form-control"
-               placeholder="{{sangrePeriferica.linfBMaduroEinterm}}"
+               placeholder="{{sangrePeriferica.neutrofilosSegmentadosP}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Células NK</label>
+        <label>Bastones (%)</label>
         <input type="number"
-               name="celulasNK" #celulasNK
+               name="bastonesP" #bastonesP
                class="form-control"
-               placeholder="{{sangrePeriferica.celulasNK}}"
+               placeholder="{{sangrePeriferica.bastonesP}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>serie monocítica</label>
+        <label>Eosinófilos (10^3/UL)</label>
         <input type="number"
-               name="serieMonocitica" #serieMonocitica
+               name="eosinofilosD" #eosinofilosD
                class="form-control"
-               placeholder="{{sangrePeriferica.serieMonocritica}}"
+               placeholder="{{sangrePeriferica.eosinofilosD}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Basófilo/CD</label>
+        <label>Basófilos (10^3/UL)</label>
         <input type="number"
-               name="basofiloCD" #basofiloCD
+               name="basofilosD" #basofilosD
                class="form-control"
-               placeholder="{{sangrePeriferica.basofiloCD}}"
+               placeholder="{{sangrePeriferica.basofilosD}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Plasmocito</label>
+        <label>Linfocitos (10^3/UL)</label>
         <input type="number"
-               name="plasmocito" #plasmocito
+               name="linfocitosD" #linfocitosD
                class="form-control"
-               placeholder="{{sangrePeriferica.plasmocito}}"
+               placeholder="{{sangrePeriferica.linfocitosD}}"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Monocitos (10^3/UL)</label>
+        <input type="number"
+               name="monocitosD" #monocitosD
+               class="form-control"
+               placeholder="{{sangrePeriferica.monocitosD}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Neutrofilos Segmentados (10^3/UL)</label>
+        <input type="number"
+               name="neutrofilosSegmentadosD" #neutrofilosSegmentadosD
+               class="form-control"
+               placeholder="{{sangrePeriferica.neutrofilosSegmentadosD}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Bastones (10^3/UL)</label>
+        <input type="number"
+               name="bastonesD" #bastonesD
+               class="form-control"
+               placeholder="{{sangrePeriferica.bastonesD}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Recuento Plaqueta</label>
+        <input type="number"
+               name="recuentoPlaqueta" #recuentoPlaqueta
+               class="form-control"
+               placeholder="{{sangrePeriferica.recuentoPlaqueta}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Volumen Plaquetario Medio</label>
+        <input type="number"
+               name="volumenPlaquetarioMedio" #volumenPlaquetarioMedio
+               class="form-control"
+               placeholder="{{sangrePeriferica.volumenPlaquetarioMedio}}"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
     </div>
   </div>
 
 </div>
--->
+
 <div class="botones">
   <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
   <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Cancelar</button>

@@ -13,19 +13,29 @@ export class SangrePerifericaComponent implements OnInit {
   PacienteId!: number;
   MedicoId!: number;
 
-  @ViewChild("linfoblastoBPatologico") linfoblastoBPatologico! : ElementRef;
-  @ViewChild("blastoMieloide") blastoMieloide! : ElementRef;
-  @ViewChild("linfoblastoBNormal") linfoblastoBNormal! : ElementRef;
-  @ViewChild("linfBMaduroEInterm") linfBMaduroEInterm! : ElementRef;
-  @ViewChild("linfocitosT") linfocitosT! : ElementRef;
-  @ViewChild("celulasNK") celulasNK! : ElementRef;
-  @ViewChild("serieGranulocitoNeutrofilo") serieGranulocitoNeutrofilo! : ElementRef;
-  @ViewChild("serieMonocitica") serieMonocitica! : ElementRef;
-  @ViewChild("eosinofilo") eosinofilo! : ElementRef;
-  @ViewChild("basofiloCD") basofiloCD! : ElementRef;
-  @ViewChild("serieEritroide") serieEritroide! : ElementRef;
-  @ViewChild("plasmocito") plasmocito! : ElementRef;
-  @ViewChild("celularidad") celularidad! : ElementRef;
+  @ViewChild("hemoglobina") hemoglobina! : ElementRef;
+  @ViewChild("hematocrito") hematocrito! : ElementRef;
+  @ViewChild("hematies") hematies! : ElementRef;
+  @ViewChild("volumenCorpuscularMedio") volumenCorpuscularMedio! : ElementRef;
+  @ViewChild("hemoglobinaCorpuscularMedia") hemoglobinaCorpuscularMedia! : ElementRef;
+  @ViewChild("concentracionHemoglobinaCorpuscular") concentracionHemoglobinaCorpuscular! : ElementRef;
+  @ViewChild("indiceAnisocitosisRDW") indiceAnisocitosisRDW! : ElementRef;
+  @ViewChild("indiceAnisocitosisRDWSD") indiceAnisocitosisRDWSD! : ElementRef;
+  @ViewChild("leucocitosTotales") leucocitosTotales! : ElementRef;
+  @ViewChild("eosinofilosP") eosinofilosP! : ElementRef;
+  @ViewChild("basofilosP") basofilosP! : ElementRef;
+  @ViewChild("linfocitosP") linfocitosP! : ElementRef;
+  @ViewChild("monocitosP") monocitosP! : ElementRef;
+  @ViewChild("neutrofilosSegmentadosP") neutrofilosSegmentadosP! : ElementRef;
+  @ViewChild("bastonesP") bastonesP! : ElementRef;
+  @ViewChild("eosinofilosD") eosinofilosD! : ElementRef;
+  @ViewChild("basofilosD") basofilosD! : ElementRef;
+  @ViewChild("linfocitosD") linfocitosD! : ElementRef;
+  @ViewChild("monocitosD") monocitosD! : ElementRef;
+  @ViewChild("neutrofilosSegmentadosD") neutrofilosSegmentadosD! : ElementRef;
+  @ViewChild("bastonesD") bastonesD! : ElementRef;
+  @ViewChild("recuentoPlaqueta") recuentoPlaqueta! : ElementRef;
+  @ViewChild("volumenPlaquetarioMedio") volumenPlaquetarioMedio! : ElementRef;
 
   constructor(private pacienteService: PacienteService,
               private medicoService : MedicoService,
@@ -40,55 +50,88 @@ export class SangrePerifericaComponent implements OnInit {
   }
 
   Registrar():void{
-    var linfoblastoBPatologico = this.linfoblastoBPatologico.nativeElement.value;
-    var blastoMieloide = this.blastoMieloide.nativeElement.value;
-    var linfoblastoBNormal = this.linfoblastoBNormal.nativeElement.value;
-    var linfBMaduroEInterm = this.linfBMaduroEInterm.nativeElement.value;
-    var linfocitosT = this.linfocitosT.nativeElement.value;
-    var celulasNK = this.celulasNK.nativeElement.value;
-    var serieGranulocitoNeutrofilo = this.serieGranulocitoNeutrofilo.nativeElement.value;
-    var serieMonocitica = this.serieMonocitica.nativeElement.value;
-    var eosinofilo = this.eosinofilo.nativeElement.value;
-    var basofiloCD = this.basofiloCD.nativeElement.value;
-    var serieEritroide = this.serieEritroide.nativeElement.value;
-    var plasmocito = this.plasmocito.nativeElement.value;
-    var celularidad = this.celularidad.nativeElement.value;
+    var hemoglobina = this.hemoglobina.nativeElement.value;
+    var hematocrito = this.hematocrito.nativeElement.value;
+    var hematies = this.hematies.nativeElement.value;
+    var volumenCorpuscularMedio = this.volumenCorpuscularMedio.nativeElement.value;
+    var hemoglobinaCorpuscularMedia = this.hemoglobinaCorpuscularMedia.nativeElement.value;
+    var concentracionHemoglobinaCorpuscular = this.concentracionHemoglobinaCorpuscular.nativeElement.value;
+    var indiceAnisocitosisRDW = this.indiceAnisocitosisRDW.nativeElement.value;
+    var indiceAnisocitosisRDWSD = this.indiceAnisocitosisRDWSD.nativeElement.value;
+    var leucocitosTotales = this.leucocitosTotales.nativeElement.value;
+    var eosinofilosP = this.eosinofilosP.nativeElement.value;
+    var basofilosP = this.basofilosP.nativeElement.value;
+    var linfocitosP = this.linfocitosP.nativeElement.value;
+    var monocitosP = this.monocitosP.nativeElement.value;
+    var neutrofilosSegmentadosP = this.neutrofilosSegmentadosP.nativeElement.value;
+    var bastonesP = this.bastonesP.nativeElement.value;
+    var eosinofilosD = this.eosinofilosD.nativeElement.value;
+    var basofilosD = this.basofilosD.nativeElement.value;
+    var linfocitosD = this.linfocitosD.nativeElement.value;
+    var monocitosD = this.monocitosD.nativeElement.value;
+    var neutrofilosSegmentadosD = this.neutrofilosSegmentadosD.nativeElement.value;
+    var bastonesD = this.bastonesD.nativeElement.value;
+    var recuentoPlaqueta = this.recuentoPlaqueta.nativeElement.value;
+    var volumenPlaquetarioMedio = this.volumenPlaquetarioMedio.nativeElement.value;
 
-    if(linfoblastoBPatologico == '' || blastoMieloide == '' || linfoblastoBNormal == '' || linfBMaduroEInterm == '' ||
-      linfocitosT == '' || celulasNK == '' || serieGranulocitoNeutrofilo == '' || serieMonocitica == '' ||
-      eosinofilo == '' || basofiloCD == '' || serieEritroide == '' || plasmocito == '' || celularidad == ''){
+    if(hemoglobina == '' || hematocrito == '' || hematies == '' || volumenCorpuscularMedio == '' ||
+    hemoglobinaCorpuscularMedia == '' || concentracionHemoglobinaCorpuscular == '' || indiceAnisocitosisRDW == '' || indiceAnisocitosisRDWSD == '' ||
+    leucocitosTotales == '' || eosinofilosP == '' || basofilosP == '' || linfocitosP == '' || monocitosP == '' || neutrofilosSegmentadosP == '' || bastonesP == ''
+    || eosinofilosD == '' || basofilosD == '' || linfocitosD == '' || monocitosD == '' || neutrofilosSegmentadosD == ''
+    || bastonesD == '' || recuentoPlaqueta == '' || volumenPlaquetarioMedio == ''){
       alert("Complete todos los campos");
     }
     else {
-      let a = parseFloat(linfoblastoBPatologico);
-      let b = parseFloat(blastoMieloide);
-      let c = parseFloat(linfoblastoBNormal);
-      let d = parseFloat(linfBMaduroEInterm);
-      let e = parseFloat(linfocitosT);
-      let f = parseFloat(celulasNK);
-      let g = parseFloat(serieGranulocitoNeutrofilo);
-      let h = parseFloat(serieMonocitica);
-      let i = parseFloat(eosinofilo);
-      let j = parseFloat(basofiloCD);
-      let k = parseFloat(serieEritroide);
-      let l = parseFloat(plasmocito);
-      let m = parseFloat(celularidad);
       let pacienteId = parseFloat(this.PacienteId.toString());
+      let a = parseFloat(hemoglobina);
+      let b = parseFloat(hematocrito);
+      let c = parseFloat(hematies);
+      let d = parseFloat(volumenCorpuscularMedio);
+      let e = parseFloat(hemoglobinaCorpuscularMedia);
+      let f = parseFloat(concentracionHemoglobinaCorpuscular);
+      let g = parseFloat(indiceAnisocitosisRDW);
+      let h = parseFloat(indiceAnisocitosisRDWSD);
+      let i = parseFloat(leucocitosTotales);
+      let j = parseFloat(eosinofilosP);
+      let k = parseFloat(basofilosP);
+      let l = parseFloat(linfocitosP);
+      let m = parseFloat(monocitosP);
+      let n = parseFloat(neutrofilosSegmentadosP);
+      let o = parseFloat(bastonesP);
+      let p = parseFloat(eosinofilosD);
+      let q = parseFloat(basofilosD);
+      let r = parseFloat(linfocitosD);
+      let s = parseFloat(monocitosD);
+      let t = parseFloat(neutrofilosSegmentadosD);
+      let u = parseFloat(bastonesD);
+      let v = parseFloat(recuentoPlaqueta);
+      let w = parseFloat(volumenPlaquetarioMedio);
+     
 
       const sangrePerifericaNew = {pacienteId: pacienteId,
-        linfoblastoBPatologico: a,
-        blastoMieloide: b,
-        linfoblastoBNormal: c,
-        linfBMaduroEinterm: d,
-        linfocitosT: e,
-        celulasNK: f,
-        serieGranulocitoNeutrofilo: g,
-        serieMonocritica: h,
-        eosinofilo: i,
-        basofiloCD: j,
-        serieEritroide: k,
-        plasmocito: l,
-        celularidad: m
+        hemoglobina: a,
+        hematocrito: b,
+        hematies: c,
+        volumenCorpuscularMedio: d,
+        hemoglobinaCorpuscularMedia: e,
+        concentracionHemoglobinaCorpuscular: f,
+        indiceAnisocitosisRDW: g,
+        indiceAnisocitosisRDWSD: h,
+        leucocitosTotales: i,
+        eosinofilosP: j,
+        basofilosP: k,
+        linfocitosP: l,
+        monocitosP: m,
+        neutrofilosSegmentadosP: n,
+        bastonesP: o,
+        eosinofilosD: p,
+        basofilosD: q,
+        linfocitosD: r,
+        monocitosD: s,
+        neutrofilosSegmentadosD: t,
+        bastonesD: u,
+        recuentoPlaqueta: v,
+        volumenPlaquetarioMedio: w,
       };
 
       this.sangrePerifericaService.addSangrePeriferica(sangrePerifericaNew).subscribe((response: any) => {

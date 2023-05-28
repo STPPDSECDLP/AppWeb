@@ -2,7 +2,7 @@
 <app-sangre-periferica-figura></app-sangre-periferica-figura>
 
 <div class="titulo">
-  <h1> Prueba: Sangre Periférica </h1>
+  <h1> Prueba: Hemograma </h1>
 </div>
 
 <div class="cuerpo">
@@ -12,92 +12,157 @@
     <div class="sub-izquierda">
 
       <div style="display: flex;">
-        <label>linfoblasto B patólogico</label>
+        <label>Hemoglobina</label>
           <input type="number"
-                 name="linfoblastoBPatologico" #linfoblastoBPatologico
+                 name="hemoglobina" #hemoglobina
                  class="form-control"
                  step="0.01"
                  min="0"
                  required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>linfoblasto B normal</label>
+        <label>Hematocrito</label>
         <input type="number"
-               name="linfoblastoBNormal" #linfoblastoBNormal
+               name="hematocrito" #hematocrito
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>linfocitos T</label>
+        <label>Hematies</label>
         <input type="number"
-               name="linfocitosT" #linfocitosT
+               name="hematies" #hematies
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie granulocito/neutrófilo</label>
+        <label>Volumen Corpuscular Medio</label>
         <input type="number"
-               name="serieGranulocitoNeutrofilo" #serieGranulocitoNeutrofilo
+               name="volumenCorpuscularMedio" #volumenCorpuscularMedio
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Eosinófilo</label>
+        <label>Hemoglobina Corpuscular Media</label>
         <input type="number"
-               name="eosinofilo" #eosinofilo
+               name="hemoglobinaCorpuscularMedia" #hemoglobinaCorpuscularMedia
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie eritroide</label>
+        <label>Concentración Hemoglobina Corpuscular</label>
         <input type="number"
-               name="serieEritroide" #serieEritroide
+               name="concentracionHemoglobinaCorpuscular" #concentracionHemoglobinaCorpuscular
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Celularidad de la muestra</label>
+        <label>Indice Anisocitosis (RDW) (%)</label>
         <input type="number"
-               name="celularidad" #celularidad
+               name="indiceAnisocitosisRDW" #indiceAnisocitosisRDW
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Indice Anisocitosis (RDW) (SD)</label>
+        <input type="number"
+               name="indiceAnisocitosisRDWSD" #indiceAnisocitosisRDWSD
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+      
+      <br>
+
+      <div style="display: flex;">
+        <label>Leucocitos Totales</label>
+        <input type="number"
+               name="leucocitosTotales" #leucocitosTotales
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+      
+      <br>
+
+      <div style="display: flex;">
+        <label>Eosinófilos (%)</label>
+        <input type="number"
+               name="eosinofilosP" #eosinofilosP
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+      
+      <br>
+
+      <div style="display: flex;">
+        <label>Basófilos (%)</label>
+        <input type="number"
+               name="basofilosP" #basofilosP
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Linfocitos (%)</label>
+        <input type="number"
+               name="linfocitosP" #linfocitosP
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
     </div>
@@ -105,79 +170,144 @@
     <div class="sub-derecha">
 
       <div style="display: flex;">
-        <label>Blasto mieloide</label>
+        <label>Monocitos (%)</label>
         <input type="number"
-               name="blastoMieloide" #blastoMieloide
+               name="monocitosP" #monocitosP
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>linf. B maduro e interm </label>
+        <label>Neutrófilos Segmentados (%) </label>
         <input type="number"
-               name="linfBMaduroEInterm" #linfBMaduroEInterm
+               name="neutrofilosSegmentadosP" #neutrofilosSegmentadosP
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Células NK</label>
+        <label>Bastones (%)</label>
         <input type="number"
-               name="celulasNK" #celulasNK
+               name="bastonesP" #bastonesP
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>serie monocítica</label>
+        <label>Eosinófilos (10^3/UL)</label>
         <input type="number"
-               name="serieMonocitica" #serieMonocitica
+               name="eosinofilosD" #eosinofilosD
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Basófilo/CD</label>
+        <label>Basófilos (10^3/UL)</label>
         <input type="number"
-               name="basofiloCD" #basofiloCD
+               name="basofilosD" #basofilosD
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Plasmocito</label>
+        <label>Linfocitos (10^3/UL)</label>
         <input type="number"
-               name="plasmocito" #plasmocito
+               name="linfocitosD" #linfocitosD
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Monocitos (10^3/UL)</label>
+        <input type="number"
+               name="monocitosD" #monocitosD
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Neutrofilos Segmentados (10^3/UL)</label>
+        <input type="number"
+               name="neutrofilosSegmentadosD" #neutrofilosSegmentadosD
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Bastones (10^3/UL)</label>
+        <input type="number"
+               name="bastonesD" #bastonesD
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Recuento Plaqueta</label>
+        <input type="number"
+               name="recuentoPlaqueta" #recuentoPlaqueta
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Volumen Plaquetario Medio</label>
+        <input type="number"
+               name="volumenPlaquetarioMedio" #volumenPlaquetarioMedio
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none"> </span>
       </div>
 
     </div>
