@@ -30,9 +30,6 @@ export class HomeHematologoComponent implements OnInit {
 
 
   constructor(private pacienteService : PacienteService,
-              private sangrePerifericaService: SangrePerifericaService,
-              private medulaOseaService: MedulaOseaService,
-              private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
   }

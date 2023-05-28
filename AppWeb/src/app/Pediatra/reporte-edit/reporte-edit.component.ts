@@ -114,7 +114,7 @@ export class ReporteEditComponent implements OnInit {
             }
         })
     }
-
+/*
     getPrediction(): void {
 
         const a = this.sangrePeriferica.linfoblastoBPatologico.toString()
@@ -153,7 +153,7 @@ export class ReporteEditComponent implements OnInit {
             console.log(this.prediccionResult);
         })
     }
-
+*/
     Registrar(): void {
         var comentario = this.comentario.nativeElement.value;
         var observacion = this.observacion.nativeElement.value;

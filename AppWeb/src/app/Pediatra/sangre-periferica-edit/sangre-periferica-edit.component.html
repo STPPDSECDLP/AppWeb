@@ -1,6 +1,6 @@
 <app-pediatra-nav-bar></app-pediatra-nav-bar>
 <app-sangre-periferica-figura></app-sangre-periferica-figura>
-
+<!--
 <div class="titulo">
   <h1> Prueba: Sangre Periférica</h1>
 </div>
@@ -12,11 +12,11 @@
     <div class="sub-izquierda">
 
       <div style="display: flex;">
-        <label>linfoblasto B patólogico</label>
+        <label>Hemoglobina</label>
         <input type="number"
                name="linfoblastoBPatologico" #linfoblastoBPatologico
                class="form-control"
-               placeholder="{{sangrePeriferica.linfoblastoBPatologico}}"
+               placeholder="{{sangrePeriferica.hemoglobina}}"
                step="0.01"
                min="0"
                required>
@@ -197,7 +197,7 @@
   </div>
 
 </div>
-
+-->
 <div class="botones">
   <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
   <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Cancelar</button>

@@ -79,11 +79,7 @@ export class ReporteVisualizarComponent implements OnInit {
 }
 
   printPage() {
-    if (this.comentario.nativeElement.value == '' || this.observacion.nativeElement.value == '' || this.prediccionResult == undefined) {
-      alert("Completar los datos")
-    } else {
       window.print();
-    }
   }
 
   getReturnDataPacient() {
@@ -114,72 +110,5 @@ export class ReporteVisualizarComponent implements OnInit {
         }
       }
     })
-  }
-
-  getPrediction(): void {
-
-    const a = this.sangrePeriferica.linfoblastoBPatologico.toString()
-    const b = this.sangrePeriferica.blastoMieloide.toString()
-    const c = this.sangrePeriferica.linfoblastoBNormal.toString()
-    const d = this.sangrePeriferica.linfBMaduroEinterm.toString()
-    const e = this.sangrePeriferica.linfocitosT.toString()
-    const f = this.sangrePeriferica.celulasNK.toString()
-    const g = this.sangrePeriferica.serieGranulocitoNeutrofilo.toString()
-    const h = this.sangrePeriferica.serieMonocritica.toString()
-    const i = this.sangrePeriferica.eosinofilo.toString()
-    const j = this.sangrePeriferica.basofiloCD.toString()
-    const k = this.sangrePeriferica.serieEritroide.toString()
-    const l = this.sangrePeriferica.plasmocito.toString()
-    const m = this.sangrePeriferica.celularidad.toString()
-    const n = this.medulaOsea.linfoblastoBPatologico.toString()
-    const o = this.medulaOsea.blastoMieloide.toString()
-    const p = this.medulaOsea.linfoblastoBNormal.toString()
-    const q = this.medulaOsea.linfBMaduroEinterm.toString()
-    const r = this.medulaOsea.linfocitosTNK.toString()
-    const s = this.medulaOsea.celMesenquimal.toString()
-    const t = this.medulaOsea.serieGranulocitoNeutrofilo.toString()
-    const u = this.medulaOsea.serieMonocritica.toString()
-    const v = this.medulaOsea.eosinofilo.toString()
-    const w = this.medulaOsea.basofiloCD.toString()
-    const x = this.medulaOsea.serieEritroide.toString()
-    const y = this.medulaOsea.plasmocito.toString()
-    const z = this.medulaOsea.celularidad;
-
-    this.prediccionData = a + ',' + b + ',' + c + ',' + d + ',' + e + ',' + f + ',' + g + ',' + h + ',' + i + ',' + j + ',' + k + ',' + l + ',' + m + ',' + n + ',' + o + ',' + p + ',' + q + ',' + r + ',' + s + ',' + t + ',' + u + ',' + v + ',' + w + ',' + x + ',' + y + ',' + z;
-
-    const prediccionNew = { data: this.prediccionData }
-    console.log(prediccionNew);
-    this.prediccionService.addPrediccion(prediccionNew).subscribe(data => {
-      this.prediccionResult = data;
-      console.log(this.prediccionResult);
-    })
-  }
-
-  Registrar(): void {
-    var comentario = this.comentario.nativeElement.value;
-    var observacion = this.observacion.nativeElement.value;
-
-    let pacienteId = parseFloat(this.PacienteId.toString());
-    let medicoId = parseFloat(this.MedicoId.toString());
-
-    if (comentario == '' || observacion == '' || this.prediccionResult == undefined) {
-      alert("Completar los datos")
-    }
-    else {
-      const reporteNew = {
-        pacienteId: pacienteId,
-        medicoId: medicoId,
-        sangrePerifericaId: this.SangrePerifericaId,
-        medulaOseaId: this.MedulaOseaId,
-        prediccion: this.prediccionResult,
-        comentario: comentario,
-        observacion: observacion
-      };
-
-      this.reporteService.addReporte(reporteNew).subscribe((response: any) => {
-        this.router.navigate(['home/hematologo/', this.MedicoId]);
-      });
-    }
-
   }
 }
