@@ -18,19 +18,21 @@ export class MedulaOseaEditComponent implements OnInit {
   medulaOseaData: any;
   medulaOsea: MedulaOsea;
 
-  @ViewChild("linfoblastoBPatologico") linfoblastoBPatologico! : ElementRef;
-  @ViewChild("blastoMieloide") blastoMieloide! : ElementRef;
-  @ViewChild("linfoblastoBNormal") linfoblastoBNormal! : ElementRef;
-  @ViewChild("linfBMaduroEInterm") linfBMaduroEInterm! : ElementRef;
-  @ViewChild("linfocitosTNK") linfocitosTNK! : ElementRef;
-  @ViewChild("celMesenquimal") celMesenquimal! : ElementRef;
-  @ViewChild("serieGranulocitoNeutrofilo") serieGranulocitoNeutrofilo! : ElementRef;
-  @ViewChild("serieMonocitica") serieMonocitica! : ElementRef;
-  @ViewChild("eosinofilo") eosinofilo! : ElementRef;
-  @ViewChild("basofiloCD") basofiloCD! : ElementRef;
-  @ViewChild("serieEritroide") serieEritroide! : ElementRef;
-  @ViewChild("plasmocito") plasmocito! : ElementRef;
-  @ViewChild("celularidad") celularidad! : ElementRef;
+  @ViewChild("dolorPersistenteHuesos") dolorPersistenteHuesos! : ElementRef;
+  @ViewChild("dolorPersistenteAbdomen") dolorPersistenteAbdomen! : ElementRef;
+  @ViewChild("fiebrePersistente") fiebrePersistente! : ElementRef;
+  @ViewChild("moretones") moretones! : ElementRef;
+  @ViewChild("sangradoNarizEncias") sangradoNarizEncias! : ElementRef;
+  @ViewChild("crecimientoTumoral") crecimientoTumoral! : ElementRef;
+  @ViewChild("inflamacionGanglios") inflamacionGanglios! : ElementRef;
+  @ViewChild("picazonCorporal") picazonCorporal! : ElementRef;
+  @ViewChild("cansancioFacil") cansancioFacil! : ElementRef;
+  @ViewChild("palidez") palidez! : ElementRef;
+  @ViewChild("anemiaSubita") anemiaSubita! : ElementRef;
+  @ViewChild("perdidaPeso") perdidaPeso! : ElementRef;
+  @ViewChild("dolorCabeza") dolorCabeza! : ElementRef;
+  @ViewChild("vomitosMatutinos") vomitosMatutinos! : ElementRef;
+  @ViewChild("crecimientoRapidoAbdomen") crecimientoRapidoAbdomen! : ElementRef;
 
   constructor(private pacienteService: PacienteService,
               private medicoService : MedicoService,
@@ -61,55 +63,62 @@ export class MedulaOseaEditComponent implements OnInit {
   }
 
   Registrar():void{
-    var linfoblastoBPatologico = this.linfoblastoBPatologico.nativeElement.value;
-    var blastoMieloide = this.blastoMieloide.nativeElement.value;
-    var linfoblastoBNormal = this.linfoblastoBNormal.nativeElement.value;
-    var linfBMaduroEInterm = this.linfBMaduroEInterm.nativeElement.value;
-    var linfocitosTNK = this.linfocitosTNK.nativeElement.value;
-    var celMesenquimal = this.celMesenquimal.nativeElement.value;
-    var serieGranulocitoNeutrofilo = this.serieGranulocitoNeutrofilo.nativeElement.value;
-    var serieMonocitica = this.serieMonocitica.nativeElement.value;
-    var eosinofilo = this.eosinofilo.nativeElement.value;
-    var basofiloCD = this.basofiloCD.nativeElement.value;
-    var serieEritroide = this.serieEritroide.nativeElement.value;
-    var plasmocito = this.plasmocito.nativeElement.value;
-    var celularidad = this.celularidad.nativeElement.value;
+    var dolorPersistenteHuesos = this.dolorPersistenteHuesos.nativeElement.value;
+    var dolorPersistenteAbdomen = this.dolorPersistenteAbdomen.nativeElement.value;
+    var fiebrePersistente = this.fiebrePersistente.nativeElement.value;
+    var moretones = this.moretones.nativeElement.value;
+    var sangradoNarizEncias = this.sangradoNarizEncias.nativeElement.value;
+    var crecimientoTumoral = this.crecimientoTumoral.nativeElement.value;
+    var inflamacionGanglios = this.inflamacionGanglios.nativeElement.value;
+    var picazonCorporal = this.picazonCorporal.nativeElement.value;
+    var cansancioFacil = this.cansancioFacil.nativeElement.value;
+    var palidez = this.palidez.nativeElement.value;
+    var anemiaSubita = this.anemiaSubita.nativeElement.value;
+    var perdidaPeso = this.perdidaPeso.nativeElement.value;
+    var dolorCabeza = this.dolorCabeza.nativeElement.value;
+    var vomitosMatutinos = this.vomitosMatutinos.nativeElement.value;
+    var crecimientoRapidoAbdomen = this.crecimientoRapidoAbdomen.nativeElement.value;
 
-    if(linfoblastoBPatologico == '' || blastoMieloide == '' || linfoblastoBNormal == '' || linfBMaduroEInterm == '' ||
-      linfocitosTNK == '' || celMesenquimal == '' || serieGranulocitoNeutrofilo == '' || serieMonocitica == '' ||
-      eosinofilo == '' || basofiloCD == '' || serieEritroide == '' || plasmocito == '' || celularidad == ''){
+    if(dolorPersistenteHuesos == '' || dolorPersistenteAbdomen == '' || fiebrePersistente == '' || moretones == '' ||
+    sangradoNarizEncias == '' || crecimientoTumoral == '' || inflamacionGanglios == '' || picazonCorporal == '' ||
+    cansancioFacil == '' || palidez == '' || anemiaSubita == '' || perdidaPeso == '' || dolorCabeza == '' 
+    || vomitosMatutinos == '' || crecimientoRapidoAbdomen == ''){
       alert("Complete todos los campos");
     }
     else {
-      let a = parseFloat(linfoblastoBPatologico);
-      let b = parseFloat(blastoMieloide);
-      let c = parseFloat(linfoblastoBNormal);
-      let d = parseFloat(linfBMaduroEInterm);
-      let e = parseFloat(linfocitosTNK);
-      let f = parseFloat(celMesenquimal);
-      let g = parseFloat(serieGranulocitoNeutrofilo);
-      let h = parseFloat(serieMonocitica);
-      let i = parseFloat(eosinofilo);
-      let j = parseFloat(basofiloCD);
-      let k = parseFloat(serieEritroide);
-      let l = parseFloat(plasmocito);
-      let m = parseFloat(celularidad);
+      let a = dolorPersistenteHuesos;
+      let b = dolorPersistenteAbdomen;
+      let c = fiebrePersistente;
+      let d = moretones;
+      let e = sangradoNarizEncias;
+      let f = crecimientoTumoral;
+      let g = inflamacionGanglios;
+      let h = picazonCorporal;
+      let i = cansancioFacil;
+      let j = palidez;
+      let k = anemiaSubita;
+      let l = perdidaPeso;
+      let m = dolorCabeza;
+      let n = vomitosMatutinos;
+      let o = crecimientoRapidoAbdomen;
       let pacienteId = parseFloat(this.PacienteId.toString());
 
       const medulaOseaNew = {pacienteId: pacienteId,
-        linfoblastoBPatologico: a,
-        blastoMieloide: b,
-        linfoblastoBNormal: c,
-        linfBMaduroEinterm: d,
-        linfocitosTNK: e,
-        celMesenquimal: f,
-        serieGranulocitoNeutrofilo: g,
-        serieMonocritica: h,
-        eosinofilo: i,
-        basofiloCD: j,
-        serieEritroide: k,
-        plasmocito: l,
-        celularidad: m
+        dolorPersistenteHuesos: a,
+        dolorPersistenteAbdomen: b,
+        fiebrePersistente: c,
+        moretones: d,
+        sangradoNarizEncias: e,
+        crecimientoTumoral: f,
+        inflamacionGanglios: g,
+        picazonCorporal: h,
+        cansancioFacil: i,
+        palidez: j,
+        anemiaSubita: k,
+        perdidaPeso: l,
+        dolorCabeza: m,
+        vomitosMatutinos: n,
+        crecimientoRapidoAbdomen: o,
       };
 
       this.medulaOseaService.updateMedulaOsea(medulaOseaNew).subscribe((response: any) => {

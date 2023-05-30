@@ -2,7 +2,7 @@
 <app-medula-osea-figura></app-medula-osea-figura>
 
 <div class="titulo">
-  <h1> Prueba: Médula Ósea </h1>
+  <h1> Prueba: Examen Clínico</h1>
 </div>
 
 <div class="cuerpo">
@@ -12,92 +12,107 @@
     <div class="sub-izquierda">
 
       <div style="display: flex;">
-        <label>Linfoblasto B patólogico</label>
-        <input type="number"
-               name="linfoblastoBPatologico" #linfoblastoBPatologico
+        <label>Dolor Persistente de Huesos</label>
+        <input type="text"
+               name="dolorPersistenteHuesos" #dolorPersistenteHuesos
                class="form-control"
                step="0.01"
                min="0"
-               ngModel required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Linfoblasto B normal</label>
-        <input type="number"
-               name="linfoblastoBNormal" #linfoblastoBNormal
+        <label>Dolor Persistente de Abdomen</label>
+        <input type="text"
+               name="dolorPersistenteAbdomen" #dolorPersistenteAbdomen
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Linfocitos T y NK</label>
-        <input type="number"
-               name="linfocitosTNK" #linfocitosTNK
+        <label>Fiebre Persistente</label>
+        <input type="text"
+               name="fiebrePersistente" #fiebrePersistente
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie granulocito/neutrófilo</label>
-        <input type="number"
-               name="serieGranulocitoNeutrofilo" #serieGranulocitoNeutrofilo
+        <label>Moretones</label>
+        <input type="text"
+               name="moretones" #moretones
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Eosinófilo</label>
-        <input type="number"
-               name="eosinofilo" #eosinofilo
+        <label>Sangrado de Nariz/Encías</label>
+        <input type="text"
+               name="sangradoNarizEncias" #sangradoNarizEncias
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie eritroide</label>
-        <input type="number"
-               name="serieEritroide" #serieEritroide
+        <label>Crecimiento Tumoral</label>
+        <input type="text"
+               name="crecimientoTumoral" #crecimientoTumoral
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Celularidad de la muestra</label>
-        <input type="number"
-               name="celularidad" #celularidad
+        <label>Inflamación de Ganglios</label>
+        <input required
+               type="text"
+               name="inflamacionGanglios" #inflamacionGanglios
                class="form-control"
                step="0.01"
                min="0"
-               required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+                />
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Picazón Corporal</label>
+        <input required
+               type="text"
+               name="picazonCorporal" #picazonCorporal
+               class="form-control"
+               step="0.01"
+               min="0"
+                />
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
     </div>
@@ -105,79 +120,92 @@
     <div class="sub-derecha">
 
       <div style="display: flex;">
-        <label>Blasto mieloide</label>
-        <input type="number"
-               name="blastoMieloide" #blastoMieloide
+        <label>Cansancio Fácil</label>
+        <input type="text"
+               name="cansancioFacil" #cansancioFacil
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Linf. B maduro e interm </label>
-        <input type="number"
-               name="linfBMaduroEInterm" #linfBMaduroEInterm
+        <label>Palidez</label>
+        <input type="text"
+               name="palidez" #palidez
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Plasmocito</label>
-        <input type="number"
-               name="plasmocito" #plasmocito
+        <label>Anemia Súbita</label>
+        <input type="text"
+               name="anemiaSubita" #anemiaSubita
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Serie monocítica</label>
-        <input type="number"
-               name="serieMonocitica" #serieMonocitica
+        <label>Pérdida de Peso</label>
+        <input type="text"
+               name="perdidaPeso" #perdidaPeso
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Basófilo/CD</label>
-        <input type="number"
-               name="basofiloCD" #basofiloCD
+        <label>Dolor de Cabeza</label>
+        <input type="text"
+               name="dolorCabeza" #dolorCabeza
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
       <br>
 
       <div style="display: flex;">
-        <label>Cel. Mesenquinal</label>
-        <input type="number"
-               name="celMesenquimal" #celMesenquimal
+        <label>Vómitos Matutinos</label>
+        <input type="text"
+               name="vomitosMatutinos" #vomitosMatutinos
                class="form-control"
                step="0.01"
                min="0"
                required>
-        <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Crecimiento Rápido del Abdomen</label>
+        <input type="text"
+               name="crecimientoRapidoAbdomen" #crecimientoRapidoAbdomen
+               class="form-control"
+               step="0.01"
+               min="0"
+               required>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
     </div>

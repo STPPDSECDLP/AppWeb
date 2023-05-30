@@ -43,6 +43,7 @@
   
   .sub-izquierda label{
     width: 15em;
+    text-align: left;
   }
   
   .sub-izquierda input{
@@ -56,6 +57,7 @@
   
   .sub-derecha label{
     width: 15em;
+    text-align: left;
   }
   
   .sub-derecha input{

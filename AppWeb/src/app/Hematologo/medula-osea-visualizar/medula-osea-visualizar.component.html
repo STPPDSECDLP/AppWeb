@@ -4,7 +4,7 @@
 <div class="titulo">
   <div *ngIf="validar">
 
-    <h1> Prueba: Médula Ósea </h1>
+    <h1> Prueba: Examen Clínico </h1>
 
     <div class="cuerpo">
 
@@ -13,86 +13,99 @@
         <div class="sub-izquierda">
 
           <div style="display: flex;">
-            <label>Linfoblasto B patólogico</label>
-            <input type="number"
+            <label>Dolor Persistente de Huesos</label>
+            <input type="text"
                    disabled = disabled
-                   placeholder="{{medulaOsea.linfoblastoBPatologico}}"
+                   placeholder="{{medulaOsea.dolorPersistenteHuesos}}"
                    class="form-control"
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Linfoblasto B normal</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.linfoblastoBNormal}}"
+            <label>Dolor Persistente de Abdomen</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.dolorPersistenteAbdomen}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Linfocitos T y NK</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.linfocitosTNK}}"
+            <label>Fiebre Persistente</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.fiebrePersistente}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Serie granulocito/neutrófilo</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.serieGranulocitoNeutrofilo}}"
+            <label>Moretones</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.moretones}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Eosinófilo</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.eosinofilo}}"
+            <label>Sangrado de Nariz/Encias</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.sangradoNarizEncias}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Serie eritroide</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.serieEritroide}}"
+            <label>Crecimiento Tumoral</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.crecimientoTumoral}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Celularidad de la muestra</label>
+            <label>Inflamación de Ganglios</label>
             <input required
-                   type="number"
-                   placeholder="{{medulaOsea.celularidad}}"
+                   type="text"
+                   placeholder="{{medulaOsea.inflamacionGanglios}}"
                    class="form-control"
                    disabled = disabled
             />
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Picazón Corporal</label>
+            <input required
+                   type="text"
+                   placeholder="{{medulaOsea.picazonCorporal}}"
+                   class="form-control"
+                   disabled = disabled
+            />
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
         </div>
@@ -100,73 +113,85 @@
         <div class="sub-derecha">
 
           <div style="display: flex;">
-            <label>Blasto mieloide</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.blastoMieloide}}"
+            <label>Cansancio Fácil</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.cansancioFacil}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Linf. B maduro e interm </label>
-            <input type="number"
-                   placeholder="{{medulaOsea.linfBMaduroEinterm}}"
+            <label>Palidez</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.palidez}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Plasmocito</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.plasmocito}}"
+            <label>Anemia Súbita</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.anemiaSubita}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Serie monocítica</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.serieMonocritica}}"
+            <label>Pérdida de Peso</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.perdidaPeso}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Basófilo/CD</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.basofiloCD}}"
+            <label>Dolor de Cabeza</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.dolorCabeza}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
           <br>
 
           <div style="display: flex;">
-            <label>Cel. Mesenquinal</label>
-            <input type="number"
-                   placeholder="{{medulaOsea.celMesenquimal}}"
+            <label>Vómitos Matutinos</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.vomitosMatutinos}}"
                    class="form-control"
                    disabled = disabled
                    required>
-            <span  class="input-group-text" style="background-color: white; border: none"><i class="bi bi-percent"></i></span>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Crecimiento Rápido del Abdomen</label>
+            <input type="text"
+                   placeholder="{{medulaOsea.crecimientoRapidoAbdomen}}"
+                   class="form-control"
+                   disabled = disabled
+                   required>
+            <span  class="input-group-text" style="background-color: white; border: none"> </span>
           </div>
 
         </div>
