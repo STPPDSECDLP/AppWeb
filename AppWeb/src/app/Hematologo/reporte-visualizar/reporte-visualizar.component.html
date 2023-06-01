@@ -6,6 +6,155 @@
 
     <div class="hr"></div>
 
+    <div *ngIf="validarMedulaOsea">
+
+        <h1> Prueba: Examen Clínico </h1>
+
+        <div class="cuerpo">
+
+            <div class="formulario">
+
+                <div class="sub-izquierda">
+
+                    <div style="display: flex;">
+                        <label>Dolor Persistente de Huesos</label>
+                        <input type="number" disabled=disabled placeholder="{{medulaOsea.dolorPersistenteHuesos}}"
+                            class="form-control" required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Dolor Persistente de Abdomen</label>
+                        <input type="number" placeholder="{{medulaOsea.dolorPersistenteAbdomen}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Fiebre Persistente</label>
+                        <input type="number" placeholder="{{medulaOsea.fiebrePersistente}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Moretones</label>
+                        <input type="number" placeholder="{{medulaOsea.moretones}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Sangrado de Nariz/Encias</label>
+                        <input type="number" placeholder="{{medulaOsea.sangradoNarizEncias}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Crecimiento Tumoral</label>
+                        <input type="number" placeholder="{{medulaOsea.crecimientoTumoral}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Inflamación de Ganglios</label>
+                        <input required type="number" placeholder="{{medulaOsea.inflamacionGanglios}}"
+                            class="form-control" disabled=disabled />
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Picazón Corporal</label>
+                        <input required type="number" placeholder="{{medulaOsea.picazonCorporal}}" class="form-control"
+                            disabled=disabled />
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                </div>
+
+                <div class="sub-derecha">
+
+                    <div style="display: flex;">
+                        <label>Cansancio Fácil</label>
+                        <input type="number" placeholder="{{medulaOsea.cansancioFacil}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Palidez</label>
+                        <input type="number" placeholder="{{medulaOsea.palidez}}" class="form-control" disabled=disabled
+                            required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Anemia Súbita</label>
+                        <input type="number" placeholder="{{medulaOsea.anemiaSubita}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Pérdida de Peso</label>
+                        <input type="number" placeholder="{{medulaOsea.perdidaPeso}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Dolor de Cabeza</label>
+                        <input type="number" placeholder="{{medulaOsea.dolorCabeza}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Vómitos Matutinos</label>
+                        <input type="number" placeholder="{{medulaOsea.vomitosMatutinos}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+
+                    <br>
+
+                    <div style="display: flex;">
+                        <label>Crecimiento Rápido del Abdomen</label>
+                        <input type="number" placeholder="{{medulaOsea.crecimientoRapidoAbdomen}}" class="form-control"
+                            disabled=disabled required>
+                        <span class="input-group-text" style="background-color: white; border: none"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div *ngIf="validar" style="margin-top: 1%">
         <h1> Prueba: Hemograma </h1>
 
@@ -229,169 +378,19 @@
 
     </div>
 
-    <div *ngIf="validarMedulaOsea">
-
-
-        <h1> Prueba: Examen Clínico </h1>
-
-        <div class="cuerpo">
-
-            <div class="formulario">
-
-                <div class="sub-izquierda">
-
-                    <div style="display: flex;">
-                        <label>Dolor Persistente de Huesos</label>
-                        <input type="number" disabled=disabled placeholder="{{medulaOsea.dolorPersistenteHuesos}}"
-                            class="form-control" required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Dolor Persistente de Abdomen</label>
-                        <input type="number" placeholder="{{medulaOsea.dolorPersistenteAbdomen}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Fiebre Persistente</label>
-                        <input type="number" placeholder="{{medulaOsea.fiebrePersistente}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Moretones</label>
-                        <input type="number" placeholder="{{medulaOsea.moretones}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Sangrado de Nariz/Encias</label>
-                        <input type="number" placeholder="{{medulaOsea.sangradoNarizEncias}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Crecimiento Tumoral</label>
-                        <input type="number" placeholder="{{medulaOsea.crecimientoTumoral}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Inflamación de Ganglios</label>
-                        <input required type="number" placeholder="{{medulaOsea.inflamacionGanglios}}"
-                            class="form-control" disabled=disabled />
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Picazón Corporal</label>
-                        <input required type="number" placeholder="{{medulaOsea.picazonCorporal}}" class="form-control"
-                            disabled=disabled />
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                </div>
-
-                <div class="sub-derecha">
-
-                    <div style="display: flex;">
-                        <label>Cansancio Fácil</label>
-                        <input type="number" placeholder="{{medulaOsea.cansancioFacil}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Palidez</label>
-                        <input type="number" placeholder="{{medulaOsea.palidez}}" class="form-control" disabled=disabled
-                            required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Anemia Súbita</label>
-                        <input type="number" placeholder="{{medulaOsea.anemiaSubita}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Pérdida de Peso</label>
-                        <input type="number" placeholder="{{medulaOsea.perdidaPeso}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Dolor de Cabeza</label>
-                        <input type="number" placeholder="{{medulaOsea.dolorCabeza}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Vómitos Matutinos</label>
-                        <input type="number" placeholder="{{medulaOsea.vomitosMatutinos}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-
-                    <br>
-
-                    <div style="display: flex;">
-                        <label>Crecimiento Rápido del Abdomen</label>
-                        <input type="number" placeholder="{{medulaOsea.crecimientoRapidoAbdomen}}" class="form-control"
-                            disabled=disabled required>
-                        <span class="input-group-text" style="background-color: white; border: none"> </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div *ngIf="!validar && !validarMedulaOsea" style="margin-top: 2%">
-        <h1> DATOS DE LA SANGRE PERIFÉRICA DEL PACIENTE NO REGISTRADOS </h1>
+        <h1> DATOS DEL EXAMEN CLÍNICO DEL PACIENTE NO REGISTRADOS </h1>
         <div class="hr" style="margin-top: 2%"></div>
-        <h1 style="margin-top: 2%"> DATOS DE LA MÉDULA ÓSEA DEL PACIENTE NO REGISTRADOS</h1>
+        <h1 style="margin-top: 2%"> DATOS DEL HEMOGRAMA DEL PACIENTE NO REGISTRADOS</h1>
     </div>
 
     <div *ngIf="validar && !validarMedulaOsea">
-        <h1 style="margin-top: 2%"> DATOS DE LA MÉDULA ÓSEA DEL PACIENTE NO REGISTRADOS</h1>
+        <h1 style="margin-top: 2%"> DATOS DEL EXAMEN CLÍNICO DEL PACIENTE NO REGISTRADOS</h1>
     </div>
 
     <div *ngIf="!validar && validarMedulaOsea">
         <div class="hr" style="margin-top: 2%"></div>
-        <h1 style="margin-top: 2%"> DATOS DE LA SANGRE PERIFÉRICA DEL PACIENTE NO REGISTRADOS </h1>
+        <h1 style="margin-top: 2%"> DATOS DEL HEMOGRAMA DEL PACIENTE NO REGISTRADOS </h1>
     </div>
 
     <div *ngIf="!validar && !validarMedulaOsea || validar && !validarMedulaOsea || !validar && validarMedulaOsea"
