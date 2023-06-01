@@ -29,6 +29,7 @@ import { PediatraReporteFiguraComponent } from './Figuras/pediatra-reporte-figur
 import { EstadisticasComponent } from './Pediatra/estadisticas/estadisticas.component';
 import { ReporteEditComponent } from './Pediatra/reporte-edit/reporte-edit.component';
 import { ReporteVisualizarComponent } from './Hematologo/reporte-visualizar/reporte-visualizar.component';
+import { EstadisticasHematologoComponent } from './Hematologo/estadisticas-hematologo/estadisticas-hematologo.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ReporteVisualizarComponent } from './Hematologo/reporte-visualizar/repo
     ReporteEditComponent,
     ReporteVisualizarComponent,
     PediatraReporteFiguraComponent,
-    EstadisticasComponent
+    EstadisticasComponent,
+    EstadisticasHematologoComponent
   ],
     imports: [
         BrowserModule,
