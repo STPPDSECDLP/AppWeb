@@ -26,7 +26,6 @@ export class RegistrarPacienteComponent implements OnInit {
   @ViewChild("telefono") telefono! : ElementRef;
 
   constructor(private pacienteService: PacienteService,
-              private medicoService : MedicoService,
               private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params=>this.MedicoId= params['medicoId'])
@@ -74,7 +73,7 @@ export class RegistrarPacienteComponent implements OnInit {
 
       //Validacion DNI y Numero de Telefono
 
-      if (dni.length == 8 && telefono.length == 9){
+      if (dni.length > 7 && telefono.length == 9){
         if (telefono[0] == 9){
           for (var i = 0; i < this.listPacientes.length; i++){
             if (dni == this.listPacientes[i].dni){

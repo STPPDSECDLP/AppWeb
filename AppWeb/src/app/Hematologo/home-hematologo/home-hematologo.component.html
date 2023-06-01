@@ -26,8 +26,8 @@
             <i class="bi bi-lock-fill"></i>
             DNI
           </th>
-          <th>Prueba: Hemograma</th>
           <th>Prueba: Examen Clínico</th>
+          <th>Prueba: Hemograma</th>
           <th>Reporte</th>
         </tr>
         </thead>
@@ -51,10 +51,10 @@
             <p class="fw-normal mb-1">{{group.dni}}</p>
           </td>
           <td>
-            <button type="button" class="btn btn-success" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'sangrePeriferica']">Visualizar</button>
+            <button type="button" class="btn btn-success" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'medulaOsea']">Visualizar</button>
           </td>
           <td>
-            <button type="button" class="btn" style="background-color: #7a43ee; color: white" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'medulaOsea']">Visualizar</button>
+            <button type="button" class="btn" style="background-color: #7a43ee; color: white" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'sangrePeriferica']">Visualizar</button>
           </td>
           <td>
             <button type="button" class="btn btn-danger" [routerLink]="['/home/hematologo/',MedicoId,'paciente',group.id,'reporte']">Visualizar</button>

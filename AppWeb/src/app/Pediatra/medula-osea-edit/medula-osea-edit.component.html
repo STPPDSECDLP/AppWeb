@@ -8,18 +8,15 @@
 <div class="cuerpo">
 
   <div class="formulario">
-
     <div class="sub-izquierda">
 
       <div style="display: flex;">
         <label>Dolor Persistente de Huesos</label>
-        <input type="text"
-               name="dolorPersistenteHuesos" #dolorPersistenteHuesos
-               placeholder="{{medulaOsea.dolorPersistenteHuesos}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getA($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -27,13 +24,11 @@
 
       <div style="display: flex;">
         <label>Dolor Persistente de Abdomen</label>
-        <input type="text"
-               name="dolorPersistenteAbdomen" #dolorPersistenteAbdomen
-               placeholder="{{medulaOsea.dolorPersistenteAbdomen}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getB($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -41,13 +36,11 @@
 
       <div style="display: flex;">
         <label>Fiebre Persistente</label>
-        <input type="text"
-               name="fiebrePersistente" #fiebrePersistente
-               placeholder="{{medulaOsea.fiebrePersistente}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getC($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -55,13 +48,11 @@
 
       <div style="display: flex;">
         <label>Moretones</label>
-        <input type="text"
-               name="moretones" #moretones
-               placeholder="{{medulaOsea.moretones}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getD($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -69,13 +60,11 @@
 
       <div style="display: flex;">
         <label>Sangrado de Nariz/Encías</label>
-        <input type="text"
-               name="sangradoNarizEncias" #sangradoNarizEncias
-               placeholder="{{medulaOsea.sangradoNarizEncias}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getE($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -83,13 +72,11 @@
 
       <div style="display: flex;">
         <label>Crecimiento Tumoral</label>
-        <input type="text"
-               name="crecimientoTumoral" #crecimientoTumoral
-               placeholder="{{medulaOsea.crecimientoTumoral}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getF($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -97,29 +84,22 @@
 
       <div style="display: flex;">
         <label>Inflamación de Ganglios</label>
-        <input required
-               type="text"
-               name="inflamacionGanglios" #inflamacionGanglios
-               placeholder="{{medulaOsea.inflamacionGanglios}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-                />
+        <select class="form-select" (change)="getG($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
-      </div>
-
+        </div>
       <br>
 
       <div style="display: flex;">
         <label>Picazón Corporal</label>
-        <input required
-               type="text"
-               name="picazonCorporal" #picazonCorporal
-               placeholder="{{medulaOsea.inflamacionGanglios}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-                />
+        <select class="form-select" (change)="getH($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -129,13 +109,11 @@
 
       <div style="display: flex;">
         <label>Cansancio Fácil</label>
-        <input type="text"
-               name="cansancioFacil" #cansancioFacil
-               placeholder="{{medulaOsea.cansancioFacil}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getI($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -143,13 +121,11 @@
 
       <div style="display: flex;">
         <label>Palidez</label>
-        <input type="text"
-               name="palidez" #palidez
-               placeholder="{{medulaOsea.palidez}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getJ($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -157,13 +133,11 @@
 
       <div style="display: flex;">
         <label>Anemia Súbita</label>
-        <input type="text"
-               name="anemiaSubita" #anemiaSubita
-               placeholder="{{medulaOsea.anemiaSubita}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getK($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -171,13 +145,11 @@
 
       <div style="display: flex;">
         <label>Pérdida de Peso</label>
-        <input type="text"
-               name="perdidaPeso" #perdidaPeso
-               placeholder="{{medulaOsea.perdidaPeso}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getL($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -185,27 +157,22 @@
 
       <div style="display: flex;">
         <label>Dolor de Cabeza</label>
-        <input type="text"
-               name="dolorCabeza" #dolorCabeza
-               placeholder="{{medulaOsea.dolorCabeza}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
-        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+        <select class="form-select" (change)="getM($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
       </div>
 
       <br>
 
       <div style="display: flex;">
         <label>Vómitos Matutinos</label>
-        <input type="text"
-               name="vomitosMatutinos" #vomitosMatutinos
-               placeholder="{{medulaOsea.vomitosMatutinos}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getN($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
@@ -213,13 +180,11 @@
 
       <div style="display: flex;">
         <label>Crecimiento Rápido del Abdomen</label>
-        <input type="text"
-               name="crecimientoRapidoAbdomen" #crecimientoRapidoAbdomen
-               placeholder="{{medulaOsea.crecimientoRapidoAbdomen}}"
-               class="form-control"
-               step="0.01"
-               min="0"
-               required>
+        <select class="form-select" (change)="getO($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
         <span  class="input-group-text" style="background-color: white; border: none">  </span>
       </div>
 
