@@ -53,3 +53,7 @@
   max-width: 55px;
   filter: hue-rotate(60deg) brightness(500%);
 }
+
+.navbar-custom {
+  background-color: #4682b4;
+}
