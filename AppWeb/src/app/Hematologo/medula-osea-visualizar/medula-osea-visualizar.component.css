@@ -22,13 +22,11 @@
 
 .formulario{
   width: 100%;
-  height: max-content;
   display: flex;
   justify-content: space-between;
   margin-top: 2%;
   margin-left: 5%;
 }
-
 .sub-izquierda{
   width: 30em;
   margin: 0;
@@ -36,6 +34,7 @@
 
 .sub-izquierda label{
   width: 15em;
+  text-align: left;
 }
 
 .sub-izquierda input{
@@ -49,6 +48,7 @@
 
 .sub-derecha label{
   width: 15em;
+  text-align: left;
 }
 
 .sub-derecha input{
@@ -62,4 +62,5 @@
 
 .botones button{
   width: 7em;
+  margin-right: 7%;
 }

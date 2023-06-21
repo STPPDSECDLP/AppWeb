@@ -1,0 +1,287 @@
+<app-hematologo-nav-bar></app-hematologo-nav-bar>
+<app-sangre-periferica-figura></app-sangre-periferica-figura>
+
+<div class="titulo">
+  <div *ngIf="validar">
+    <h1> Prueba: Hemograma </h1>
+
+    <div class="cuerpo">
+
+      <div class="formulario">
+
+        <div class="sub-izquierda">
+
+          <div style="display: flex;">
+            <label>Hemoglobina</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.hemoglobina}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Hematocrito</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.hematocrito}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Hematies</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.hematies}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Volumen Corpuscular Medio</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.volumenCorpuscularMedio}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Hemoglobina Corpuscular Media</label>
+            <input type="number" o
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.hemoglobinaCorpuscularMedia}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Concentración Hemoglobina Corpuscular</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.concentracionHemoglobinaCorpuscular}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Indice Anisocitosis (RDW) (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.indiceAnisocitosisRDW}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Indice Anisocitosis (RDW) (SD)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.indiceAnisocitosisRDWSD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Leucocitos Totales</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.leucocitosTotales}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Eosinófilos (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.eosinofilosP}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Basófilos (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.basofilosP}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Linfocitos (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.linfocitosP}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+        </div>
+
+        <div class="sub-derecha">
+
+          <div style="display: flex;">
+            <label>Monocitos (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.monocitosP}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Neutrófilos Segmentados (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.neutrofilosSegmentadosP}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Bastones (%)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.bastonesP}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Eosinófilos (10^3/UL)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.eosinofilosD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Basófilos (10^3/UL)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.basofilosD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Linfocitos (10^3/UL)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.linfocitosD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Monocitos (10^3/UL)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.monocitosD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Neutrófilos Segmentados (10^3/UL)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.neutrofilosSegmentadosD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Bastones (10^3/UL)</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.bastonesD}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Recuento Plaqueta</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.recuentoPlaqueta}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+          <br>
+
+          <div style="display: flex;">
+            <label>Volumen Plaquetario Medio</label>
+            <input type="number"
+                   class="form-control"
+                   placeholder="{{sangrePeriferica.volumenPlaquetarioMedio}}"
+                   disabled = disabled>
+            <span  class="input-group-text" style="background-color: white; border: none"></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="botones">
+      <button type="button" class="btn btn-primary" [routerLink]="['/home/hematologo/',MedicoId]">Regresar</button>
+    </div>
+
+  </div>
+
+  <div *ngIf="!validar">
+    <h1> DATOS NO REGISTRADOS </h1>
+
+    <div class="botones">
+      <button style="margin-top: 8%" type="button" class="btn btn-primary" [routerLink]="['/home/hematologo/',MedicoId]">Regresar</button>
+    </div>
+
+  </div>
+
+</div>
+

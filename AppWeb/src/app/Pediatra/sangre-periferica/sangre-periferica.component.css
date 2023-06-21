@@ -27,6 +27,23 @@
   margin-top: 2%;
   margin-left: 5%;
 }
+
+/*Mostraremos los campos requeridos de color amarillo*/
+.formulario input:required {
+  border:2px solid black;
+  /* otras propiedades */
+}
+/*Si el valor que el usuario escribe es valido, obtendra un color verde*/
+.formulario input:valid{
+  border:2px solid green;
+  /* otras propiedades */
+}
+/*caso contrario, el color sera rojo*/
+.formulario input:focus:invalid{
+  border:2px solid red;
+  /* otras propiedades */
+}
+
 .sub-izquierda{
   width: 30em;
   margin: 0;
@@ -34,6 +51,7 @@
 
 .sub-izquierda label{
   width: 15em;
+  text-align: left;
 }
 
 .sub-izquierda input{
@@ -47,6 +65,7 @@
 
 .sub-derecha label{
   width: 15em;
+  text-align: left;
 }
 
 .sub-derecha input{

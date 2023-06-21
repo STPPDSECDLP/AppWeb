@@ -55,7 +55,7 @@ export class ReporteComponent implements OnInit {
   }
 
   printPage() {
-    if (this.comentario.nativeElement.value == '' || this.observacion.nativeElement.value == '' || this.prediccionResult == undefined) {
+    if (this.comentario.nativeElement.value == '' || this.observacion.nativeElement.value == '' /*|| this.prediccionResult == undefined*/) {
       alert("Completar los datos")
     } else {
       window.print();
@@ -91,7 +91,7 @@ export class ReporteComponent implements OnInit {
       }
     })
   }
-
+/*
   getPrediction(): void {
 
     const a = this.sangrePeriferica.linfoblastoBPatologico.toString()
@@ -130,6 +130,7 @@ export class ReporteComponent implements OnInit {
       console.log(this.prediccionResult);
     })
   }
+  */
 
   Registrar(): void {
     var comentario = this.comentario.nativeElement.value;
@@ -138,16 +139,16 @@ export class ReporteComponent implements OnInit {
     let pacienteId = parseFloat(this.PacienteId.toString());
     let medicoId = parseFloat(this.MedicoId.toString());
 
-    if (comentario == '' || observacion == '' || this.prediccionResult == undefined) {
+    if (comentario == '' || observacion == '' /*|| this.prediccionResult == undefined*/) {
       alert("Completar los datos")
     }
     else {
       const reporteNew = {
         pacienteId: pacienteId,
         medicoId: medicoId,
-        sangrePerifericaId: this.SangrePerifericaId,
-        medulaOseaId: this.MedulaOseaId,
-        prediccion: this.prediccionResult,
+        hemogramaId: this.SangrePerifericaId,
+        examenClinicoId: this.MedulaOseaId,
+        prediccion:  "POSITIVO", //this.prediccionResult,
         comentario: comentario,
         observacion: observacion
       };

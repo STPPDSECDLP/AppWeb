@@ -1,0 +1,200 @@
+<app-pediatra-nav-bar></app-pediatra-nav-bar>
+<app-medula-osea-figura></app-medula-osea-figura>
+
+<div class="titulo">
+  <h1> Prueba: Examen Clínico </h1>
+</div>
+
+<div class="cuerpo">
+
+  <div class="formulario">
+    <div class="sub-izquierda">
+
+      <div style="display: flex;">
+        <label>Dolor Persistente de Huesos</label>
+        <select class="form-select" (change)="getA($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Dolor Persistente de Abdomen</label>
+        <select class="form-select" (change)="getB($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Fiebre Persistente</label>
+        <select class="form-select" (change)="getC($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Moretones</label>
+        <select class="form-select" (change)="getD($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Sangrado de Nariz/Encías</label>
+        <select class="form-select" (change)="getE($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Crecimiento Tumoral</label>
+        <select class="form-select" (change)="getF($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Inflamación de Ganglios</label>
+        <select class="form-select" (change)="getG($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+        </div>
+      <br>
+
+      <div style="display: flex;">
+        <label>Picazón Corporal</label>
+        <select class="form-select" (change)="getH($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+    </div>
+
+    <div class="sub-derecha">
+
+      <div style="display: flex;">
+        <label>Cansancio Fácil</label>
+        <select class="form-select" (change)="getI($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Palidez</label>
+        <select class="form-select" (change)="getJ($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Anemia Súbita</label>
+        <select class="form-select" (change)="getK($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Pérdida de Peso</label>
+        <select class="form-select" (change)="getL($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Dolor de Cabeza</label>
+        <select class="form-select" (change)="getM($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Vómitos Matutinos</label>
+        <select class="form-select" (change)="getN($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+      <br>
+
+      <div style="display: flex;">
+        <label>Crecimiento Rápido del Abdomen</label>
+        <select class="form-select" (change)="getO($event)">
+          <option value="0">Seleccione</option>
+          <option value="1">SI</option>
+          <option value="2">NO</option>
+        </select>
+        <span  class="input-group-text" style="background-color: white; border: none">  </span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="botones">
+  <button type="button" class="btn btn-primary" (click)="Registrar()">Grabar</button>
+  <button type="button" class="btn btn-danger" [routerLink]="['/home/pediatra/',MedicoId]"> Cancelar</button>
+</div>
+

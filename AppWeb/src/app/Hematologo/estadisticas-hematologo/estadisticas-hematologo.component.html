@@ -1,0 +1,17 @@
+<app-hematologo-nav-bar></app-hematologo-nav-bar>
+<div class="space"></div>
+
+<div class="row row-centered">
+    <div class="col-lg-6 col-centered" class="box">
+        <h2>Pacientes según sexo </h2>
+        <canvas id="sexoChart"></canvas>
+    </div>
+    <div class="col-lg-6 col-centered">
+        <h2>Pacientes según edad</h2>
+        <canvas id="edadChart"></canvas>
+    </div>
+</div>
+
+<div class="center">
+    <button type="button" class="btn btn-danger" [routerLink]="['/home/hematologo/',MedicoId]"> Regresar</button>
+</div>

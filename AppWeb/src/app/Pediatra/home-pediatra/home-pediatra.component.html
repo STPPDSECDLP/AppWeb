@@ -28,8 +28,9 @@
             DNI
           </th>
 
-          <th>Prueba: Sangre Periférica</th>
-          <th>Prueba: Médula Ósea</th>
+          <th>Prueba: Examen Clínico</th>
+          <th>Prueba: Hemograma</th>
+          <th>Reporte</th>
           <th></th>
         </tr>
         </thead>
@@ -53,10 +54,10 @@
             <p class="fw-normal mb-1">{{group.dni}}</p>
           </td>
           <td>
-            <button type="button" class="btn btn-success" [routerLink]="['/home/pediatra/',MedicoId,'paciente',group.id,'sangrePeriferica']">Visualizar</button>
+            <button type="button" class="btn btn-success" (click)="editMedulaOsea(group.id)">Editar</button>
           </td>
           <td>
-            <button type="button" class="btn" style="background-color: #7a43ee; color: white" [routerLink]="['/home/pediatra/',MedicoId,'paciente',group.id,'medulaOsea']">Visualizar</button>
+            <button type="button" class="btn" style="background-color: #7a43ee; color: white" (click)="editSangrePeriferica(group.id)">Editar</button>
           </td>
           <td>
             <button type="button" class="btn btn-danger" (click)="editReporte(group.id)">Reporte</button>
@@ -96,6 +97,73 @@
           No
         </button>
         <button type="button" style="width: 100px" class="btn btn-primary" (click)="saveSomeThingReporte()">
+          Si
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--form modal-->
+<div
+  class="modal fade"
+  id="modalSangrePeriferica"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">ADVERTENCIA</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h5>Ya se registró el Hemograma del paciente ¿Desea continuar con la modificacion de los datos?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="width: 100px" class="btn btn-secondary" (click)="refresh()" data-bs-dismiss="modal">
+          No
+        </button>
+        <button type="button" style="width: 100px" class="btn btn-primary" (click)="saveSomeThingSangrePeriferica()">
+          Si
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modalMedulaOsea"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel#2">ADVERTENCIA</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h5>Ya se registro el Examen Clínico del paciente <br> ¿Desea continuar con la modificacion de los datos?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="width: 100px" class="btn btn-secondary" (click)="refresh()" data-bs-dismiss="modal">
+          No
+        </button>
+        <button type="button" style="width: 100px" class="btn btn-primary" (click)="saveSomeThingMedulaOsea()">
           Si
         </button>
       </div>
