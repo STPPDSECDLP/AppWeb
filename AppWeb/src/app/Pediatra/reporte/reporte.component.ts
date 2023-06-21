@@ -91,9 +91,10 @@ export class ReporteComponent implements OnInit {
       }
     })
   }
-/*
-  getPrediction(): void {
 
+
+  getPrediction(): void {
+/*
     const a = this.sangrePeriferica.linfoblastoBPatologico.toString()
     const b = this.sangrePeriferica.blastoMieloide.toString()
     const c = this.sangrePeriferica.linfoblastoBNormal.toString()
@@ -122,7 +123,7 @@ export class ReporteComponent implements OnInit {
     const z = this.medulaOsea.celularidad;
 
     this.prediccionData = a + ',' + b + ',' + c + ',' + d + ',' + e + ',' + f + ',' + g + ',' + h + ',' + i + ',' + j + ',' + k + ',' + l + ',' + m + ',' + n + ',' + o + ',' + p + ',' + q + ',' + r + ',' + s + ',' + t + ',' + u + ',' + v + ',' + w + ',' + x + ',' + y + ',' + z;
-
+*/
     const prediccionNew = { data: this.prediccionData }
     console.log(prediccionNew);
     this.prediccionService.addPrediccion(prediccionNew).subscribe(data => {
@@ -130,7 +131,7 @@ export class ReporteComponent implements OnInit {
       console.log(this.prediccionResult);
     })
   }
-  */
+  
 
   Registrar(): void {
     var comentario = this.comentario.nativeElement.value;
